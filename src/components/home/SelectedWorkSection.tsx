@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, Code, Cpu, ExternalLink, Globe, Layers, ShieldCheck } from 'lucide-react';
 import { PROJECTS } from '@/data/siteData';
+import { SpotlightCard } from '@/components/common/SpotlightCard';
 
 export const SelectedWorkSection: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -66,9 +67,9 @@ export const SelectedWorkSection: React.FC = () => {
         {/* Editorial Project Grid (Asymmetrical high-impact 2-column layout) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project, idx) => (
-            <div
+            <SpotlightCard
               key={project.id}
-              className="bg-white border border-motive-border rounded-xl overflow-hidden shadow-subtle hover:shadow-premium transition-all duration-300 flex flex-col justify-between group"
+              className="overflow-hidden shadow-subtle hover:shadow-premium transition-all duration-300 flex flex-col justify-between group"
             >
               {/* Architectural Visual Preview Frame */}
               <div className="relative bg-zinc-950 p-6 sm:p-8 aspect-[16/9] flex flex-col justify-between border-b border-motive-border overflow-hidden">
@@ -151,7 +152,7 @@ export const SelectedWorkSection: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
 

@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, GitMerge, Layers3, Cpu } from 'lucide-react';
+import { ArrowRight, GitMerge, Layers3, Cpu } from 'lucide-react';
+import { SpotlightCard } from '@/components/common/SpotlightCard';
 
 export const BrandIntroSection: React.FC = () => {
   return (
@@ -42,11 +43,11 @@ export const BrandIntroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Sophisticated Systems Thinking Visual Composition */}
+        {/* Sophisticated Systems Thinking Visual Composition with Spotlight Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
           
-          <div className="bg-white border border-motive-border rounded-lg p-6 shadow-subtle hover:border-zinc-400 transition-colors">
-            <div className="w-10 h-10 rounded bg-motive-offwhite flex items-center justify-center text-motive-black mb-4">
+          <SpotlightCard className="p-6 shadow-subtle hover:border-zinc-400">
+            <div className="w-10 h-10 rounded bg-motive-offwhite flex items-center justify-center text-motive-black mb-4 border border-motive-border">
               <GitMerge className="w-5 h-5 text-motive-red" />
             </div>
             <span className="text-[10px] font-mono uppercase tracking-widest text-motive-grey block mb-1">
@@ -58,10 +59,10 @@ export const BrandIntroSection: React.FC = () => {
             <p className="text-xs text-motive-grey leading-relaxed">
               Connecting customer contact points (WhatsApp, web portals, forms) straight into autonomous backend logic and automated task execution.
             </p>
-          </div>
+          </SpotlightCard>
 
-          <div className="bg-white border border-motive-border rounded-lg p-6 shadow-subtle hover:border-zinc-400 transition-colors">
-            <div className="w-10 h-10 rounded bg-motive-offwhite flex items-center justify-center text-motive-black mb-4">
+          <SpotlightCard className="p-6 shadow-subtle hover:border-zinc-400">
+            <div className="w-10 h-10 rounded bg-motive-offwhite flex items-center justify-center text-motive-black mb-4 border border-motive-border">
               <Cpu className="w-5 h-5 text-motive-red" />
             </div>
             <span className="text-[10px] font-mono uppercase tracking-widest text-motive-grey block mb-1">
@@ -73,10 +74,10 @@ export const BrandIntroSection: React.FC = () => {
             <p className="text-xs text-motive-grey leading-relaxed">
               Deploying verified AI agent routines that triage inquiries, extract structured metadata, and perform routine decision-making with strict human oversight.
             </p>
-          </div>
+          </SpotlightCard>
 
-          <div className="bg-white border border-motive-border rounded-lg p-6 shadow-subtle hover:border-zinc-400 transition-colors">
-            <div className="w-10 h-10 rounded bg-motive-offwhite flex items-center justify-center text-motive-black mb-4">
+          <SpotlightCard className="p-6 shadow-subtle hover:border-zinc-400">
+            <div className="w-10 h-10 rounded bg-motive-offwhite flex items-center justify-center text-motive-black mb-4 border border-motive-border">
               <Layers3 className="w-5 h-5 text-motive-red" />
             </div>
             <span className="text-[10px] font-mono uppercase tracking-widest text-motive-grey block mb-1">
@@ -88,7 +89,7 @@ export const BrandIntroSection: React.FC = () => {
             <p className="text-xs text-motive-grey leading-relaxed">
               Building on rock-solid web infrastructure and clean semantic code that continuously improves search visibility and user retention over the long term.
             </p>
-          </div>
+          </SpotlightCard>
 
         </div>
 

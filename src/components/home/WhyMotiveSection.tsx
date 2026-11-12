@@ -1,5 +1,6 @@
 import React from 'react';
 import { WHY_MOTIVE_PRINCIPLES } from '@/data/siteData';
+import { SpotlightCard } from '@/components/common/SpotlightCard';
 
 export const WhyMotiveSection: React.FC = () => {
   return (
@@ -22,12 +23,12 @@ export const WhyMotiveSection: React.FC = () => {
           </p>
         </div>
 
-        {/* 5 Principles Grid */}
+        {/* 5 Principles Grid with Spotlight Hover Glow */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {WHY_MOTIVE_PRINCIPLES.map((principle) => (
-            <div
+            <SpotlightCard
               key={principle.number}
-              className="bg-white border border-motive-border rounded-lg p-8 relative flex flex-col justify-between hover:border-zinc-400 transition-all duration-200 group"
+              className="p-8 relative flex flex-col justify-between hover:border-zinc-400 group"
             >
               <div>
                 <div className="flex items-center justify-between pb-6 mb-6 border-b border-motive-border">
@@ -50,11 +51,14 @@ export const WhyMotiveSection: React.FC = () => {
                 <span>FOUNDATIONAL PILLAR</span>
                 <span className="text-motive-black font-semibold">VERIFIED</span>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
 
           {/* Sixth Architectural Statement Card to complete the clean 3x2 grid */}
-          <div className="bg-motive-black text-white border border-motive-darkborder rounded-lg p-8 flex flex-col justify-between">
+          <SpotlightCard
+            dark={true}
+            className="p-8 flex flex-col justify-between"
+          >
             <div>
               <div className="flex items-center justify-between pb-6 mb-6 border-b border-zinc-800">
                 <span className="font-mono text-xs font-bold text-motive-red px-2 py-0.5 bg-red-950/40 rounded">
@@ -76,7 +80,7 @@ export const WhyMotiveSection: React.FC = () => {
               <span>DELIVERY STANDARD</span>
               <span className="text-white font-semibold">100% AUDITABLE</span>
             </div>
-          </div>
+          </SpotlightCard>
         </div>
 
       </div>

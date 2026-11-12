@@ -1,8 +1,10 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/HeroSection';
+import { KineticTicker } from '@/components/home/KineticTicker';
 import { BrandIntroSection } from '@/components/home/BrandIntroSection';
 import { CoreCapabilitiesSection } from '@/components/home/CoreCapabilitiesSection';
+import { SystemImpactCalculator } from '@/components/home/SystemImpactCalculator';
 import { WhyMotiveSection } from '@/components/home/WhyMotiveSection';
 import { OurApproachSection } from '@/components/home/OurApproachSection';
 import { SelectedWorkSection } from '@/components/home/SelectedWorkSection';
@@ -22,28 +24,38 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Section 01 — Hero */}
+      {/* Section 01 — Hero with 60fps Interactive Architectural Canvas */}
       <HeroSection />
+
+      {/* Kinetic Infinite Marquee Strip */}
+      <KineticTicker />
 
       {/* Section 02 — Brand Introduction */}
       <BrandIntroSection />
 
-      {/* Section 03 — Our Core Capabilities */}
+      {/* Section 03 — Our Core Capabilities (with Live Interactive Terminal & Workflow Sandbox) */}
       <CoreCapabilitiesSection />
 
-      {/* Section 04 — Why Motive Technologies */}
+      {/* Section 04 — Executive ROI & Efficiency Simulation Engine */}
+      <section className="py-20 bg-white border-b border-motive-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SystemImpactCalculator />
+        </div>
+      </section>
+
+      {/* Section 05 — Why Motive Technologies */}
       <WhyMotiveSection />
 
-      {/* Section 05 — Our Approach */}
+      {/* Section 06 — Our Approach (5-Phase Interactive Journey) */}
       <OurApproachSection />
 
-      {/* Section 06 — Selected Work */}
+      {/* Section 07 — Selected Work */}
       <SelectedWorkSection />
 
-      {/* Section 07 — Technology & Innovation */}
+      {/* Section 08 — Technology & Innovation Ecosystem */}
       <TechEcosystemSection />
 
-      {/* Section 08 — Final Conversion Section */}
+      {/* Section 09 — Final High-Impact Conversion Section */}
       <FinalConversionSection />
     </>
   );

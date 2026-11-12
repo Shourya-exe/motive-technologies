@@ -1,11 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Bot, Code2, TrendingUp, CheckCircle, ArrowUpRight, Terminal, Smartphone, Search, Database } from 'lucide-react';
+import { ArrowRight, Bot, Code2, TrendingUp, CheckCircle, ArrowUpRight, Terminal, Smartphone, Search, Database, Layers, Play } from 'lucide-react';
 import { SERVICES } from '@/data/siteData';
+import { InteractiveTerminal } from './InteractiveTerminal';
+import { WorkflowSandbox } from './WorkflowSandbox';
+import { SpotlightCard } from '@/components/common/SpotlightCard';
 
 export const CoreCapabilitiesSection: React.FC = () => {
+  const [aiPreviewMode, setAiPreviewMode] = useState<'terminal' | 'code'>('terminal');
+
   return (
     <section className="py-20 lg:py-28 bg-white border-b border-motive-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,13 +32,13 @@ export const CoreCapabilitiesSection: React.FC = () => {
         </div>
 
         {/* 3 Visually Distinct Editorial Capabilities */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           
           {/* 01 — AI Automation & Intelligent Systems (Dark Architectural Theme) */}
           <div className="bg-motive-dark text-white rounded-xl border border-motive-darkborder p-8 lg:p-12 shadow-darkcard">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
-              <div className="lg:col-span-7 space-y-6">
+              <div className="lg:col-span-6 space-y-6">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-xs text-motive-red font-bold px-2.5 py-1 bg-red-950/40 rounded border border-motive-red/30">
                     CAPABILITY // 01
@@ -70,54 +75,37 @@ export const CoreCapabilitiesSection: React.FC = () => {
                   ))}
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-4 flex flex-wrap gap-4">
                   <Link
                     href="/services/ai-automation"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-white text-motive-black text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red hover:text-white transition-all duration-200 group"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-motive-red text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red-hover transition-all duration-200 group"
                   >
                     <span>Explore AI Solutions</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
+                  <Link
+                    href="/contact?service=ai-automation"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-zinc-900 border border-zinc-800 text-white text-xs font-mono rounded hover:bg-zinc-800 transition-colors"
+                  >
+                    <span>Inquire Architecture</span>
+                  </Link>
                 </div>
               </div>
 
-              {/* Visual Preview / Code & Workflow Mockup */}
-              <div className="lg:col-span-5">
-                <div className="bg-black/90 border border-zinc-800 rounded-lg p-5 font-mono text-xs text-zinc-300 shadow-inner">
-                  <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-800 text-[10px] text-zinc-500">
-                    <span className="flex items-center gap-1.5">
-                      <Terminal className="w-3.5 h-3.5 text-motive-red" />
-                      <span>agent_pipeline_executor.ts</span>
-                    </span>
-                    <span className="text-emerald-500 font-semibold">● LIVE DISPATCH</span>
-                  </div>
-                  <pre className="text-[11px] leading-relaxed text-zinc-400 overflow-x-auto">
-{`// Motive AI Orchestrator
-async function dispatchInquiry(lead: InboundLead) {
-  const context = await retrieveDocs(lead.intent);
-  const decision = await reasoningEngine.evaluate({
-    leadProfile: lead,
-    retrievedKnowledge: context,
-    guardrails: strictEnterprisePolicy
-  });
-
-  await triggerMultiSystemActions({
-    crmSync: true,
-    whatsAppAck: decision.autoReply,
-    salesEscalation: decision.confidenceScore > 0.95
-  });
-  return { status: "EXECUTED", latencyMs: 14.2 };
-}`}
-                  </pre>
-                  <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[10px] text-zinc-500">
-                    <span>Model: Verified Enterprise LLM</span>
-                    <span className="text-motive-red">Verification: 100% Deterministic</span>
-                  </div>
+              {/* Right Column: Interactive Terminal Simulator */}
+              <div className="lg:col-span-6">
+                <div className="flex items-center justify-between pb-2 mb-2 text-xs font-mono text-zinc-400">
+                  <span>LIVE REASONING CONSOLE</span>
+                  <span className="text-[10px] text-motive-red font-semibold">INTERACTIVE</span>
                 </div>
+                <InteractiveTerminal />
               </div>
 
             </div>
           </div>
+
+          {/* Interactive Multi-Node Sandbox Between Sections */}
+          <WorkflowSandbox />
 
           {/* 02 — Website & Application Development (Clean Architectural White & Grid Theme) */}
           <div className="bg-motive-offwhite rounded-xl border border-motive-border p-8 lg:p-12">
@@ -163,7 +151,7 @@ async function dispatchInquiry(lead: InboundLead) {
                 <div className="pt-4">
                   <Link
                     href="/services/web-app-development"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-motive-black text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red transition-all duration-200 group"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-motive-black text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red transition-all duration-200 group"
                   >
                     <span>Explore Development</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -173,7 +161,7 @@ async function dispatchInquiry(lead: InboundLead) {
 
               {/* Visual Preview / Architectural Device Wireframe */}
               <div className="lg:col-span-5">
-                <div className="bg-white border border-motive-border rounded-lg p-5 shadow-premium">
+                <SpotlightCard className="p-6 shadow-premium">
                   <div className="flex items-center justify-between pb-3 mb-4 border-b border-motive-border">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-zinc-300" />
@@ -186,29 +174,33 @@ async function dispatchInquiry(lead: InboundLead) {
                   </div>
 
                   <div className="space-y-3">
-                    <div className="h-6 w-2/3 bg-zinc-100 rounded flex items-center px-2 text-[10px] font-mono text-motive-grey">
-                      HTTP/3 TLS 1.3 200 OK — 0.28s LCP
+                    <div className="h-6 w-full bg-zinc-100 rounded flex items-center justify-between px-3 text-[10px] font-mono text-motive-grey">
+                      <span>HTTP/3 TLS 1.3 200 OK</span>
+                      <span className="text-emerald-700 font-bold">0.24s LCP</span>
                     </div>
                     <div className="grid grid-cols-3 gap-2">
                       <div className="p-3 bg-motive-offwhite rounded border border-motive-border text-center">
                         <span className="text-[10px] font-mono text-motive-grey block">PERF</span>
-                        <span className="text-sm font-bold text-emerald-600 font-mono">99</span>
+                        <span className="text-base font-bold text-emerald-600 font-mono">99</span>
                       </div>
                       <div className="p-3 bg-motive-offwhite rounded border border-motive-border text-center">
                         <span className="text-[10px] font-mono text-motive-grey block">A11Y</span>
-                        <span className="text-sm font-bold text-emerald-600 font-mono">100</span>
+                        <span className="text-base font-bold text-emerald-600 font-mono">100</span>
                       </div>
                       <div className="p-3 bg-motive-offwhite rounded border border-motive-border text-center">
                         <span className="text-[10px] font-mono text-motive-grey block">SEO</span>
-                        <span className="text-sm font-bold text-emerald-600 font-mono">100</span>
+                        <span className="text-base font-bold text-emerald-600 font-mono">100</span>
                       </div>
                     </div>
                     <div className="p-3 bg-motive-offwhite rounded border border-motive-border flex items-center justify-between text-xs">
-                      <span className="font-semibold text-motive-black">Mobile + Android Ready</span>
-                      <Smartphone className="w-4 h-4 text-motive-red" />
+                      <div>
+                        <span className="font-semibold text-motive-black block">Cross-Platform Mobile</span>
+                        <span className="text-[10px] font-mono text-motive-grey">Flutter &bull; Offline SQLite Persisted</span>
+                      </div>
+                      <Smartphone className="w-5 h-5 text-motive-red" />
                     </div>
                   </div>
-                </div>
+                </SpotlightCard>
               </div>
 
             </div>
@@ -258,7 +250,7 @@ async function dispatchInquiry(lead: InboundLead) {
                 <div className="pt-4">
                   <Link
                     href="/services/seo-digital-growth"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-motive-black text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red transition-all duration-200 group"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-motive-black text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red transition-all duration-200 group"
                   >
                     <span>Explore SEO</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -268,7 +260,7 @@ async function dispatchInquiry(lead: InboundLead) {
 
               {/* Visual Preview / Search Analytics Mockup */}
               <div className="lg:col-span-5">
-                <div className="bg-motive-offwhite border border-motive-border rounded-lg p-5">
+                <SpotlightCard className="p-6 bg-motive-offwhite">
                   <div className="flex items-center justify-between pb-3 mb-4 border-b border-motive-border">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-motive-black font-bold flex items-center gap-1.5">
                       <Search className="w-3.5 h-3.5 text-motive-red" />
@@ -285,7 +277,7 @@ async function dispatchInquiry(lead: InboundLead) {
                         <span className="text-[10px] font-mono uppercase text-motive-grey block">
                           Crawl Efficiency
                         </span>
-                        <span className="text-sm font-bold text-motive-black font-mono">
+                        <span className="text-xs sm:text-sm font-bold text-motive-black font-mono">
                           Zero Orphan Traps
                         </span>
                       </div>
@@ -299,7 +291,7 @@ async function dispatchInquiry(lead: InboundLead) {
                         <span className="text-[10px] font-mono uppercase text-motive-grey block">
                           Entity Graph
                         </span>
-                        <span className="text-sm font-bold text-motive-black font-mono">
+                        <span className="text-xs sm:text-sm font-bold text-motive-black font-mono">
                           JSON-LD Schema
                         </span>
                       </div>
@@ -313,7 +305,7 @@ async function dispatchInquiry(lead: InboundLead) {
                         <span className="text-[10px] font-mono uppercase text-motive-grey block">
                           Core Web Vitals
                         </span>
-                        <span className="text-sm font-bold text-motive-black font-mono">
+                        <span className="text-xs sm:text-sm font-bold text-motive-black font-mono">
                           INP &lt; 50ms | LCP &lt; 0.9s
                         </span>
                       </div>
@@ -322,7 +314,7 @@ async function dispatchInquiry(lead: InboundLead) {
                       </span>
                     </div>
                   </div>
-                </div>
+                </SpotlightCard>
               </div>
 
             </div>
