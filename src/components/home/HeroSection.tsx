@@ -2,14 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Cpu, Layers, TrendingUp, Sparkles, ChevronDown } from 'lucide-react';
+import { ArrowRight, Cpu, Layers, TrendingUp } from 'lucide-react';
 import { InteractiveBackgroundMesh } from './InteractiveBackgroundMesh';
 import { COMPANY_INFO } from '@/data/siteData';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-white pt-14 pb-20 lg:pt-20 lg:pb-28 border-b border-motive-border min-h-[85vh] flex flex-col justify-center">
-      {/* Full-bleed interactive mouse-reactive background canvas (NO clunky boxes) */}
+    <section className="relative overflow-hidden bg-white pt-16 pb-20 lg:pt-24 lg:pb-32 border-b border-motive-border flex flex-col justify-center">
+      {/* Full-bleed interactive mouse-reactive background canvas (No boxy widgets) */}
       <InteractiveBackgroundMesh />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
@@ -87,12 +87,6 @@ export const HeroSection: React.FC = () => {
               Technical SEO &amp; semantic ranking
             </p>
           </div>
-        </div>
-
-        {/* Scroll Indicator Prompt */}
-        <div className="pt-4 flex items-center justify-center gap-2 text-xs font-mono text-motive-grey">
-          <span>Scroll to explore video frame transformation</span>
-          <ChevronDown className="w-3.5 h-3.5 text-motive-red animate-bounce" />
         </div>
 
       </div>

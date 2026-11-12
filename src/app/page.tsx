@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/HeroSection';
-import { FullScreenScrollVideo } from '@/components/home/FullScreenScrollVideo';
 import { KineticTicker } from '@/components/home/KineticTicker';
 import { BrandIntroSection } from '@/components/home/BrandIntroSection';
 import { CoreCapabilitiesSection } from '@/components/home/CoreCapabilitiesSection';
@@ -24,35 +23,31 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* 01: Hero with Subtle Mouse-Reactive Background Canvas (No boxy widgets) */}
+      {/* 01: Hero with Subtle Mouse-Reactive Background Canvas */}
       <HeroSection />
 
-      {/* 02: Full-Screen Scroll Video Frame Sequence (Edge-to-Edge 100vw x 100vh, No Cards) */}
-      <FullScreenScrollVideo />
-
-      {/* 03: Kinetic Infinite Marquee Strip */}
+      {/* 02: Kinetic Infinite Marquee Strip */}
       <KineticTicker />
 
-      {/* 04: Normal Website Begins Here Once Sequence Completes */}
-      {/* Brand Introduction (Architectural 3-Column Grid) */}
+      {/* 03: Brand Introduction (Architectural 3-Column Grid) */}
       <BrandIntroSection />
 
-      {/* Core Capabilities (Luxury Editorial Specification, No Toy Cards) */}
+      {/* 04: Core Capabilities (Luxury Editorial Specification, No Toy Cards) */}
       <CoreCapabilitiesSection />
 
-      {/* Why Motive Technologies (Authoritative Operating Principles Index) */}
+      {/* 05: Why Motive Technologies (Authoritative Operating Principles Index) */}
       <WhyMotiveSection />
 
-      {/* Our Approach (5-Phase Delivery Timeline) */}
+      {/* 06: Our Approach (5-Phase Delivery Timeline) */}
       <OurApproachSection />
 
-      {/* Selected Work (Verified Case Architectures) */}
+      {/* 07: Selected Work (Verified Case Architectures) */}
       <SelectedWorkSection />
 
-      {/* Technology & Innovation Ecosystem (Clean Runtime Matrix) */}
+      {/* 08: Technology & Innovation Ecosystem (Clean Runtime Matrix) */}
       <TechEcosystemSection />
 
-      {/* Final Conversion Closing */}
+      {/* 09: Final Conversion Closing */}
       <FinalConversionSection />
     </>
   );
