@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/HeroSection';
+import { ScrollFrameSequence } from '@/components/home/ScrollFrameSequence';
 import { KineticTicker } from '@/components/home/KineticTicker';
 import { BrandIntroSection } from '@/components/home/BrandIntroSection';
 import { CoreCapabilitiesSection } from '@/components/home/CoreCapabilitiesSection';
@@ -24,38 +25,42 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Section 01 — Hero with 60fps Interactive Architectural Canvas */}
+      {/* Hero with Subtle Mouse-Reactive Background Canvas (No boxy widgets) */}
       <HeroSection />
+
+      {/* Scroll-Driven Video Frame Transformation (Plays frames as you scroll) */}
+      <ScrollFrameSequence />
 
       {/* Kinetic Infinite Marquee Strip */}
       <KineticTicker />
 
-      {/* Section 02 — Brand Introduction */}
+      {/* Normal Full Website Starts Here Once Frames Are Complete */}
+      {/* Brand Introduction */}
       <BrandIntroSection />
 
-      {/* Section 03 — Our Core Capabilities (with Live Interactive Terminal & Workflow Sandbox) */}
+      {/* Core Capabilities */}
       <CoreCapabilitiesSection />
 
-      {/* Section 04 — Executive ROI & Efficiency Simulation Engine */}
+      {/* Executive ROI & Efficiency Simulation Engine */}
       <section className="py-20 bg-white border-b border-motive-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SystemImpactCalculator />
         </div>
       </section>
 
-      {/* Section 05 — Why Motive Technologies */}
+      {/* Why Motive Technologies */}
       <WhyMotiveSection />
 
-      {/* Section 06 — Our Approach (5-Phase Interactive Journey) */}
+      {/* Our Approach (5-Phase Interactive Journey) */}
       <OurApproachSection />
 
-      {/* Section 07 — Selected Work */}
+      {/* Selected Work */}
       <SelectedWorkSection />
 
-      {/* Section 08 — Technology & Innovation Ecosystem */}
+      {/* Technology & Innovation Ecosystem */}
       <TechEcosystemSection />
 
-      {/* Section 09 — Final High-Impact Conversion Section */}
+      {/* Final Conversion Section */}
       <FinalConversionSection />
     </>
   );

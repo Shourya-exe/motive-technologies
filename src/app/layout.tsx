@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
+import { CurtainTransition } from '@/components/common/CurtainTransition';
 import { COMPANY_INFO } from '@/data/siteData';
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -148,6 +149,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans min-h-screen flex flex-col bg-white text-motive-black selection:bg-motive-red selection:text-white">
+        <CurtainTransition />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-motive-black focus:text-white focus:outline-none rounded font-mono text-xs"
