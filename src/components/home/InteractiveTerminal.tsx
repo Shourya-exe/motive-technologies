@@ -68,7 +68,7 @@ export const InteractiveTerminal: React.FC = () => {
         { id: Math.random().toString(), type: 'success', text: '✓ Core Runtimes: Online (Next.js 15 + Node.js)', time },
         { id: Math.random().toString(), type: 'system', text: '• AI Reasoning Pipeline: Deterministic & Active', time },
         { id: Math.random().toString(), type: 'system', text: '• Edge Network: 285 PoPs with 0.12s TTFB', time },
-        { id: Math.random().toString(), type: 'dim', text: '• Direct Telephony: +91 7003526440, +91 6289056881', time },
+        { id: Math.random().toString(), type: 'dim', text: `• Telephony: ${COMPANY_INFO.primaryPhone}, ${COMPANY_INFO.secondaryPhone} | WhatsApp: ${COMPANY_INFO.whatsappNumber}`, time },
       ]);
       setIsExecuting(false);
       return;

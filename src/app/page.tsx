@@ -3,11 +3,13 @@ import type { Metadata } from 'next';
 import { HeroSection } from '@/components/home/HeroSection';
 import { KineticTicker } from '@/components/home/KineticTicker';
 import { BrandIntroSection } from '@/components/home/BrandIntroSection';
+import { ProblemsWeSolveSection } from '@/components/home/ProblemsWeSolveSection';
 import { CoreCapabilitiesSection } from '@/components/home/CoreCapabilitiesSection';
 import { WhyMotiveSection } from '@/components/home/WhyMotiveSection';
 import { OurApproachSection } from '@/components/home/OurApproachSection';
 import { SelectedWorkSection } from '@/components/home/SelectedWorkSection';
 import { TechEcosystemSection } from '@/components/home/TechEcosystemSection';
+import { ClientFAQSection } from '@/components/home/ClientFAQSection';
 import { FinalConversionSection } from '@/components/home/FinalConversionSection';
 import { COMPANY_INFO } from '@/data/siteData';
 
@@ -29,25 +31,31 @@ export default function HomePage() {
       {/* 02: Kinetic Infinite Marquee Strip */}
       <KineticTicker />
 
-      {/* 03: Brand Introduction (Architectural 3-Column Grid) */}
+      {/* 03: Brand Introduction (Executive 3-Column Value Architecture) */}
       <BrandIntroSection />
 
-      {/* 04: Core Capabilities (Luxury Editorial Specification, No Toy Cards) */}
+      {/* 04: Client Solutions (Common Business Challenges & Tangible Results) */}
+      <ProblemsWeSolveSection />
+
+      {/* 05: Core Capabilities (Three Interconnected Pillars & Deliverables) */}
       <CoreCapabilitiesSection />
 
-      {/* 05: Why Motive Technologies (Authoritative Operating Principles Index) */}
+      {/* 06: Why Motive Technologies (Authoritative Operating Principles Index) */}
       <WhyMotiveSection />
 
-      {/* 06: Our Approach (5-Phase Delivery Timeline) */}
+      {/* 07: Our Approach (5-Phase Delivery Timeline) */}
       <OurApproachSection />
 
-      {/* 07: Selected Work (Verified Case Architectures) */}
+      {/* 08: Selected Work (Verified Case Architectures & Client Outcomes) */}
       <SelectedWorkSection />
 
-      {/* 08: Technology & Innovation Ecosystem (Clean Runtime Matrix) */}
+      {/* 09: Technology & Innovation Ecosystem (Clean Runtime Matrix) */}
       <TechEcosystemSection />
 
-      {/* 09: Final Conversion Closing */}
+      {/* 10: Client Guide & FAQ (Clear Answers for Confident Decisions) */}
+      <ClientFAQSection />
+
+      {/* 11: Final Conversion Closing */}
       <FinalConversionSection />
     </>
   );

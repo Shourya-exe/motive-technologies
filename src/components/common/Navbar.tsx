@@ -128,7 +128,11 @@ export const Navbar: React.FC = () => {
                                 <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-motive-red" />
                               </div>
                               <p className="text-[11px] text-motive-grey line-clamp-1 mt-0.5">
-                                {service.category}
+                                {service.id === 'ai-automation'
+                                  ? 'AI agents, WhatsApp & workflow pipelines'
+                                  : service.id === 'web-app-development'
+                                  ? 'Custom websites, platforms & mobile apps'
+                                  : 'Technical SEO & top Google rankings'}
                               </p>
                             </div>
                           </Link>

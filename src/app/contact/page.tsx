@@ -55,11 +55,35 @@ export default function ContactPage() {
               </p>
             </div>
 
-            {/* Direct Phone Cards */}
+            {/* Direct Phone & WhatsApp Cards */}
             <div className="space-y-4">
+              {/* Dedicated WhatsApp Card */}
+              <div className="p-6 bg-emerald-50/60 border border-emerald-200 rounded-xl space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-800 font-bold block">
+                    Official WhatsApp
+                  </span>
+                  <span className="text-[10px] font-mono text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded font-semibold">
+                    Fast Response
+                  </span>
+                </div>
+                <a
+                  href={COMPANY_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl font-bold font-mono text-emerald-950 hover:text-emerald-700 transition-colors flex items-center gap-2"
+                >
+                  <MessageSquare className="w-5 h-5 text-emerald-600" />
+                  <span>{COMPANY_INFO.whatsappNumber}</span>
+                </a>
+                <p className="text-xs text-emerald-800">
+                  Instant scoping &amp; project inquiries directly on WhatsApp.
+                </p>
+              </div>
+
               <div className="p-6 bg-motive-offwhite border border-motive-border rounded-xl">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-motive-grey block mb-1">
-                  Primary Line (Call / WhatsApp)
+                  Primary Voice Line
                 </span>
                 <a
                   href={`tel:${COMPANY_INFO.primaryPhone.replace(/\s+/g, '')}`}

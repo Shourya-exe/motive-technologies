@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { PROJECTS } from '@/data/siteData';
 
 export const SelectedWorkSection: React.FC = () => {
@@ -24,14 +24,14 @@ export const SelectedWorkSection: React.FC = () => {
             <div className="inline-flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-motive-red" />
               <span className="font-mono text-xs font-bold uppercase tracking-widest text-motive-grey">
-                SELECTED PROJECTS // VERIFIED ARCHITECTURES
+                PROVEN RESULTS // REAL CLIENT CASE ARCHITECTURES
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-motive-black leading-tight">
-              Ideas transformed into real solutions.
+              Ideas transformed into real business solutions.
             </h2>
             <p className="text-sm sm:text-base text-motive-grey leading-relaxed">
-              Explore verified technical architectures delivered across automated workflows, high-performance web systems, and organic search visibility.
+              Explore verified case studies delivered across intelligent automation pipelines, high-performance web systems, and organic search visibility.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export const SelectedWorkSection: React.FC = () => {
               href="/work"
               className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-motive-black hover:text-motive-red transition-colors group"
             >
-              <span>View All Project Specifications</span>
+              <span>View All Client Case Studies</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-motive-red" />
             </Link>
           </div>
@@ -63,19 +63,19 @@ export const SelectedWorkSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Editorial Case Study List (No clunky cards, pure luxury editorial presentation) */}
+        {/* Editorial Case Study List */}
         <div className="divide-y divide-motive-border">
           {filteredProjects.map((project, idx) => (
             <div
               key={project.id}
-              className="py-14 sm:py-16 group hover:bg-white transition-colors px-6 -mx-6 rounded"
+              className="py-14 sm:py-16 group hover:bg-white transition-colors px-6 -mx-6 rounded-lg"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
                 {/* Meta Column (3 cols on lg) */}
                 <div className="lg:col-span-3 space-y-2">
                   <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest block">
-                    CASE // 0{idx + 1}
+                    CASE STUDY // 0{idx + 1}
                   </span>
                   <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block">
                     {project.category}
@@ -95,10 +95,14 @@ export const SelectedWorkSection: React.FC = () => {
                     {project.summary}
                   </p>
 
+                  {/* Concrete Outcomes */}
                   <div className="space-y-2 pt-2">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-motive-black font-bold block mb-1">
+                      Verified Client Outcomes:
+                    </span>
                     {project.outcomes.map((outcome, oIdx) => (
-                      <div key={oIdx} className="flex items-start gap-2.5 text-xs text-motive-black font-medium">
-                        <span className="text-motive-red font-bold shrink-0">&rarr;</span>
+                      <div key={oIdx} className="flex items-start gap-2.5 text-xs text-motive-black font-medium leading-relaxed">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0 mt-0.5" />
                         <span>{outcome}</span>
                       </div>
                     ))}
@@ -120,10 +124,10 @@ export const SelectedWorkSection: React.FC = () => {
                 <div className="lg:col-span-3 lg:text-right pt-2">
                   <Link
                     href={`/work#${project.id}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-motive-black group-hover:text-motive-red transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-motive-border hover:border-motive-red text-xs font-mono font-bold uppercase tracking-wider text-motive-black group-hover:text-motive-red transition-all rounded shadow-subtle"
                   >
-                    <span>Inspect System</span>
-                    <ArrowUpRight className="w-4 h-4 text-motive-red" />
+                    <span>View Case Study</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-motive-red" />
                   </Link>
                 </div>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface BrandLogoProps {
   variant?: 'light' | 'dark';
@@ -12,21 +13,24 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   size = 'md',
   withTagline = false,
 }) => {
-  const isDarkBg = variant === 'light'; // on dark background, logo is white
+  const isDarkBg = variant === 'light'; // on dark background, text is white
 
   const sizeClasses = {
     sm: {
-      mark: 'w-7 h-7 text-xs',
+      width: 44,
+      height: 24,
       title: 'text-sm tracking-tight',
       sub: 'text-[9px] tracking-widest',
     },
     md: {
-      mark: 'w-8 h-8 text-sm',
+      width: 54,
+      height: 30,
       title: 'text-base tracking-tight font-bold',
       sub: 'text-[10px] tracking-widest font-medium',
     },
     lg: {
-      mark: 'w-10 h-10 text-base',
+      width: 72,
+      height: 40,
       title: 'text-xl tracking-tight font-bold',
       sub: 'text-xs tracking-widest font-medium',
     },
@@ -35,23 +39,18 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <Link
       href="/"
-      className="group inline-flex items-center gap-2.5 select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-motive-red"
+      className="group inline-flex items-center gap-3 select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-motive-red"
       aria-label="Motive Technologies - Homepage"
     >
-      {/* Precision Geometric Monogram Symbol */}
-      <div
-        className={`relative ${sizeClasses.mark} flex items-center justify-center font-mono font-bold transition-transform duration-300 group-hover:scale-105 ${
-          isDarkBg
-            ? 'bg-white text-black'
-            : 'bg-motive-black text-white'
-        }`}
-        style={{ borderRadius: '2px' }}
-      >
-        <span className="relative z-10 font-bold tracking-tighter">M</span>
-        {/* Subtle signature red indicator pip */}
-        <span
-          className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-motive-red"
-          aria-hidden="true"
+      {/* Motive Technologies Official 3D Metallic Emblem */}
+      <div className="relative shrink-0 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+        <Image
+          src={isDarkBg ? '/images/motive-logo.png' : '/images/motive-logo-light.png'}
+          alt="Motive Technologies Logo"
+          width={sizeClasses.width}
+          height={sizeClasses.height}
+          className="w-auto h-auto object-contain"
+          priority
         />
       </div>
 
@@ -74,7 +73,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           </span>
         </div>
         {withTagline && (
-          <span className="text-[9px] tracking-widest font-mono uppercase text-motive-grey mt-0.5">
+          <span className="text-[9px] tracking-widest font-mono uppercase text-motive-grey mt-1">
             INNOVATE. AUTOMATE. TRANSFORM.
           </span>
         )}

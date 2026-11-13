@@ -135,7 +135,7 @@ export const ContactForm: React.FC = () => {
       setIsSubmitting(false);
     } catch (err) {
       setErrors({
-        general: 'Unable to reach submission endpoint. Please call +91 7003526440 directly.',
+        general: `Unable to reach submission endpoint. Please call ${COMPANY_INFO.primaryPhone} or WhatsApp ${COMPANY_INFO.whatsappNumber} directly.`,
       });
       setIsSubmitting(false);
     }

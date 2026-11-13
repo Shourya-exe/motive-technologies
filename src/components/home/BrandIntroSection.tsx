@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Layout, TrendingUp } from 'lucide-react';
 
 export const BrandIntroSection: React.FC = () => {
   return (
@@ -19,66 +19,105 @@ export const BrandIntroSection: React.FC = () => {
               </span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-motive-black leading-[1.08]">
-              Technology should move businesses forward.
+              Technology should move your business forward.
             </h2>
           </div>
 
           <div className="lg:col-span-7 lg:pl-8 space-y-6">
             <p className="text-lg sm:text-xl text-motive-black font-medium leading-relaxed">
-              At Motive Technologies, we believe technology is most valuable when it solves real problems. We bring together intelligent automation, thoughtful engineering and digital growth strategies to help businesses build stronger, smarter and more scalable operations.
+              At Motive Technologies, we believe technology is most valuable when it solves concrete business problems. We unite intelligent automation, thoughtful engineering, and organic search growth so your company operates smoother, closes deals faster, and scales predictably.
             </p>
             <p className="text-sm sm:text-base text-motive-grey leading-relaxed">
-              Too often, modern companies struggle with fragmented software stacks, manual administrative bottlenecks, and static websites that fail to generate commercial pipeline. We construct unified, intelligent architectures that tie your daily operations directly to customer engagement and revenue velocity.
+              Too many growing businesses struggle with disconnected software tools, hours wasted on repetitive administrative tasks, and static websites that fail to attract real paying clients. We engineer unified digital solutions that automate your daily workload and turn your online presence into a dependable growth engine.
             </p>
             <div className="pt-2">
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-motive-black hover:text-motive-red transition-colors group"
               >
-                <span>Discover Motive Technologies</span>
+                <span>Learn More About Our Philosophy</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-motive-red" />
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Architectural 3-Column Systems Architecture (No Cards, Pure Editorial Columns) */}
+        {/* Architectural 3-Column Systems Architecture - Executive & Understandable */}
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-motive-border border-b border-motive-border">
           
+          {/* Pillar 1 */}
           <div className="pb-8 md:pb-0 md:pr-8 space-y-4">
-            <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest block">
-              // 01 &bull; SYSTEM CONVERGENCE
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
+                01 // WORKFLOW AUTOMATION
+              </span>
+            </div>
             <h3 className="text-xl font-bold text-motive-black">
-              Unified Digital Operations
+              Automate Everyday Operations
             </h3>
             <p className="text-sm text-motive-grey leading-relaxed">
-              Connecting customer contact points—such as WhatsApp Business API, corporate portals, and transactional webhooks—directly into autonomous backend logic and automated task execution.
+              Eliminate tedious spreadsheets, manual email follow-ups, and repetitive data entry. We connect your tools, WhatsApp, and CRM so your business operates smoothly 24/7 without delays or human error.
             </p>
+            <ul className="space-y-1.5 pt-2 text-xs text-zinc-600 font-medium">
+              <li className="flex items-center gap-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
+                <span>Instant 24/7 WhatsApp customer replies</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
+                <span>Automated invoicing, leads &amp; CRM sync</span>
+              </li>
+            </ul>
           </div>
 
+          {/* Pillar 2 */}
           <div className="py-8 md:py-0 md:px-8 space-y-4">
-            <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest block">
-              // 02 &bull; COGNITIVE REASONING
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
+                02 // BESPOKE DIGITAL PRESENCE
+              </span>
+            </div>
             <h3 className="text-xl font-bold text-motive-black">
-              Autonomous Intelligence
+              High-Converting Web &amp; Mobile
             </h3>
             <p className="text-sm text-motive-grey leading-relaxed">
-              Deploying verified AI agent routines that triage customer inquiries, extract structured metadata, and perform routine decision-making with deterministic guardrails and strict human oversight.
+              Elevate your company with custom-designed, lightning-fast corporate websites, mobile apps, and client portals that build immediate institutional trust and turn visitors into high-value clients.
             </p>
+            <ul className="space-y-1.5 pt-2 text-xs text-zinc-600 font-medium">
+              <li className="flex items-center gap-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
+                <span>Sub-second page loads with modern Next.js</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
+                <span>Bespoke client portals &amp; mobile apps</span>
+              </li>
+            </ul>
           </div>
 
+          {/* Pillar 3 */}
           <div className="pt-8 md:pt-0 md:pl-8 space-y-4">
-            <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest block">
-              // 03 &bull; PERFORMANCE ARCHITECTURE
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
+                03 // SUSTAINABLE ACQUISITION
+              </span>
+            </div>
             <h3 className="text-xl font-bold text-motive-black">
-              Engineered for Compounding Value
+              Predictable Inbound Growth
             </h3>
             <p className="text-sm text-motive-grey leading-relaxed">
-              Building on rock-solid web infrastructure, type-safe Next.js codebases, and clean semantic structures that continuously improve organic search visibility and user retention over years of operation.
+              Stop relying solely on expensive paid ads. Our technical SEO, keyword strategy, and content architecture put your brand at the very top of Google when high-intent buyers search for your services.
             </p>
+            <ul className="space-y-1.5 pt-2 text-xs text-zinc-600 font-medium">
+              <li className="flex items-center gap-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
+                <span>Top Google rankings for buying-intent keywords</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
+                <span>Compounding inbound traffic without monthly ad spend</span>
+              </li>
+            </ul>
           </div>
 
         </div>

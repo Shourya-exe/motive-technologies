@@ -51,10 +51,13 @@ export const COMPANY_INFO = {
   phones: [
     { display: '+91 7003526440', raw: '+917003526440', label: 'Primary Contact' },
     { display: '+91 6289056881', raw: '+916289056881', label: 'Direct Line' },
+    { display: '+91 8777245321', raw: '+918777245321', label: 'WhatsApp' },
   ],
   primaryPhone: '+91 7003526440',
   secondaryPhone: '+91 6289056881',
-  whatsappUrl: 'https://wa.me/917003526440',
+  whatsappNumber: '+91 8777245321',
+  whatsappRaw: '+918777245321',
+  whatsappUrl: 'https://wa.me/918777245321',
   foundedYear: '2024',
   currentYear: '2026',
   corePillars: [

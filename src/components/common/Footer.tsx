@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { BrandLogo } from './BrandLogo';
-import { ArrowUpRight, Phone, Globe, Shield, Terminal } from 'lucide-react';
+import { ArrowUpRight, Phone, Globe, Shield, Terminal, MessageCircle } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
 
 export const Footer: React.FC = () => {
@@ -134,6 +134,21 @@ export const Footer: React.FC = () => {
             </h4>
             
             <div className="space-y-3 text-sm">
+              <div>
+                <span className="text-[11px] font-mono uppercase text-emerald-400 block font-semibold">
+                  WhatsApp
+                </span>
+                <a
+                  href={COMPANY_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-emerald-400 transition-colors font-mono font-medium inline-flex items-center gap-1.5 mt-0.5"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>{COMPANY_INFO.whatsappNumber}</span>
+                </a>
+              </div>
+
               <div>
                 <span className="text-[11px] font-mono uppercase text-zinc-400 block">
                   Primary Phone

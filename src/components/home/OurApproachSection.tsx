@@ -34,29 +34,40 @@ export const OurApproachSection: React.FC = () => {
         </div>
 
         {/* Minimal Timeline Phase Selector */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 pt-12 pb-8 border-b border-motive-border">
-          {PROCESS_STEPS.map((step, idx) => (
-            <button
-              key={step.number}
-              type="button"
-              onClick={() => setActiveStep(idx)}
-              className={`text-left pb-4 border-b-2 transition-all duration-200 ${
-                activeStep === idx
-                  ? 'border-motive-red text-motive-black'
-                  : 'border-transparent text-motive-grey hover:text-motive-black'
-              }`}
-            >
-              <span className="font-mono text-xs font-bold block mb-1">
-                PHASE {step.number}
-              </span>
-              <span className="text-base font-bold tracking-tight block">
-                {step.name}
-              </span>
-            </button>
-          ))}
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-12 pb-8 border-b border-motive-border">
+          {PROCESS_STEPS.map((step, idx) => {
+            const isActive = activeStep === idx;
+            return (
+              <button
+                key={step.number}
+                type="button"
+                onClick={() => setActiveStep(idx)}
+                className={`group text-left p-4 rounded-lg transition-all duration-200 cursor-pointer border ${
+                  isActive
+                    ? 'bg-motive-black text-white border-motive-black shadow-md'
+                    : 'bg-white text-motive-grey border-motive-border hover:bg-zinc-100 hover:text-motive-black hover:border-zinc-300 hover:shadow-sm'
+                }`}
+              >
+                <span
+                  className={`font-mono text-xs font-bold block mb-1 transition-colors duration-150 ${
+                    isActive ? 'text-motive-red' : 'text-zinc-500 group-hover:text-motive-red'
+                  }`}
+                >
+                  PHASE {step.number}
+                </span>
+                <span
+                  className={`text-base font-bold tracking-tight block transition-colors duration-150 ${
+                    isActive ? 'text-white' : 'text-motive-black group-hover:text-black font-semibold'
+                  }`}
+                >
+                  {step.name}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
-        {/* Active Stage Detailed Breakdown (Clean luxury editorial display) */}
+        {/* Active Stage Detailed Breakdown */}
         <div className="py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
@@ -97,30 +108,53 @@ export const OurApproachSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Stage Summary Index */}
-            <div className="lg:col-span-5 bg-white p-6 sm:p-8 rounded border border-motive-border shadow-subtle space-y-4">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block border-b border-motive-border pb-3">
-                METHODOLOGY STAGES // 0{activeStep + 1} OF 05
-              </span>
+            {/* Stage Summary Index - Interactive & Turns Dark on Hover */}
+            <div className="lg:col-span-5 bg-white p-6 sm:p-8 rounded-xl border border-motive-border shadow-subtle space-y-4">
+              <div className="flex items-center justify-between border-b border-motive-border pb-3">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 block font-semibold">
+                  METHODOLOGY STAGES // 0{activeStep + 1} OF 05
+                </span>
+                <span className="text-[10px] font-mono text-motive-red font-semibold">
+                  CLICK TO SWITCH
+                </span>
+              </div>
 
-              <div className="space-y-3 font-mono text-xs">
-                {PROCESS_STEPS.map((s, idx) => (
-                  <div
-                    key={s.number}
-                    className={`py-2 px-3 rounded flex items-center justify-between transition-colors ${
-                      idx === activeStep
-                        ? 'bg-motive-black text-white font-bold'
-                        : idx < activeStep
-                        ? 'text-zinc-400 line-through'
-                        : 'text-zinc-500 hover:text-motive-black'
-                    }`}
-                  >
-                    <span>{s.number}. {s.name}</span>
-                    <span className="text-[10px] text-motive-red font-normal">
-                      {idx === activeStep ? 'IN FOCUS' : idx < activeStep ? 'PASSED' : 'QUEUED'}
-                    </span>
-                  </div>
-                ))}
+              <div className="space-y-2 font-mono text-xs">
+                {PROCESS_STEPS.map((s, idx) => {
+                  const isActive = idx === activeStep;
+                  return (
+                    <button
+                      key={s.number}
+                      type="button"
+                      onClick={() => setActiveStep(idx)}
+                      className={`w-full py-3 px-4 rounded-lg flex items-center justify-between text-left transition-all duration-200 cursor-pointer group ${
+                        isActive
+                          ? 'bg-motive-black text-white font-bold shadow-md scale-[1.01]'
+                          : 'bg-zinc-50 text-zinc-600 hover:bg-zinc-200/80 hover:text-black hover:shadow-sm'
+                      }`}
+                    >
+                      <span className="flex items-center gap-2.5">
+                        <span
+                          className={`w-1.5 h-1.5 rounded-full transition-colors duration-150 ${
+                            isActive ? 'bg-motive-red' : 'bg-zinc-400 group-hover:bg-motive-red'
+                          }`}
+                        />
+                        <span className={`transition-colors duration-150 ${isActive ? 'text-white' : 'text-zinc-700 group-hover:text-black font-semibold'}`}>
+                          {s.number}. {s.name}
+                        </span>
+                      </span>
+                      <span
+                        className={`text-[10px] font-semibold tracking-wider transition-colors duration-150 ${
+                          isActive
+                            ? 'text-motive-red'
+                            : 'text-zinc-400 group-hover:text-motive-red'
+                        }`}
+                      >
+                        {isActive ? 'IN FOCUS' : idx < activeStep ? 'PASSED' : 'QUEUED'}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 

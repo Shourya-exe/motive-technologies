@@ -13,6 +13,7 @@ A premium, high-performance corporate web platform engineered for **Motive Techn
 - **Official Domain**: [www.motivetechnologies.in](https://www.motivetechnologies.in)
 - **Primary Phone**: `+91 7003526440`
 - **Direct Line**: `+91 6289056881`
+- **WhatsApp**: `+91 8777245321`
 - **Brand Tagline**: `INNOVATE. AUTOMATE. TRANSFORM.`
 - **Brand Statement**: `SMARTER AUTOMATION. A BRIGHTER TOMORROW.`
 
