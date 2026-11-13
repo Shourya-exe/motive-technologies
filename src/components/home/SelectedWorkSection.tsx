@@ -52,10 +52,11 @@ export const SelectedWorkSection: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedFilter(cat)}
+              aria-label={`Filter projects by ${cat}`}
               className={`px-4 py-2 text-xs font-mono uppercase tracking-wider transition-colors rounded ${
                 selectedFilter === cat
                   ? 'bg-motive-black text-white font-bold'
-                  : 'bg-white text-motive-grey border border-motive-border hover:text-motive-black hover:border-zinc-400'
+                  : 'bg-white text-zinc-700 border border-motive-border hover:text-motive-black hover:border-zinc-400'
               }`}
             >
               {cat}
@@ -77,7 +78,7 @@ export const SelectedWorkSection: React.FC = () => {
                   <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest block">
                     CASE STUDY // 0{idx + 1}
                   </span>
-                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block">
+                  <span className="text-xs font-mono text-zinc-600 font-semibold uppercase tracking-wider block">
                     {project.category}
                   </span>
                   <p className="text-xs text-motive-grey font-mono pt-1">

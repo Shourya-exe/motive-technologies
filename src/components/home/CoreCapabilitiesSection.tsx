@@ -10,14 +10,14 @@ export const CoreCapabilitiesSection: React.FC = () => {
     {
       id: 'ai-automation',
       icon: Bot,
-      clientOutcome: 'Save 20–40 hours/week by automating repetitive tasks, WhatsApp customer service, and CRM updates.',
+      clientOutcome: 'Save 20–40 hours/week by deploying the best AI agents development, 24/7 WhatsApp customer service, and automated CRM pipelines.',
       keyCapabilities: [
-        'Autonomous AI Agents & Task Execution',
-        '24/7 WhatsApp Business API & Lead Qualification',
+        'Best AI Agents Development & Multi-Agent Systems',
+        '24/7 WhatsApp Business API & Autonomous Lead Qualification',
         'Custom Workflow Automation (CRM, Invoicing, Forms)',
-        'Zero-Error Data Synchronization Across Apps',
+        'Zero-Error Data Synchronization Across Enterprise Apps',
       ],
-      ctaText: 'Explore AI Automation Services',
+      ctaText: 'Explore Best AI Agents & Automation',
     },
     {
       id: 'web-app-development',
@@ -34,14 +34,14 @@ export const CoreCapabilitiesSection: React.FC = () => {
     {
       id: 'seo-digital-growth',
       icon: TrendingUp,
-      clientOutcome: 'Dominate Google search results on high-intent commercial queries to generate steady inbound leads.',
+      clientOutcome: 'Dominate Google search results on high-intent commercial queries and get cited in AI Answer Engines.',
       keyCapabilities: [
         'Full Technical SEO & Core Web Vitals Audits',
+        'AEO & GEO Optimization for Perplexity & ChatGPT',
         'High-Intent Keyword & Semantic Entity Strategy',
         'Structured Schema Markup & Crawl Optimization',
-        'Sustainable Inbound Leads Without Monthly Ad Spend',
       ],
-      ctaText: 'Explore SEO & Digital Growth',
+      ctaText: 'Explore SEO, AEO & Growth',
     },
   ];
 
@@ -90,7 +90,7 @@ export const CoreCapabilitiesSection: React.FC = () => {
                       <span className="font-mono text-3xl sm:text-4xl font-light text-motive-grey group-hover:text-motive-red transition-colors">
                         0{idx + 1}
                       </span>
-                      <span className="font-mono text-xs uppercase tracking-widest text-zinc-400">
+                      <span className="font-mono text-xs uppercase tracking-widest text-zinc-600 font-semibold">
                         // {service.category}
                       </span>
                     </div>
@@ -99,7 +99,7 @@ export const CoreCapabilitiesSection: React.FC = () => {
                       <Icon className="w-5 h-5" />
                     </div>
 
-                    <p className="text-xs font-mono text-zinc-400 pt-1">
+                    <p className="text-xs font-mono text-zinc-600 font-medium pt-1">
                       ENTERPRISE SPECIFICATION
                     </p>
                   </div>
@@ -157,13 +157,14 @@ export const CoreCapabilitiesSection: React.FC = () => {
                       ))}
                     </ul>
 
-                    <div className="mt-6 pt-4 border-t border-motive-border flex items-center justify-between text-[10px] font-mono text-zinc-400">
+                    <div className="mt-6 pt-4 border-t border-motive-border flex items-center justify-between text-[10px] font-mono text-zinc-600 font-medium">
                       <span>TYPE-SAFE &bull; AUDITED</span>
                       <span>PRODUCTION-GRADE</span>
                     </div>
                   </div>
 
                 </div>
+
               </div>
             );
           })}

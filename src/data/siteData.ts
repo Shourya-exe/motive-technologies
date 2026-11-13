@@ -48,7 +48,7 @@ export const COMPANY_INFO = {
   tagline: 'INNOVATE. AUTOMATE. TRANSFORM.',
   statement: 'SMARTER AUTOMATION. A BRIGHTER TOMORROW.',
   headline: 'Building Intelligent Systems for a Smarter Business Future.',
-  subheadline: 'We combine AI automation, powerful digital engineering and strategic SEO to help businesses streamline operations, create better digital experiences and grow with confidence.',
+  subheadline: 'We combine the best AI agents development, autonomous business workflow automation, powerful digital engineering, and strategic SEO/AEO/GEO to help businesses streamline operations, create better digital experiences, and grow with confidence.',
   phones: [
     { display: '+91 7003526440', raw: '+917003526440', label: 'Primary Contact' },
     { display: '+91 6289056881', raw: '+916289056881', label: 'Direct Line' },
@@ -72,16 +72,16 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'ai-automation',
     slug: 'ai-automation',
-    title: 'AI Automation & Intelligent Systems',
-    shortDescription: 'Transform repetitive processes into intelligent workflows. We design AI-powered systems and automation solutions that help businesses operate more efficiently.',
+    title: 'AI Automation & Best AI Agents Development',
+    shortDescription: 'Transform repetitive processes into intelligent workflows. We engineer the best AI agents development and automation solutions that help modern businesses operate with sub-second precision.',
     category: 'AI & Automation',
-    headline: 'Make Your Business Work Smarter.',
-    subheadline: 'Eliminate friction, connect disconnected enterprise tools, and empower human teams with autonomous AI agents and automated operational pipelines.',
-    fullDescription: 'We build end-to-end autonomous business systems that handle complex multi-step workflows, cross-platform integrations, and real-time customer engagements without human bottlenecks.',
+    headline: 'Make Your Business Work Smarter with Autonomous AI Agents.',
+    subheadline: 'Eliminate friction, connect disconnected enterprise tools, and empower human teams with the best AI agents development and automated operational pipelines.',
+    fullDescription: 'We build end-to-end autonomous business systems and custom multi-agent architectures that handle complex multi-step workflows, cross-platform integrations, and real-time customer engagements without human bottlenecks.',
     capabilities: [
       {
-        title: 'AI Agent Development',
-        description: 'Autonomous, goal-driven agents capable of parsing unstructured data, executing reasoning chains, and triggering multi-system actions safely.',
+        title: 'Best AI Agents Development',
+        description: 'Industry-leading autonomous, goal-driven agents capable of parsing unstructured data, executing reasoning chains, and triggering multi-system actions safely.',
       },
       {
         title: 'Business Process Automation',
@@ -275,13 +275,13 @@ export const SERVICES: ServiceItem[] = [
 export const PROJECTS: ProjectItem[] = [
   {
     id: 'enterprise-whatsapp-crm-automation',
-    title: 'Autonomous WhatsApp & CRM Lead Orchestrator',
+    title: 'Autonomous WhatsApp & CRM AI Agent Orchestrator',
     category: 'AI & Automation',
     clientType: 'Commercial Enterprise (Verified Case Architecture)',
-    summary: 'A bi-directional conversational AI agent handling incoming business leads, verifying requirements, and synchronizing CRM state in under 12 seconds.',
+    summary: 'Best AI agents development in practice: a bi-directional conversational AI agent handling incoming business leads, verifying requirements, and synchronizing CRM state in under 12 seconds.',
     description: 'Designed and deployed an intelligent conversational flow utilizing WhatsApp Cloud API, webhook dispatchers, and LLM-guided intent extraction. The system triages customer requests, classifies urgency, answers pricing and specification queries from verified documentation, and logs structured contact records into the database.',
     challenge: 'High customer drop-off during off-hours, manual response times exceeding 4 hours, and fragmented lead entries across WhatsApp chats and spreadsheets.',
-    solution: 'Engineered an asynchronous Node.js webhook worker cluster with OpenAI API integration, automated guardrails against hallucination, and instant notification hooks for key sales reps.',
+    solution: 'Engineered the best AI agent development pipeline: an asynchronous Node.js webhook worker cluster with OpenAI API integration, automated guardrails against hallucination, and instant notification hooks for key sales reps.',
     outcomes: [
       'Reduced average first-response latency from 4.2 hours to under 12 seconds',
       'Automated qualification for 82% of inbound prospect inquiries',
@@ -347,10 +347,10 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: 'custom-internal-knowledge-ai-bot',
-    title: 'Proprietary Document Retrieval & Semantic Assistant',
+    title: 'Enterprise Multi-Agent Document Intelligence Assistant',
     category: 'AI & Automation',
     clientType: 'Engineering Consultancy',
-    summary: 'Internal enterprise RAG assistant enabling engineering staff to query 15,000+ technical specification sheets with cited source references.',
+    summary: 'Best AI agents development for knowledge retrieval: an internal enterprise RAG assistant enabling engineering staff to query 15,000+ technical specification sheets with cited source references.',
     description: 'Built a secure, hallucination-resistant internal intelligence tool. Ingests technical blueprints, PDF equipment guidelines, and safety manuals into a vector store. Engineers can ask questions in natural language and receive verifiable answers with exact page citations.',
     challenge: 'Engineers spent an estimated 6 hours per week searching through decentralized PDFs and outdated shared network drives to locate component tolerances.',
     solution: 'Built a chunking and embedding pipeline using pgvector and OpenAI embeddings, paired with a clean, fast internal search interface.',

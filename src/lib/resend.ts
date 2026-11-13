@@ -23,7 +23,7 @@ export interface SendEmailResult {
   skipped?: boolean;
 }
 
-// Target recipient address as requested
+// Target recipient address
 export const DEFAULT_RECEIVER_EMAIL = 'motivetechnologies1@gmail.com';
 
 // Sender identity - defaults to Resend testing domain until custom domain is verified

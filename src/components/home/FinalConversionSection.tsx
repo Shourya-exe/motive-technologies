@@ -68,7 +68,7 @@ export const FinalConversionSection: React.FC = () => {
         </div>
 
         {/* Trust & Guarantee Markers */}
-        <div className="pt-8 border-t border-zinc-800/80 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-mono text-zinc-500">
+        <div className="pt-8 border-t border-zinc-800/80 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-mono text-zinc-400 font-medium">
           <span className="flex items-center gap-1.5">
             <Zap className="w-3.5 h-3.5 text-motive-red" />
             <span>Free Discovery &amp; Initial Architecture Scoping</span>

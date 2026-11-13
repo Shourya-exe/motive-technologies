@@ -44,7 +44,7 @@ export const WhyMotiveSection: React.FC = () => {
                   <span className="text-2xl font-light text-motive-grey group-hover:text-motive-red transition-colors">
                     {principle.number}
                   </span>
-                  <span className="text-xs text-zinc-400">/ 05</span>
+                  <span className="text-xs text-zinc-600 font-medium">/ 05</span>
                 </div>
 
                 {/* Principle Title */}

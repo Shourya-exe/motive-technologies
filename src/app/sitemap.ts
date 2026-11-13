@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { COMPANY_INFO, SERVICES, PROJECTS } from '@/data/siteData';
+import { BLOG_POSTS } from '@/data/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = COMPANY_INFO.url;
@@ -37,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
@@ -68,5 +75,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return staticRoutes;
+  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly',
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }

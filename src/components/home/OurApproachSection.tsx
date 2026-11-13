@@ -42,10 +42,11 @@ export const OurApproachSection: React.FC = () => {
                 key={step.number}
                 type="button"
                 onClick={() => setActiveStep(idx)}
+                aria-label={`Select methodology phase ${step.number}: ${step.name}`}
                 className={`group text-left p-4 rounded-lg transition-all duration-200 cursor-pointer border ${
                   isActive
                     ? 'bg-motive-black text-white border-motive-black shadow-md'
-                    : 'bg-white text-motive-grey border-motive-border hover:bg-zinc-100 hover:text-motive-black hover:border-zinc-300 hover:shadow-sm'
+                    : 'bg-white text-zinc-700 border-motive-border hover:bg-zinc-100 hover:text-motive-black hover:border-zinc-300 hover:shadow-sm'
                 }`}
               >
                 <span
@@ -127,19 +128,20 @@ export const OurApproachSection: React.FC = () => {
                       key={s.number}
                       type="button"
                       onClick={() => setActiveStep(idx)}
+                      aria-label={`Switch to stage ${s.number}: ${s.name}`}
                       className={`w-full py-3 px-4 rounded-lg flex items-center justify-between text-left transition-all duration-200 cursor-pointer group ${
                         isActive
                           ? 'bg-motive-black text-white font-bold shadow-md scale-[1.01]'
-                          : 'bg-zinc-50 text-zinc-600 hover:bg-zinc-200/80 hover:text-black hover:shadow-sm'
+                          : 'bg-zinc-50 text-zinc-700 hover:bg-zinc-200/80 hover:text-black hover:shadow-sm'
                       }`}
                     >
                       <span className="flex items-center gap-2.5">
                         <span
                           className={`w-1.5 h-1.5 rounded-full transition-colors duration-150 ${
-                            isActive ? 'bg-motive-red' : 'bg-zinc-400 group-hover:bg-motive-red'
+                            isActive ? 'bg-motive-red' : 'bg-zinc-500 group-hover:bg-motive-red'
                           }`}
                         />
-                        <span className={`transition-colors duration-150 ${isActive ? 'text-white' : 'text-zinc-700 group-hover:text-black font-semibold'}`}>
+                        <span className={`transition-colors duration-150 ${isActive ? 'text-white' : 'text-zinc-800 group-hover:text-black font-semibold'}`}>
                           {s.number}. {s.name}
                         </span>
                       </span>
@@ -147,7 +149,7 @@ export const OurApproachSection: React.FC = () => {
                         className={`text-[10px] font-semibold tracking-wider transition-colors duration-150 ${
                           isActive
                             ? 'text-motive-red'
-                            : 'text-zinc-400 group-hover:text-motive-red'
+                            : 'text-zinc-600 group-hover:text-motive-red'
                         }`}
                       >
                         {isActive ? 'IN FOCUS' : idx < activeStep ? 'PASSED' : 'QUEUED'}

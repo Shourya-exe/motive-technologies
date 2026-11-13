@@ -35,6 +35,7 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Our Work', href: '/work' },
+    { label: 'Blog', href: '/blog' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ];
@@ -85,6 +86,8 @@ export const Navbar: React.FC = () => {
                     : 'text-motive-grey hover:text-motive-black'
                 }`}
                 aria-expanded={servicesDropdownOpen}
+                aria-haspopup="true"
+                aria-label="Capabilities and services menu"
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
               >
                 <span>Services</span>
@@ -163,6 +166,17 @@ export const Navbar: React.FC = () => {
               }`}
             >
               Our Work
+            </Link>
+
+            <Link
+              href="/blog"
+              className={`px-3 py-1.5 rounded transition-colors duration-150 ${
+                pathname.startsWith('/blog')
+                  ? 'text-motive-black font-semibold'
+                  : 'text-motive-grey hover:text-motive-black'
+              }`}
+            >
+              Blog
             </Link>
 
             <Link

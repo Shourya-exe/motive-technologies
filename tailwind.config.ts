@@ -2,9 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -13,17 +11,17 @@ const config: Config = {
           white: "#FFFFFF",
           offwhite: "#F7F7F7",
           black: "#111111",
-          grey: "#777777",
-          lightgrey: "#A3A3A3",
+          grey: "#4B5563",
+          lightgrey: "#6B7280",
           border: "#E8E8E8",
           dark: "#090909",
           darkborder: "#1F1F1F",
           darkcard: "#121212",
           red: {
-            DEFAULT: "#ED1C2E",
-            hover: "#D61626",
-            light: "rgba(237, 28, 46, 0.08)",
-            border: "rgba(237, 28, 46, 0.2)",
+            DEFAULT: "#DC2626",
+            hover: "#B91C1C",
+            light: "rgba(220, 38, 38, 0.08)",
+            border: "rgba(220, 38, 38, 0.25)",
           },
         },
       },

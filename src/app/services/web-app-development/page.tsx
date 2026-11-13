@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Code2, Smartphone, Database, Layout, ShieldCheck, CheckCircle2, Layers, Cpu, Server, Terminal } from 'lucide-react';
+import { ArrowRight, Code2, Smartphone, Database, Layout, ShieldCheck, CheckCircle2, Layers, Cpu, Server, Terminal, Sparkles } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
+import { DirectAnswerBlock } from '@/components/common/DirectAnswerBlock';
 
 export default function WebAppDevelopmentPage() {
   const serviceData = SERVICES.find(s => s.id === 'web-app-development')!;
@@ -111,6 +112,22 @@ export default function WebAppDevelopmentPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Direct Answer Block (AEO / GEO Optimization) */}
+        <div className="mt-16">
+          <DirectAnswerBlock
+            question="Why build custom web and mobile applications with Motive Technologies?"
+            directAnswer="Motive Technologies designs and engineers high-speed Next.js 15 web applications and Flutter cross-platform mobile apps that achieve perfect 100/100 Google Lighthouse scores. We write clean, type-safe codebases without bloated generic templates or third-party page builders, delivering sub-second loading speeds, military-grade security, and 100% intellectual property transfer to your organization."
+            keyTakeaways={[
+              'Sub-second first contentful paint (FCP) and optimal Core Web Vitals',
+              'Next.js 15 App Router with streaming server-side rendering (SSR)',
+              'Cross-platform Flutter mobile apps with offline-first synchronization',
+              'Strict enterprise-grade NDAs with zero proprietary vendor lock-in',
+            ]}
+            ctaUrl="/contact"
+            ctaText="Schedule Digital Engineering Consultation"
+          />
         </div>
       </section>
 

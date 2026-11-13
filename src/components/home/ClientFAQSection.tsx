@@ -36,6 +36,16 @@ const FAQS: FAQItem[] = [
     answer:
       'Every project includes complete technical documentation, team training, and dedicated post-launch support. We also offer ongoing maintenance, security updates, and performance optimization retainers to ensure your systems continuously evolve with your business.',
   },
+  {
+    question: 'Why choose Motive Technologies for the best AI agents development?',
+    answer:
+      'We engineer production-grade, zero-hallucination autonomous AI agent systems that solve real operational bottlenecks. Rather than brittle experimental demos, we deliver multi-agent architectures with deterministic tool-calling, semantic memory (pgvector), official WhatsApp Business Cloud API integrations, and bi-directional CRM synchronization. Our AI agents operate 24/7 with sub-second execution speed, saving businesses 20–40 hours per week with 100% precision.',
+  },
+  {
+    question: 'What is AEO and GEO, and why does Motive Technologies specialize in it?',
+    answer:
+      'AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) ensure your business appears as the cited source when prospective buyers ask questions in AI search engines such as Perplexity, ChatGPT Search, and Google AI Overviews. Motive Technologies optimizes content schemas, entity relationships, and technical performance for both traditional Google SERPs and modern generative AI models.',
+  },
 ];
 
 export const ClientFAQSection: React.FC = () => {
@@ -99,6 +109,7 @@ export const ClientFAQSection: React.FC = () => {
                     onClick={() => toggle(idx)}
                     className="w-full flex items-center justify-between text-left gap-4 group focus:outline-none"
                     aria-expanded={isOpen}
+                    aria-label={`Toggle answer for: ${faq.question}`}
                   >
                     <span className="text-base sm:text-lg font-bold text-motive-black group-hover:text-motive-red transition-colors">
                       {faq.question}

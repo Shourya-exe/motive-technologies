@@ -36,9 +36,9 @@ export const Footer: React.FC = () => {
 
           {/* Column 2: Navigation & Company (2 cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-widest text-zinc-400">
+            <p className="text-xs font-mono uppercase tracking-widest text-zinc-300 font-bold">
               Company
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
@@ -66,6 +66,14 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  href="/blog"
+                  className="text-zinc-300 hover:text-white transition-colors"
+                >
+                  Blog &amp; Insights
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/services"
                   className="text-zinc-300 hover:text-white transition-colors"
                 >
@@ -85,9 +93,9 @@ export const Footer: React.FC = () => {
 
           {/* Column 3: Core Services (3 cols on lg) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-widest text-zinc-400">
+            <p className="text-xs font-mono uppercase tracking-widest text-zinc-300 font-bold">
               Services
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-sm">
               {SERVICES.map((service) => (
                 <li key={service.id}>
@@ -129,9 +137,9 @@ export const Footer: React.FC = () => {
 
           {/* Column 4: Direct Channels & Telephony (2 cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-widest text-zinc-400">
+            <p className="text-xs font-mono uppercase tracking-widest text-zinc-300 font-bold">
               Direct Channels
-            </h4>
+            </p>
             
             <div className="space-y-3 text-sm">
               <div>
@@ -205,6 +213,9 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="pt-2">
+              <div className="text-[11px] font-mono text-zinc-400 mb-2">
+                <span>Location: Kolkata, WB, India (22.57° N, 88.36° E) &bull; Serving Pan-India &amp; Global</span>
+              </div>
               <Link
                 href="/contact"
                 className="inline-block w-full text-center px-3 py-2 bg-zinc-900 border border-zinc-700 text-xs font-semibold text-white rounded hover:border-motive-red hover:bg-motive-red transition-colors"

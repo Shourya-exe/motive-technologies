@@ -43,7 +43,7 @@ export const TechEcosystemSection: React.FC = () => {
                 <span className="font-mono text-xs font-bold text-motive-red">
                   // 0{idx + 1}
                 </span>
-                <span className="text-[10px] font-mono text-zinc-400 uppercase">
+                <span className="text-[10px] font-mono text-zinc-600 font-semibold uppercase">
                   RUNTIME SPEC
                 </span>
               </div>

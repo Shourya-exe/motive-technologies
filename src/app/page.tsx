@@ -14,9 +14,21 @@ import { FinalConversionSection } from '@/components/home/FinalConversionSection
 import { COMPANY_INFO } from '@/data/siteData';
 
 export const metadata: Metadata = {
-  title: `${COMPANY_INFO.name} | Intelligent AI Automation, Digital Engineering & SEO`,
+  title: `${COMPANY_INFO.name} | Best AI Agents Development, Digital Engineering & SEO`,
   description:
-    'Building intelligent systems for a smarter business future. We combine AI agent development, workflow automation, custom web and mobile engineering, and technical SEO.',
+    'Building intelligent systems for a smarter business future. We combine the best AI agents development, autonomous workflow automation, custom web and mobile engineering, and technical SEO, AEO & GEO optimization.',
+  keywords: [
+    'best ai agents development',
+    'best ai agent development company',
+    'top ai agent developers',
+    'custom ai agent development services',
+    'autonomous ai agents development',
+    'enterprise ai agent systems',
+    'ai automation company',
+    'best ai software development',
+    'whatsapp ai agent development',
+    'motive technologies',
+  ],
   alternates: {
     canonical: COMPANY_INFO.url,
   },

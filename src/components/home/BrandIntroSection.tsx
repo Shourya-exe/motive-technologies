@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Zap, Layout, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Layout, TrendingUp, Cpu, ShieldCheck, Clock } from 'lucide-react';
 
 export const BrandIntroSection: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ export const BrandIntroSection: React.FC = () => {
             <div className="inline-flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-motive-red" />
               <span className="font-mono text-xs font-bold uppercase tracking-widest text-motive-grey">
-                WHO WE ARE
+                WHO WE ARE // OPERATING PHILOSOPHY
               </span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-motive-black leading-[1.08]">
@@ -43,20 +43,23 @@ export const BrandIntroSection: React.FC = () => {
         </div>
 
         {/* Architectural 3-Column Systems Architecture - Executive & Understandable */}
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-motive-border border-b border-motive-border">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-motive-border border-b border-motive-border pb-12">
           
           {/* Pillar 1 */}
-          <div className="pb-8 md:pb-0 md:pr-8 space-y-4">
-            <div className="flex items-center gap-2">
+          <div className="pb-8 md:pb-0 md:pr-8 space-y-4 group">
+            <div className="flex items-center justify-between">
               <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
-                01 // WORKFLOW AUTOMATION
+                01 // BEST AI AGENTS &amp; AUTOMATION
               </span>
+              <div className="w-8 h-8 rounded-lg bg-red-50 border border-red-100 flex items-center justify-center text-motive-red group-hover:scale-110 transition-transform">
+                <Cpu className="w-4 h-4" />
+              </div>
             </div>
             <h3 className="text-xl font-bold text-motive-black">
-              Automate Everyday Operations
+              Best AI Agents &amp; Everyday Automation
             </h3>
             <p className="text-sm text-motive-grey leading-relaxed">
-              Eliminate tedious spreadsheets, manual email follow-ups, and repetitive data entry. We connect your tools, WhatsApp, and CRM so your business operates smoothly 24/7 without delays or human error.
+              Eliminate tedious spreadsheets, manual email follow-ups, and repetitive data entry. We engineer the best AI agents and autonomous workflows connecting your tools, WhatsApp, and CRM so your business operates smoothly 24/7 without delays or human error.
             </p>
             <ul className="space-y-1.5 pt-2 text-xs text-zinc-600 font-medium">
               <li className="flex items-center gap-2">
@@ -71,11 +74,14 @@ export const BrandIntroSection: React.FC = () => {
           </div>
 
           {/* Pillar 2 */}
-          <div className="py-8 md:py-0 md:px-8 space-y-4">
-            <div className="flex items-center gap-2">
+          <div className="py-8 md:py-0 md:px-8 space-y-4 group">
+            <div className="flex items-center justify-between">
               <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
                 02 // BESPOKE DIGITAL PRESENCE
               </span>
+              <div className="w-8 h-8 rounded-lg bg-red-50 border border-red-100 flex items-center justify-center text-motive-red group-hover:scale-110 transition-transform">
+                <Layout className="w-4 h-4" />
+              </div>
             </div>
             <h3 className="text-xl font-bold text-motive-black">
               High-Converting Web &amp; Mobile
@@ -96,17 +102,20 @@ export const BrandIntroSection: React.FC = () => {
           </div>
 
           {/* Pillar 3 */}
-          <div className="pt-8 md:pt-0 md:pl-8 space-y-4">
-            <div className="flex items-center gap-2">
+          <div className="pt-8 md:pt-0 md:pl-8 space-y-4 group">
+            <div className="flex items-center justify-between">
               <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
                 03 // SUSTAINABLE ACQUISITION
               </span>
+              <div className="w-8 h-8 rounded-lg bg-red-50 border border-red-100 flex items-center justify-center text-motive-red group-hover:scale-110 transition-transform">
+                <TrendingUp className="w-4 h-4" />
+              </div>
             </div>
             <h3 className="text-xl font-bold text-motive-black">
               Predictable Inbound Growth
             </h3>
             <p className="text-sm text-motive-grey leading-relaxed">
-              Stop relying solely on expensive paid ads. Our technical SEO, keyword strategy, and content architecture put your brand at the very top of Google when high-intent buyers search for your services.
+              Stop relying solely on expensive paid ads. Our technical SEO, AEO, and GEO architectures put your brand at the very top of Google and AI answer engines when high-intent buyers search for your services.
             </p>
             <ul className="space-y-1.5 pt-2 text-xs text-zinc-600 font-medium">
               <li className="flex items-center gap-2">

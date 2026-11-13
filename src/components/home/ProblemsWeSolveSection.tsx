@@ -58,12 +58,12 @@ const PROBLEMS: ProblemItem[] = [
       'Sales reps waste hours answering basic repetitive qualification questions',
       'Hot prospects lose interest and reach out to competitors who reply faster',
     ],
-    solutionTitle: 'Intelligent 24/7 WhatsApp & Customer Support AI Agents',
+    solutionTitle: 'Best AI Agents Development & 24/7 WhatsApp Conversational Assistants',
     solutionDesc:
-      'We deploy smart, guardrailed AI assistants on your official WhatsApp Business number and website. They answer product and pricing inquiries accurately and qualify leads instantly 24/7.',
-    concreteResult: 'Average first-response time drops from 4 hours to under 12 seconds with 24/7 lead capture.',
+      'We deploy the best AI agents development frameworks: intelligent, zero-hallucination agents that greet prospects, answer complex pricing and catalog questions in seconds, and sync qualified leads directly to your CRM.',
+    concreteResult: 'Average first-response time drops from 4 hours to under 12 seconds with 24/7 autonomous lead capture.',
     serviceLink: '/services/ai-automation',
-    serviceName: 'Explore WhatsApp AI Solutions',
+    serviceName: 'Explore Best AI Agents & WhatsApp Automation',
   },
   {
     id: 'zero-seo',
@@ -122,6 +122,7 @@ export const ProblemsWeSolveSection: React.FC = () => {
                 key={prob.id}
                 type="button"
                 onClick={() => setActiveId(prob.id)}
+                aria-label={`Select business challenge: ${prob.tag}`}
                 className={`group text-left p-6 rounded-xl border transition-all duration-200 cursor-pointer flex flex-col justify-between ${
                   isSelected
                     ? 'bg-motive-black text-white border-motive-black shadow-xl ring-2 ring-motive-black/10 scale-[1.01]'
@@ -133,20 +134,20 @@ export const ProblemsWeSolveSection: React.FC = () => {
                     className={`font-mono text-[10px] uppercase tracking-widest block font-bold transition-colors duration-150 ${
                       isSelected
                         ? 'text-motive-red'
-                        : 'text-motive-grey group-hover:text-motive-red'
+                        : 'text-zinc-600 group-hover:text-motive-red'
                     }`}
                   >
                     {prob.tag}
                   </span>
-                  <h3
-                    className={`text-sm sm:text-base font-bold tracking-tight leading-snug line-clamp-2 transition-colors duration-150 ${
+                  <span
+                    className={`block text-sm sm:text-base font-bold tracking-tight leading-snug line-clamp-2 transition-colors duration-150 ${
                       isSelected
                         ? 'text-white'
                         : 'text-motive-black group-hover:text-black'
                     }`}
                   >
                     {prob.painPoint}
-                  </h3>
+                  </span>
                 </div>
                 
                 <div className="pt-6 flex items-center justify-between text-xs font-mono font-semibold">
@@ -154,7 +155,7 @@ export const ProblemsWeSolveSection: React.FC = () => {
                     className={`transition-colors duration-150 ${
                       isSelected
                         ? 'text-zinc-300'
-                        : 'text-motive-grey group-hover:text-motive-black'
+                        : 'text-zinc-600 group-hover:text-motive-black'
                     }`}
                   >
                     {isSelected ? 'Viewing Solution' : 'View Fix'}
@@ -163,7 +164,7 @@ export const ProblemsWeSolveSection: React.FC = () => {
                     className={`transition-all duration-150 ${
                       isSelected
                         ? 'text-motive-red font-bold translate-x-0.5'
-                        : 'text-zinc-400 group-hover:text-motive-red group-hover:translate-x-1'
+                        : 'text-zinc-600 group-hover:text-motive-red group-hover:translate-x-1'
                     }`}
                   >
                     &rarr;

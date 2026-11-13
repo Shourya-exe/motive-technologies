@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Search, BarChart3, Globe, ShieldCheck, CheckCircle2, FileSearch, LineChart, Cpu, Key } from 'lucide-react';
+import { ArrowRight, TrendingUp, Search, BarChart3, Globe, ShieldCheck, CheckCircle2, FileSearch, LineChart, Cpu, Key, Sparkles } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
+import { DirectAnswerBlock } from '@/components/common/DirectAnswerBlock';
 
 export default function SEODigitalGrowthPage() {
   const serviceData = SERVICES.find(s => s.id === 'seo-digital-growth')!;
@@ -107,6 +108,22 @@ export default function SEODigitalGrowthPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Direct Answer Block (AEO / GEO Optimization) */}
+        <div className="mt-16">
+          <DirectAnswerBlock
+            question="What is Tri-Pillar Search: SEO, AEO, and GEO?"
+            directAnswer="Tri-Pillar Search is Motive Technologies' holistic discovery methodology. It optimizes your digital assets simultaneously for traditional search engines (Google SEO), AI answer engines (Perplexity, ChatGPT Search, Google AI Overviews for AEO), and generative foundational models (Gemini, Claude, Copilot for GEO). This ensures your brand is recommended whenever high-intent enterprise buyers ask questions in any search interface."
+            keyTakeaways={[
+              '100% Schema.org semantic graphs for rich snippet eligibility',
+              'Direct Q&A entity optimization for featured Perplexity & ChatGPT citations',
+              'Sub-50ms INP and sub-1s LCP Core Web Vitals performance guarantee',
+              'Regional & global geo-targeting capturing commercial acquisition intent',
+            ]}
+            ctaUrl="/contact"
+            ctaText="Schedule SEO/AEO Strategy Consultation"
+          />
         </div>
       </section>
 
