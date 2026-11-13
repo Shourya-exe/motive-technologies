@@ -44,6 +44,7 @@ export const COMPANY_INFO = {
   legalName: 'Motive Technologies',
   domain: 'www.motivetechnologies.in',
   url: 'https://www.motivetechnologies.in',
+  email: 'motivetechnologies1@gmail.com',
   tagline: 'INNOVATE. AUTOMATE. TRANSFORM.',
   statement: 'SMARTER AUTOMATION. A BRIGHTER TOMORROW.',
   headline: 'Building Intelligent Systems for a Smarter Business Future.',

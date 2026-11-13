@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { ContactForm } from '@/components/contact/ContactForm';
-import { Phone, Globe, Clock, ShieldCheck, HelpCircle, MessageSquare } from 'lucide-react';
+import { Phone, Globe, Clock, ShieldCheck, HelpCircle, MessageSquare, Mail } from 'lucide-react';
 import { COMPANY_INFO } from '@/data/siteData';
 
 export const metadata: Metadata = {
@@ -78,6 +78,23 @@ export default function ContactPage() {
                 </a>
                 <p className="text-xs text-emerald-800">
                   Instant scoping &amp; project inquiries directly on WhatsApp.
+                </p>
+              </div>
+
+              {/* Official Email Inbox Card */}
+              <div className="p-6 bg-motive-offwhite border border-motive-border rounded-xl">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-motive-grey block mb-1">
+                  Official Email Inbox
+                </span>
+                <a
+                  href={`mailto:${COMPANY_INFO.email}`}
+                  className="text-lg sm:text-xl font-bold font-mono text-motive-black hover:text-motive-red transition-colors flex items-center gap-2 break-all"
+                >
+                  <Mail className="w-5 h-5 text-motive-red shrink-0" />
+                  <span>{COMPANY_INFO.email}</span>
+                </a>
+                <p className="text-xs text-motive-grey mt-1">
+                  Inquiries delivered directly to our solutions desk via Resend.
                 </p>
               </div>
 

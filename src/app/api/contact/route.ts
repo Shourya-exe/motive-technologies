@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendContactEnquiryEmail } from '@/lib/resend';
 
 interface ContactRequestBody {
   fullName: string;
@@ -87,12 +88,16 @@ export async function POST(req: NextRequest) {
     // Log the received enquiry cleanly in server output
     console.log('[MOTIVE TECHNOLOGIES] Project Enquiry Received:', JSON.stringify(sanitizedEnquiry, null, 2));
 
+    // 4. Dispatch notification email to motivetechnologies1@gmail.com via Resend
+    const emailResult = await sendContactEnquiryEmail(sanitizedEnquiry);
+
     // Return structured success response
     return NextResponse.json(
       {
         success: true,
         referenceId: enquiryReference,
         message: 'Your project enquiry has been securely received by Motive Technologies. A senior solutions architect will contact you within 24 business hours.',
+        emailDelivered: emailResult.success,
         enquiry: {
           referenceId: enquiryReference,
           service: sanitizedEnquiry.project.service,

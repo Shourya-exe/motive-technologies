@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { BrandLogo } from './BrandLogo';
-import { ArrowUpRight, Phone, Globe, Shield, Terminal, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, Phone, Globe, Shield, Terminal, MessageCircle, Mail } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
 
 export const Footer: React.FC = () => {
@@ -172,6 +172,19 @@ export const Footer: React.FC = () => {
                 >
                   <Phone className="w-3.5 h-3.5 text-motive-red" />
                   <span>{COMPANY_INFO.secondaryPhone}</span>
+                </a>
+              </div>
+
+              <div>
+                <span className="text-[11px] font-mono uppercase text-zinc-400 block">
+                  Official Email
+                </span>
+                <a
+                  href={`mailto:${COMPANY_INFO.email}`}
+                  className="text-white hover:text-motive-red transition-colors font-mono text-xs inline-flex items-center gap-1.5 mt-0.5 break-all"
+                >
+                  <Mail className="w-3.5 h-3.5 text-motive-red shrink-0" />
+                  <span>{COMPANY_INFO.email}</span>
                 </a>
               </div>
 

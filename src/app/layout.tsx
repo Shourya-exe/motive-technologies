@@ -103,6 +103,7 @@ export default function RootLayout({
     '@id': COMPANY_INFO.url,
     url: COMPANY_INFO.url,
     telephone: COMPANY_INFO.primaryPhone,
+    email: COMPANY_INFO.email,
     priceRange: '$$$$',
     address: {
       '@type': 'PostalAddress',

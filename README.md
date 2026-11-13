@@ -11,6 +11,7 @@ A premium, high-performance corporate web platform engineered for **Motive Techn
 
 - **Company Name**: Motive Technologies
 - **Official Domain**: [www.motivetechnologies.in](https://www.motivetechnologies.in)
+- **Official Email**: `motivetechnologies1@gmail.com`
 - **Primary Phone**: `+91 7003526440`
 - **Direct Line**: `+91 6289056881`
 - **WhatsApp**: `+91 8777245321`
@@ -85,7 +86,32 @@ The website presents three interconnected pillars of modern technology transform
 
 ---
 
-## 5. Development & Production Commands
+## 5. Environment Variables & Email Configuration (Resend)
+
+Inbound inquiries submitted on `/contact` are validated and dispatched via **[Resend](https://resend.com)** to `motivetechnologies1@gmail.com`.
+
+Copy `.env.example` to `.env.local`:
+```bash
+cp .env.example .env.local
+```
+
+Configure your environment variables:
+```env
+# Resend API Key (starts with re_)
+RESEND_API_KEY=re_your_api_key_here
+
+# Recipient email address for inbound notifications
+CONTACT_RECEIVER_EMAIL=motivetechnologies1@gmail.com
+
+# Sender email address
+# Testing: "Motive Technologies <onboarding@resend.dev>"
+# Production (with verified domain): "Motive Technologies <contact@motivetechnologies.in>"
+RESEND_FROM_EMAIL=Motive Technologies <onboarding@resend.dev>
+```
+
+---
+
+## 6. Development & Production Commands
 
 ### Installation
 ```bash
@@ -110,7 +136,7 @@ npm start -- -p 3000
 
 ---
 
-## 6. Deployment Guide
+## 7. Deployment Guide
 
 ### Deploying to Vercel (Recommended)
 1. Push this repository to GitHub or GitLab.
