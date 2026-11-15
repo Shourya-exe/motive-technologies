@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Clock, ShieldAlert, Sparkles, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Clock, ShieldAlert, Sparkles, AlertCircle, CheckCircle2, Zap } from 'lucide-react';
 
 interface ProblemItem {
   id: string;
@@ -19,12 +20,12 @@ interface ProblemItem {
 const PROBLEMS: ProblemItem[] = [
   {
     id: 'manual-admin',
-    tag: 'ADMINISTRATIVE OVERHEAD',
+    tag: 'ADMIN OVERHEAD',
     painPoint: 'Drowning in repetitive manual tasks, spreadsheets & copy-pasting',
     symptoms: [
-      'Staff spend 15+ hours weekly copying data between spreadsheets and CRM',
-      'Human errors in lead capture, client onboarding, or invoice dispatch',
-      'Operations slow down whenever team members are away or overloaded',
+      'Staff lose 15+ hours weekly copying data between sheets and CRM',
+      'Costly human errors in lead capture, onboarding, and invoices',
+      'Operations grind to a halt whenever key team members are away',
     ],
     solutionTitle: 'Autonomous Workflow & AI Process Automation',
     solutionDesc:
@@ -38,14 +39,14 @@ const PROBLEMS: ProblemItem[] = [
     tag: 'BRAND & CONVERSION',
     painPoint: 'An outdated, sluggish website that fails to convert high-value clients',
     symptoms: [
-      'Page load times exceed 3 to 5 seconds, causing prospective clients to bounce',
-      'Design looks like a generic template and fails to convey modern tech authority',
-      'Low form completion rates and poor mobile responsiveness',
+      'Page load times exceed 3–5 seconds, causing high visitor bounce',
+      'Dated look fails to convey modern technology credibility',
+      'Poor mobile responsiveness and low form completion rates',
     ],
     solutionTitle: 'Bespoke Next.js Corporate Web & Application Development',
     solutionDesc:
       'We design and build clean, custom, ultra-fast web architectures tailored to your business. Every page is crafted with sub-second performance, responsive elegance, and clear conversion paths.',
-    concreteResult: 'Instant sub-second loading, elevated institutional trust, and significantly higher inquiry rates.',
+    concreteResult: 'Instant sub-second loading, elevated institutional trust, and 2.4x higher inquiry rates.',
     serviceLink: '/services/web-app-development',
     serviceName: 'Explore Web Development',
   },
@@ -54,14 +55,14 @@ const PROBLEMS: ProblemItem[] = [
     tag: 'LEAD RETENTION',
     painPoint: 'Inquiries outside business hours go unanswered, losing deals to competitors',
     symptoms: [
-      'Customers messaging on WhatsApp in the evening wait 12+ hours for a reply',
+      'Customers messaging on WhatsApp in the evening wait 12+ hours',
       'Sales reps waste hours answering basic repetitive qualification questions',
       'Hot prospects lose interest and reach out to competitors who reply faster',
     ],
     solutionTitle: 'Best AI Agents Development & 24/7 WhatsApp Conversational Assistants',
     solutionDesc:
       'We deploy the best AI agents development frameworks: intelligent, zero-hallucination agents that greet prospects, answer complex pricing and catalog questions in seconds, and sync qualified leads directly to your CRM.',
-    concreteResult: 'Average first-response time drops from 4 hours to under 12 seconds with 24/7 autonomous lead capture.',
+    concreteResult: 'Average first-response time drops from 4 hours to under 12 seconds with 24/7 autonomous capture.',
     serviceLink: '/services/ai-automation',
     serviceName: 'Explore Best AI Agents & WhatsApp Automation',
   },
@@ -113,8 +114,56 @@ export const ProblemsWeSolveSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Visual Transformation Showcase Graphic */}
+        <div className="my-14 rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-950 shadow-xl relative group">
+          <div className="relative aspect-[21/9] sm:aspect-[21/8] w-full overflow-hidden">
+            <Image
+              src="/images/manual-chaos-vs-ai-pipeline.jpg"
+              alt="Motive Technologies Transformation: Manual Operational Chaos vs. Autonomous AI Pipeline"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40 pointer-events-none" />
+
+            {/* Overlaid Transformation Banner */}
+            <div className="absolute inset-0 p-6 sm:p-10 flex flex-col justify-between z-10 pointer-events-none">
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 rounded-full text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest bg-black/70 text-emerald-400 border border-white/10 backdrop-blur">
+                  THE OPERATIONAL SHIFT // VISUAL ARCHITECTURE
+                </span>
+                <span className="px-3 py-1 rounded-full text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest bg-motive-red text-white shadow-sm">
+                  10X OPERATIONAL LEVERAGE
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                <div className="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-red-500/30 space-y-1">
+                  <div className="flex items-center gap-2 text-red-400 text-xs font-mono font-bold uppercase tracking-wider">
+                    <span className="w-2 h-2 rounded-full bg-red-500" />
+                    <span>Traditional Manual Friction</span>
+                  </div>
+                  <p className="text-xs text-zinc-300">
+                    4.2h response latency &bull; Human spreadsheet errors &bull; Lost revenue &bull; 35% bounce
+                  </p>
+                </div>
+
+                <div className="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-emerald-500/30 space-y-1">
+                  <div className="flex items-center gap-2 text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span>Motive Autonomous Engine</span>
+                  </div>
+                  <p className="text-xs text-zinc-300">
+                    &lt; 12s AI response &bull; 100% CRM precision &bull; 24/7 lead capture &bull; Sub-second speed
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Problem Selector Bar */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-12 pb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-8">
           {PROBLEMS.map((prob) => {
             const isSelected = prob.id === activeId;
             return (
@@ -123,13 +172,13 @@ export const ProblemsWeSolveSection: React.FC = () => {
                 type="button"
                 onClick={() => setActiveId(prob.id)}
                 aria-label={`Select business challenge: ${prob.tag}`}
-                className={`group text-left p-6 rounded-xl border transition-all duration-200 cursor-pointer flex flex-col justify-between ${
+                className={`group text-left p-5 rounded-xl border transition-all duration-200 cursor-pointer flex flex-col justify-between ${
                   isSelected
-                    ? 'bg-motive-black text-white border-motive-black shadow-xl ring-2 ring-motive-black/10 scale-[1.01]'
-                    : 'bg-white text-motive-black border-motive-border hover:bg-zinc-100 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5'
+                    ? 'bg-motive-black text-white border-motive-black shadow-lg ring-2 ring-motive-black/10 scale-[1.01]'
+                    : 'bg-white text-motive-black border-motive-border hover:bg-zinc-100 hover:border-zinc-300 hover:shadow-sm'
                 }`}
               >
-                <div className="space-y-2.5">
+                <div className="space-y-2">
                   <span
                     className={`font-mono text-[10px] uppercase tracking-widest block font-bold transition-colors duration-150 ${
                       isSelected
@@ -140,7 +189,7 @@ export const ProblemsWeSolveSection: React.FC = () => {
                     {prob.tag}
                   </span>
                   <span
-                    className={`block text-sm sm:text-base font-bold tracking-tight leading-snug line-clamp-2 transition-colors duration-150 ${
+                    className={`block text-xs sm:text-sm font-bold tracking-tight leading-snug line-clamp-2 transition-colors duration-150 ${
                       isSelected
                         ? 'text-white'
                         : 'text-motive-black group-hover:text-black'
@@ -150,21 +199,21 @@ export const ProblemsWeSolveSection: React.FC = () => {
                   </span>
                 </div>
                 
-                <div className="pt-6 flex items-center justify-between text-xs font-mono font-semibold">
+                <div className="pt-4 flex items-center justify-between text-xs font-mono font-semibold">
                   <span
-                    className={`transition-colors duration-150 ${
+                    className={`transition-colors duration-150 text-[11px] ${
                       isSelected
                         ? 'text-zinc-300'
-                        : 'text-zinc-600 group-hover:text-motive-black'
+                        : 'text-zinc-500 group-hover:text-motive-black'
                     }`}
                   >
-                    {isSelected ? 'Viewing Solution' : 'View Fix'}
+                    {isSelected ? 'Viewing Fix' : 'Inspect'}
                   </span>
                   <span
                     className={`transition-all duration-150 ${
                       isSelected
                         ? 'text-motive-red font-bold translate-x-0.5'
-                        : 'text-zinc-600 group-hover:text-motive-red group-hover:translate-x-1'
+                        : 'text-zinc-400 group-hover:text-motive-red group-hover:translate-x-1'
                     }`}
                   >
                     &rarr;
@@ -176,12 +225,12 @@ export const ProblemsWeSolveSection: React.FC = () => {
         </div>
 
         {/* Active Problem / Solution Deep-Dive Display */}
-        <div className="bg-motive-offwhite/70 border border-motive-border rounded-xl p-8 lg:p-12 shadow-subtle mt-4">
+        <div className="bg-zinc-50 border border-motive-border rounded-2xl p-6 sm:p-10 lg:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left: The Real Challenge */}
             <div className="lg:col-span-5 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-motive-border rounded text-xs font-mono text-zinc-600">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-red-200 rounded-lg text-xs font-mono text-red-700 shadow-2xs">
                 <AlertCircle className="w-3.5 h-3.5 text-motive-red" />
                 <span className="uppercase font-semibold tracking-wider">The Business Problem</span>
               </div>
@@ -196,8 +245,8 @@ export const ProblemsWeSolveSection: React.FC = () => {
                 </span>
                 <ul className="space-y-2.5">
                   {activeProblem.symptoms.map((symptom, sIdx) => (
-                    <li key={sIdx} className="text-xs sm:text-sm text-zinc-700 flex items-start gap-2.5 leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 shrink-0 mt-2" />
+                    <li key={sIdx} className="text-xs sm:text-sm text-zinc-700 flex items-start gap-2.5 leading-relaxed bg-white p-3 rounded-lg border border-zinc-200/60 shadow-2xs">
+                      <span className="w-1.5 h-1.5 rounded-full bg-motive-red shrink-0 mt-2" />
                       <span>{symptom}</span>
                     </li>
                   ))}
@@ -206,8 +255,8 @@ export const ProblemsWeSolveSection: React.FC = () => {
             </div>
 
             {/* Right: The Motive Engineering Solution */}
-            <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-lg border border-motive-border shadow-subtle space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-200 rounded text-xs font-mono text-emerald-800">
+            <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-xl border border-motive-border shadow-md space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-lg text-xs font-mono text-emerald-800 shadow-2xs">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                 <span className="uppercase font-semibold tracking-wider">The Motive Solution</span>
               </div>
@@ -216,15 +265,18 @@ export const ProblemsWeSolveSection: React.FC = () => {
                 {activeProblem.solutionTitle}
               </h4>
 
-              <p className="text-sm sm:text-base text-motive-grey leading-relaxed">
+              <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal">
                 {activeProblem.solutionDesc}
               </p>
 
               {/* Concrete Business Result Highlight */}
-              <div className="p-4 bg-motive-offwhite rounded border-l-4 border-motive-red space-y-1">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-motive-black font-bold block">
-                  Measurable Client ROI
-                </span>
+              <div className="p-4 bg-zinc-50 rounded-xl border-l-4 border-motive-red space-y-1">
+                <div className="flex items-center gap-1.5 text-motive-red">
+                  <Zap className="w-3.5 h-3.5" />
+                  <span className="text-[10px] font-mono uppercase tracking-widest font-bold">
+                    Measurable Client ROI
+                  </span>
+                </div>
                 <p className="text-sm font-bold text-motive-black">
                   {activeProblem.concreteResult}
                 </p>
@@ -241,7 +293,7 @@ export const ProblemsWeSolveSection: React.FC = () => {
 
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-motive-black text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red transition-colors shadow-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-motive-black text-white text-xs font-bold uppercase tracking-wider rounded-lg hover:bg-motive-red transition-colors shadow-sm"
                 >
                   <span>Discuss This Problem With Us</span>
                 </Link>

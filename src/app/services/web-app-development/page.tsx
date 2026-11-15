@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight, Code2, Smartphone, Database, Layout, ShieldCheck, CheckCircle2, Layers, Cpu, Server, Terminal, Sparkles } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
 import { DirectAnswerBlock } from '@/components/common/DirectAnswerBlock';
+import { WebPerformanceAuditDemo } from '@/components/common/WebPerformanceAuditDemo';
 
 export default function WebAppDevelopmentPage() {
   const serviceData = SERVICES.find(s => s.id === 'web-app-development')!;
@@ -39,38 +40,46 @@ export default function WebAppDevelopmentPage() {
         <div className="absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded">
-              <span className="w-2 h-2 rounded-full bg-motive-red animate-pulse" />
-              <span className="font-mono text-xs uppercase tracking-widest text-zinc-300">
-                CAPABILITY // 02 &bull; WEB &amp; MOBILE ENGINEERING
-              </span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <div className="lg:col-span-6 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded">
+                <span className="w-2 h-2 rounded-full bg-motive-red animate-pulse" />
+                <span className="font-mono text-xs uppercase tracking-widest text-zinc-300">
+                  CAPABILITY // 02 &bull; WEB &amp; MOBILE ENGINEERING
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                Digital Experiences{' '}
+                <span className="text-motive-red">Engineered to Perform.</span>
+              </h1>
+
+              <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-normal">
+                {serviceData.subheadline}
+              </p>
+
+              <div className="pt-2 flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-motive-red text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red-hover transition-colors"
+                >
+                  <span>Initiate Digital Build</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/work"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-zinc-900 border border-zinc-800 text-white text-xs font-mono rounded hover:bg-zinc-800 transition-colors"
+                >
+                  <span>Review Built Platforms</span>
+                </Link>
+              </div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Digital Experiences{' '}
-              <span className="text-motive-red">Engineered to Perform.</span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-normal">
-              {serviceData.subheadline}
-            </p>
-
-            <div className="pt-2 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-motive-red text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red-hover transition-colors"
-              >
-                <span>Initiate Digital Build</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/work"
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-zinc-900 border border-zinc-800 text-white text-xs font-mono rounded hover:bg-zinc-800 transition-colors"
-              >
-                <span>Review Built Platforms</span>
-              </Link>
+            <div className="lg:col-span-6">
+              <WebPerformanceAuditDemo />
             </div>
+
           </div>
         </div>
       </section>
