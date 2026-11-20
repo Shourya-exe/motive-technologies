@@ -1,11 +1,53 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Search, BarChart3, Globe, ShieldCheck, CheckCircle2, FileSearch, LineChart, Cpu, Key, Sparkles } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
 import { DirectAnswerBlock } from '@/components/common/DirectAnswerBlock';
 import { SeoAeoCitationDemo } from '@/components/common/SeoAeoCitationDemo';
+
+export const metadata: Metadata = {
+  title: 'SEO, AEO & GEO Digital Growth Engineering',
+  description:
+    'Holistic organic search engineering: Technical Google SEO, Answer Engine Optimization (AEO for Perplexity & ChatGPT Search), and Generative Engine Optimization (GEO). Core Web Vitals remediation, rich Schema.org semantic graphs, and citation authority.',
+  keywords: [
+    'technical seo services',
+    'answer engine optimization aeo agency',
+    'generative engine optimization geo company',
+    'chatgpt search optimization',
+    'perplexity ai search ranking',
+    'google ai overviews optimization',
+    'core web vitals audit',
+    'semantic schema markup json-ld',
+    'enterprise organic search strategy',
+    'motive technologies seo',
+  ],
+  alternates: {
+    canonical: `${COMPANY_INFO.url}/services/seo-digital-growth`,
+  },
+  openGraph: {
+    title: 'SEO, AEO & GEO Digital Growth Engineering — Motive Technologies',
+    description:
+      'Tri-Pillar Search Engineering: Technical Google SEO, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO) for compounding inbound demand.',
+    url: `${COMPANY_INFO.url}/services/seo-digital-growth`,
+    type: 'website',
+    images: [
+      {
+        url: '/images/seo-aeo-growth.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Motive Technologies Technical SEO, AEO, and GEO Growth Engineering',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SEO, AEO & GEO Digital Growth Engineering — Motive Technologies',
+    description:
+      'Secure citations in Perplexity, ChatGPT Search, and Google AI Overviews with semantic Schema graphs and sub-50ms INP performance.',
+    images: ['/images/seo-aeo-growth.jpg'],
+  },
+};
 
 export default function SEODigitalGrowthPage() {
   const serviceData = SERVICES.find(s => s.id === 'seo-digital-growth')!;
@@ -29,8 +71,109 @@ export default function SEODigitalGrowthPage() {
     },
   ];
 
+  // Structured Data Schema Graph
+  const serviceSchemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${COMPANY_INFO.url}/services/seo-digital-growth#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: COMPANY_INFO.url,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Capabilities & Services',
+            item: `${COMPANY_INFO.url}/services`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'SEO, AEO & GEO Digital Growth Engineering',
+            item: `${COMPANY_INFO.url}/services/seo-digital-growth`,
+          },
+        ],
+      },
+      {
+        '@type': 'Service',
+        '@id': `${COMPANY_INFO.url}/services/seo-digital-growth#service`,
+        name: 'Technical SEO, AEO & GEO Digital Growth Engineering',
+        serviceType: 'Search Engine Optimization & Generative Engine Optimization',
+        provider: {
+          '@type': 'Organization',
+          '@id': `${COMPANY_INFO.url}/#organization`,
+          name: COMPANY_INFO.name,
+        },
+        description: serviceData.fullDescription,
+        url: `${COMPANY_INFO.url}/services/seo-digital-growth`,
+        areaServed: [
+          { '@type': 'Country', name: 'India' },
+          { '@type': 'Country', name: 'United States' },
+          { '@type': 'Country', name: 'United Kingdom' },
+          { '@type': 'Country', name: 'United Arab Emirates' },
+          { '@type': 'Country', name: 'Canada' },
+          { '@type': 'Country', name: 'Australia' },
+          { '@type': 'Country', name: 'Singapore' },
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'SEO, AEO & GEO Capabilities',
+          itemListElement: serviceData.capabilities.map((cap) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: cap.title,
+              description: cap.description,
+            },
+          })),
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${COMPANY_INFO.url}/services/seo-digital-growth#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is Tri-Pillar Search: SEO, AEO, and GEO?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Tri-Pillar Search is Motive Technologies' holistic discovery methodology. It optimizes your digital assets simultaneously for traditional search engines (Google SEO), AI answer engines (Perplexity, ChatGPT Search, Google AI Overviews for AEO), and generative foundational models (Gemini, Claude, Copilot for GEO). This ensures your brand is recommended whenever high-intent enterprise buyers ask questions in any search interface.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does Answer Engine Optimization (AEO) differ from traditional SEO?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Traditional SEO ranks web pages in blue-link SERPs using keywords, backlinks, and page structure. AEO specifically structures answers, entity definitions, schema graphs, and verified data tables so AI answer engines like Perplexity, ChatGPT, and Google AI Overviews quote your brand directly as the definitive authoritative source.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What deliverables are included in a Motive Technologies technical SEO audit?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Our technical audits include a full crawl graph diagnostic, Core Web Vitals profiling (INP, LCP, CLS), Schema.org entity validation, commercial intent keyword clusters, server response benchmarks, and a prioritized code-level remediation roadmap for your engineering team.',
+            },
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="bg-white">
+      {/* Schema.org Graph */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaGraph) }}
+      />
+
       {/* Hero Header */}
       <section className="pt-16 pb-20 bg-motive-dark text-white border-b border-motive-darkborder relative overflow-hidden">
         <div className="absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" />
@@ -253,7 +396,7 @@ export default function SEODigitalGrowthPage() {
               <h3 className="text-lg font-bold text-motive-black mb-2">
                 {item.title}
               </h3>
-              <p className="text-sm text-motive-grey leading-relaxed">
+              <p className="text-xs text-motive-grey leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -261,39 +404,24 @@ export default function SEODigitalGrowthPage() {
         </div>
       </section>
 
-      {/* Realistic Disclaimer & Integrity Policy */}
-      <section className="py-12 bg-motive-offwhite border-b border-motive-border">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 mb-2">
-            <ShieldCheck className="w-4 h-4 text-motive-red" />
-            <span className="font-mono text-xs uppercase font-bold text-motive-black tracking-wider">
-              Transparency &amp; Ethics Notice
-            </span>
-          </div>
-          <p className="text-xs text-motive-grey leading-relaxed max-w-2xl mx-auto">
-            Search engine algorithms evolve continuously. In accordance with professional standards and search engine guidelines, Motive Technologies never promises guaranteed #1 search rankings or fabricated growth percentages. We deliver rigorous code-level hygiene, structured schema architectures, and authoritative entity relevance designed for long-term organic stability.
-          </p>
-        </div>
-      </section>
-
       {/* Project Enquiry CTA Section */}
       <section className="bg-motive-black text-white py-20 border-t border-motive-darkborder">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
-            ORGANIC ELEVATION
+            GROWTH ACCELERATION
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Ready to establish lasting search authority?
+            Ready to secure compounding organic search authority?
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            Let us inspect your website codebase, identify hidden crawl roadblocks, and construct a sustainable growth blueprint.
+            Let us audit your current web platform, identify crawl bottlenecks, and engineer a technical SEO/AEO/GEO roadmap tailored to your industry.
           </p>
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact?service=seo-digital-growth"
               className="px-8 py-4 bg-motive-red text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red-hover transition-colors"
             >
-              Request Technical SEO Audit
+              Request Organic Search Audit
             </Link>
             <a
               href={`tel:${COMPANY_INFO.primaryPhone.replace(/\s+/g, '')}`}

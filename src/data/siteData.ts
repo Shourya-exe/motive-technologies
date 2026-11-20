@@ -223,7 +223,7 @@ export const SERVICES: ServiceItem[] = [
       },
       {
         title: 'Off-Page SEO & Digital Authority',
-        description: 'High-integrity digital PR, authoritative brand citations, and strategic link equity building without black-hat tactics.',
+        description: 'High-integrity brand citations, entity authority building, and strategic link equity without black-hat tactics.',
       },
       {
         title: 'Keyword & Semantic Entity Research',

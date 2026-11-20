@@ -1,15 +1,60 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Bot, Cpu, CheckCircle2, XCircle, ArrowUpRight, Zap, GitFork, RefreshCw, MessageSquare, Terminal, Database, Clock, Sparkles } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
 import { DirectAnswerBlock } from '@/components/common/DirectAnswerBlock';
 import { AiChatInteractionDemo } from '@/components/common/AiChatInteractionDemo';
 
+export const metadata: Metadata = {
+  title: 'AI Automation & Best AI Agents Development Services',
+  description:
+    'Engineering production-grade autonomous AI agents, multi-agent business workflows, official WhatsApp Business Cloud API automation, and pgvector RAG vector search systems.',
+  keywords: [
+    'best ai agents development',
+    'best ai agent development company',
+    'top ai agent developers',
+    'custom ai agent development services',
+    'autonomous ai agents development',
+    'enterprise ai agent systems',
+    'multi-agent ai development',
+    'ai workflow automation agency',
+    'ai automation company',
+    'business process automation',
+    'whatsapp business api automation',
+    'custom workflow automation',
+    'rag vector search ai',
+    'motive technologies ai automation',
+  ],
+  alternates: {
+    canonical: `${COMPANY_INFO.url}/services/ai-automation`,
+  },
+  openGraph: {
+    title: 'AI Automation & Best AI Agents Development Services — Motive Technologies',
+    description:
+      'Eliminate operational friction with deterministic, hallucination-resistant autonomous AI agents, WhatsApp Cloud API integrations, and multi-system business process automation.',
+    url: `${COMPANY_INFO.url}/services/ai-automation`,
+    type: 'website',
+    images: [
+      {
+        url: '/images/ai-agents-automation.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Motive Technologies AI Agents Development and Autonomous Workflow Architecture',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Automation & Best AI Agents Development Services — Motive Technologies',
+    description:
+      'Autonomous multi-agent workflows, WhatsApp Cloud API integrations, and pgvector RAG vector search with 100% intellectual property ownership.',
+    images: ['/images/ai-agents-automation.jpg'],
+  },
+};
+
 export default function AIAutomationPage() {
   const serviceData = SERVICES.find(s => s.id === 'ai-automation')!;
-  const [activeWorkflowTab, setActiveWorkflowTab] = useState<'beforeAfter' | 'liveFlow'>('beforeAfter');
 
   const challenges = [
     {
@@ -30,8 +75,121 @@ export default function AIAutomationPage() {
     },
   ];
 
+  // Structured Data (Service, BreadcrumbList, HowTo, FAQPage) for SEO, AEO & GEO
+  const serviceSchemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${COMPANY_INFO.url}/services/ai-automation#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: COMPANY_INFO.url,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Capabilities & Services',
+            item: `${COMPANY_INFO.url}/services`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'AI Automation & Best AI Agents Development',
+            item: `${COMPANY_INFO.url}/services/ai-automation`,
+          },
+        ],
+      },
+      {
+        '@type': 'Service',
+        '@id': `${COMPANY_INFO.url}/services/ai-automation#service`,
+        name: 'AI Automation & Best AI Agents Development',
+        serviceType: 'Artificial Intelligence & Business Process Automation',
+        provider: {
+          '@type': 'Organization',
+          '@id': `${COMPANY_INFO.url}/#organization`,
+          name: COMPANY_INFO.name,
+        },
+        description: serviceData.fullDescription,
+        url: `${COMPANY_INFO.url}/services/ai-automation`,
+        areaServed: [
+          { '@type': 'Country', name: 'India' },
+          { '@type': 'Country', name: 'United States' },
+          { '@type': 'Country', name: 'United Kingdom' },
+          { '@type': 'Country', name: 'United Arab Emirates' },
+          { '@type': 'Country', name: 'Canada' },
+          { '@type': 'Country', name: 'Australia' },
+          { '@type': 'Country', name: 'Singapore' },
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'AI Automation Capabilities',
+          itemListElement: serviceData.capabilities.map((cap) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: cap.title,
+              description: cap.description,
+            },
+          })),
+        },
+      },
+      {
+        '@type': 'HowTo',
+        '@id': `${COMPANY_INFO.url}/services/ai-automation#howto`,
+        name: 'How Motive Technologies Deploys Enterprise Autonomous AI Agents',
+        description: 'Our four-phase methodology for engineering and deploying deterministic, hallucination-resistant AI systems.',
+        step: serviceData.workflows?.map((wf) => ({
+          '@type': 'HowToStep',
+          position: parseInt(wf.step, 10),
+          name: wf.title,
+          text: wf.detail,
+        })) || [],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${COMPANY_INFO.url}/services/ai-automation#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Why choose Motive Technologies for the best AI agents development?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Motive Technologies provides the best AI agents development and enterprise autonomous workflows. We engineer deterministic, hallucination-resistant multi-agent architectures, official Meta WhatsApp Cloud API integrations, and vector semantic search (pgvector RAG). Our AI agents execute multi-step tool calls, synchronize CRM state, and resolve complex inquiries in seconds with 100% precision.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do AI agents prevent hallucinations in business workflows?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'We enforce deterministic state machines, typed runtime output schemas (Pydantic/Zod), and retrieval-augmented generation (RAG) strictly bounded to your private internal documents. Every statement is validated against source embeddings, and confidence-threshold escalations automatically route edge cases to human operators.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can you automate customer engagement through WhatsApp Business API?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. We are experts in official WhatsApp Cloud API integration, creating conversational assistants that qualify leads, display interactive product/service catalogs, collect intake forms, and synchronize data directly into HubSpot, Zoho, or Salesforce in under 15 seconds.',
+            },
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="bg-white">
+      {/* Schema.org Graph */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaGraph) }}
+      />
+
       {/* Hero Header */}
       <section className="pt-16 pb-20 bg-motive-dark text-white border-b border-motive-darkborder relative overflow-hidden">
         <div className="absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" />

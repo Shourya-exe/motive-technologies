@@ -1,11 +1,53 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Code2, Smartphone, Database, Layout, ShieldCheck, CheckCircle2, Layers, Cpu, Server, Terminal, Sparkles } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
 import { DirectAnswerBlock } from '@/components/common/DirectAnswerBlock';
 import { WebPerformanceAuditDemo } from '@/components/common/WebPerformanceAuditDemo';
+
+export const metadata: Metadata = {
+  title: 'Custom Web & Mobile Application Development (Next.js & Flutter)',
+  description:
+    'Engineering high-performance Next.js 15 web applications and native-feel Flutter mobile apps. 100/100 Lighthouse performance, type-safe APIs, sub-second latency, and 100% IP ownership.',
+  keywords: [
+    'custom web application development',
+    'next.js 15 enterprise web agency',
+    'react 19 full-stack development',
+    'flutter mobile app developers',
+    'high performance web engineering 100 lighthouse',
+    'corporate website development',
+    'custom web engineering kolkata',
+    'cross-platform mobile app development',
+    'offline-first mobile applications',
+    'motive technologies web development',
+  ],
+  alternates: {
+    canonical: `${COMPANY_INFO.url}/services/web-app-development`,
+  },
+  openGraph: {
+    title: 'Custom Web & Mobile Application Development — Motive Technologies',
+    description:
+      'High-performance Next.js 15 web engineering and Flutter mobile applications built with sub-second speeds, zero CLS, and complete intellectual property transfer.',
+    url: `${COMPANY_INFO.url}/services/web-app-development`,
+    type: 'website',
+    images: [
+      {
+        url: '/images/web-engineering-platform.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Motive Technologies Custom Web and Mobile Application Engineering Platform',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Web & Mobile Application Development — Motive Technologies',
+    description:
+      'Next.js 15 Server Components, Flutter cross-platform mobile apps, sub-second Core Web Vitals, and 100% client code ownership.',
+    images: ['/images/web-engineering-platform.jpg'],
+  },
+};
 
 export default function WebAppDevelopmentPage() {
   const serviceData = SERVICES.find(s => s.id === 'web-app-development')!;
@@ -33,8 +75,121 @@ export default function WebAppDevelopmentPage() {
     },
   ];
 
+  // Structured Data Schema Graph
+  const serviceSchemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${COMPANY_INFO.url}/services/web-app-development#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: COMPANY_INFO.url,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Capabilities & Services',
+            item: `${COMPANY_INFO.url}/services`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Custom Web & Mobile Application Development',
+            item: `${COMPANY_INFO.url}/services/web-app-development`,
+          },
+        ],
+      },
+      {
+        '@type': 'Service',
+        '@id': `${COMPANY_INFO.url}/services/web-app-development#service`,
+        name: 'Custom Web & Mobile Application Development',
+        serviceType: 'Full-Stack Web & Mobile Engineering',
+        provider: {
+          '@type': 'Organization',
+          '@id': `${COMPANY_INFO.url}/#organization`,
+          name: COMPANY_INFO.name,
+        },
+        description: serviceData.fullDescription,
+        url: `${COMPANY_INFO.url}/services/web-app-development`,
+        areaServed: [
+          { '@type': 'Country', name: 'India' },
+          { '@type': 'Country', name: 'United States' },
+          { '@type': 'Country', name: 'United Kingdom' },
+          { '@type': 'Country', name: 'United Arab Emirates' },
+          { '@type': 'Country', name: 'Canada' },
+          { '@type': 'Country', name: 'Australia' },
+          { '@type': 'Country', name: 'Singapore' },
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Web & Mobile Engineering Capabilities',
+          itemListElement: serviceData.capabilities.map((cap) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: cap.title,
+              description: cap.description,
+            },
+          })),
+        },
+      },
+      {
+        '@type': 'HowTo',
+        '@id': `${COMPANY_INFO.url}/services/web-app-development#howto`,
+        name: 'How Motive Technologies Builds Production-Grade Web & Mobile Applications',
+        description: 'Our disciplined software engineering workflow from discovery and architectural wireframes to production deployment.',
+        step: serviceData.workflows?.map((wf) => ({
+          '@type': 'HowToStep',
+          position: parseInt(wf.step, 10),
+          name: wf.title,
+          text: wf.detail,
+        })) || [],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${COMPANY_INFO.url}/services/web-app-development#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Why build custom web and mobile applications with Motive Technologies?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Motive Technologies designs and engineers high-speed Next.js 15 web applications and Flutter cross-platform mobile apps that achieve perfect 100/100 Google Lighthouse scores. We write clean, type-safe codebases without bloated generic templates or third-party page builders, delivering sub-second loading speeds, military-grade security, and 100% intellectual property transfer to your organization.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Why do you choose Next.js 15 and React 19 for enterprise web platforms?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Next.js 15 with React Server Components (RSC) minimizes client JavaScript bundles, streams HTML directly from edge runtimes, provides perfect Core Web Vitals (sub-50ms INP, sub-1s LCP), and renders semantic HTML that search bots index effortlessly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do you provide complete source code and IP ownership?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Every line of source code, Figma design system, deployment script, and database schema is 100% owned by your organization with zero vendor lock-in and strict enterprise NDAs.',
+            },
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="bg-white">
+      {/* Schema.org Graph */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaGraph) }}
+      />
+
       {/* Hero Header */}
       <section className="pt-16 pb-20 bg-motive-dark text-white border-b border-motive-darkborder relative overflow-hidden">
         <div className="absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" />
@@ -256,43 +411,49 @@ export default function WebAppDevelopmentPage() {
         </div>
       </section>
 
-      {/* Technical Capabilities Matrix */}
+      {/* Technical Architecture Matrix */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-motive-border">
         <div className="max-w-3xl mb-16 space-y-3">
           <span className="font-mono text-xs uppercase tracking-widest text-motive-grey">
-            ENGINEERING STACK
+            FULL-STACK STACK SPECIFICATION
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-motive-black">
-            Technical Stack &amp; Architecture Matrix
+            Our Core Engineering Matrix
           </h2>
           <p className="text-motive-grey text-base">
-            Detailed breakdown of our core runtime technologies, databases, and DevOps methodologies.
+            We operate across modern runtimes with strict emphasis on type-safety, maintainability, and horizontal scaling.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {technicalCapabilities.map((cat, idx) => (
-            <div key={idx} className="bg-white border border-motive-border rounded-xl p-8 shadow-subtle hover:border-zinc-400 transition-colors">
-              <span className="font-mono text-xs text-motive-red font-bold block mb-2">
-                LAYER 0{idx + 1}
-              </span>
-              <h3 className="text-xl font-bold text-motive-black mb-2">
-                {cat.category}
-              </h3>
-              <p className="text-xs text-motive-grey leading-relaxed mb-6">
-                {cat.desc}
-              </p>
+          {technicalCapabilities.map((tech, idx) => (
+            <div
+              key={idx}
+              className="bg-motive-offwhite border border-motive-border rounded-xl p-8 space-y-4"
+            >
+              <div className="flex items-center justify-between border-b border-motive-border pb-3">
+                <h3 className="text-base font-bold text-motive-black">
+                  {tech.category}
+                </h3>
+                <span className="font-mono text-[10px] text-motive-red font-semibold">
+                  LAYER 0{idx + 1}
+                </span>
+              </div>
 
-              <div className="flex flex-wrap gap-2 pt-4 border-t border-motive-border">
-                {cat.items.map((item, iIdx) => (
+              <div className="flex flex-wrap gap-2 pt-1">
+                {tech.items.map((item, iIdx) => (
                   <span
                     key={iIdx}
-                    className="px-2.5 py-1 bg-motive-offwhite text-xs font-mono text-motive-black rounded border border-motive-border font-medium"
+                    className="px-2.5 py-1 bg-white border border-motive-border rounded text-xs font-mono text-zinc-700"
                   >
                     {item}
                   </span>
                 ))}
               </div>
+
+              <p className="text-xs text-motive-grey leading-relaxed pt-2">
+                {tech.desc}
+              </p>
             </div>
           ))}
         </div>
@@ -302,20 +463,20 @@ export default function WebAppDevelopmentPage() {
       <section className="bg-motive-black text-white py-20 border-t border-motive-darkborder">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
-            ENGINEERING EXCELLENCE
+            DIGITAL EXCELLENCE
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Have a custom web or mobile platform in mind?
+            Ready to build an exceptional digital product?
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            From technical scoping and wireframe architecture to full production release, we deliver on time and to specification.
+            Whether you need a high-converting corporate web platform, a client portal, or an offline-first mobile app, let&apos;s engineer something memorable.
           </p>
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact?service=web-app-development"
               className="px-8 py-4 bg-motive-red text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red-hover transition-colors"
             >
-              Discuss Your Development Project
+              Discuss Your Web or Mobile Project
             </Link>
             <a
               href={`tel:${COMPANY_INFO.primaryPhone.replace(/\s+/g, '')}`}

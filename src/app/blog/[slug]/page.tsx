@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const url = `${COMPANY_INFO.url}/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | Motive Technologies`,
+    title: post.title,
     description: post.excerpt,
     alternates: {
       canonical: url,
@@ -65,28 +65,61 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.publishedAt,
-    author: {
-      '@type': 'Person',
-      name: post.author.name,
-      jobTitle: post.author.role,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: COMPANY_INFO.name,
-      url: COMPANY_INFO.url,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${COMPANY_INFO.url}/images/motive-logo.png`,
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${COMPANY_INFO.url}/blog/${post.slug}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: COMPANY_INFO.url,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog & Insights',
+            item: `${COMPANY_INFO.url}/blog`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: post.title,
+            item: `${COMPANY_INFO.url}/blog/${post.slug}`,
+          },
+        ],
       },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${COMPANY_INFO.url}/blog/${post.slug}`,
-    },
+      {
+        '@type': 'BlogPosting',
+        '@id': `${COMPANY_INFO.url}/blog/${post.slug}#article`,
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        inLanguage: 'en-US',
+        articleSection: post.category,
+        image: [`${COMPANY_INFO.url}/og-image.png`],
+        author: {
+          '@type': 'Person',
+          name: post.author.name,
+          jobTitle: post.author.role,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: COMPANY_INFO.name,
+          url: COMPANY_INFO.url,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${COMPANY_INFO.url}/images/motive-logo.png`,
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `${COMPANY_INFO.url}/blog/${post.slug}`,
+        },
+      },
+    ],
   };
 
   return (

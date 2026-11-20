@@ -5,11 +5,28 @@ import { ArrowRight, Bot, Code2, TrendingUp, CheckCircle2, Cpu, ArrowUpRight } f
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
 
 export const metadata: Metadata = {
-  title: 'Our Capabilities & Services | Motive Technologies',
+  title: 'Our Capabilities & Services',
   description:
-    'Explore our three interconnected technology capabilities: AI Automation & Intelligent Systems, Custom Web & Mobile Application Development, and Technical SEO & Digital Growth.',
+    'Explore our three interconnected technology capabilities: Best AI Agents Development & Autonomous Systems, Custom Web & Mobile Application Development, and Technical SEO/AEO/GEO Digital Growth.',
+  keywords: [
+    'best ai agents development',
+    'enterprise ai automation services',
+    'custom web application engineering',
+    'flutter mobile app development',
+    'technical seo agency',
+    'answer engine optimization aeo',
+    'generative engine optimization geo',
+    'motive technologies services',
+  ],
   alternates: {
     canonical: `${COMPANY_INFO.url}/services`,
+  },
+  openGraph: {
+    title: 'Our Capabilities & Services — Motive Technologies',
+    description:
+      'Three interconnected capabilities. One technology partner: Best AI Agents Development, Custom Web & Mobile Engineering, and Technical SEO & Digital Growth.',
+    url: `${COMPANY_INFO.url}/services`,
+    type: 'website',
   },
 };
 
@@ -20,8 +37,51 @@ export default function ServicesPage() {
     'seo-digital-growth': TrendingUp,
   };
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${COMPANY_INFO.url}/services#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: COMPANY_INFO.url,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Capabilities & Services',
+            item: `${COMPANY_INFO.url}/services`,
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `${COMPANY_INFO.url}/services#catalog`,
+        name: 'Motive Technologies Core Technology Capabilities',
+        description: 'Comprehensive engineering capabilities spanning autonomous AI systems, full-stack digital products, and technical search visibility.',
+        itemListElement: SERVICES.map((service, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: service.title,
+          description: service.shortDescription,
+          url: `${COMPANY_INFO.url}/services/${service.slug}`,
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="bg-white">
+      {/* Schema.org Graph */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+      />
+
       {/* Page Header */}
       <section className="pt-16 pb-20 bg-motive-offwhite/50 border-b border-motive-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

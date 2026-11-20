@@ -93,6 +93,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: COMPANY_INFO.url,
+    types: {
+      'application/rss+xml': `${COMPANY_INFO.url}/feed.xml`,
+    },
   },
   other: {
     'geo.region': 'IN-WB',
@@ -227,6 +230,14 @@ export default function RootLayout({
           '@id': `${COMPANY_INFO.url}/#organization`,
         },
         inLanguage: 'en-US',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: `${COMPANY_INFO.url}/blog?q={search_term_string}`,
+          },
+          'query-input': 'required name=search_term_string',
+        },
       },
       {
         '@type': 'FAQPage',
@@ -266,6 +277,22 @@ export default function RootLayout({
           },
           {
             '@type': 'Question',
+            name: 'What happens after the project launches? Do you provide support?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Every project includes complete technical documentation, team training, and dedicated post-launch support. We also offer ongoing maintenance, security updates, and performance optimization retainers to ensure your systems continuously evolve with your business.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Why choose Motive Technologies for the best AI agents development?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'We engineer production-grade, zero-hallucination autonomous AI agent systems that solve real operational bottlenecks. Rather than brittle experimental demos, we deliver multi-agent architectures with deterministic tool-calling, semantic memory (pgvector), official WhatsApp Business Cloud API integrations, and bi-directional CRM synchronization. Our AI agents operate 24/7 with sub-second execution speed, saving businesses 20–40 hours per week with 100% precision.',
+            },
+          },
+          {
+            '@type': 'Question',
             name: 'What is AEO and GEO, and why does Motive Technologies specialize in it?',
             acceptedAnswer: {
               '@type': 'Answer',
@@ -280,6 +307,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakarta.variable} ${jetbrainsMono.variable}`}>
       <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Specification" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Context Repository" />
+        <link rel="alternate" type="application/rss+xml" title="Motive Technologies Blog RSS Feed" href="/feed.xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}

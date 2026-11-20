@@ -9,7 +9,7 @@ const SERVICE_OPTIONS = [
   'Website',
   'Mobile app',
   'CRM / ERP',
-  'Marketing & SEO',
+  'SEO, AEO & GEO',
   'Not sure yet',
 ];
 

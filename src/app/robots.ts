@@ -11,11 +11,15 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/'],
       },
-      // Explicit allowance for AI Search & Answer Engines (AEO & GEO optimization)
+      // Explicit allowance for AI Search, Answer Engines & LLM scrapers (AEO & GEO optimization)
       {
         userAgent: [
           'Googlebot',
           'Bingbot',
+          'Slurp',
+          'DuckDuckBot',
+          'Baiduspider',
+          'YandexBot',
           'GPTBot',
           'OAI-SearchBot',
           'ChatGPT-User',
@@ -27,6 +31,11 @@ export default function robots(): MetadataRoute.Robots {
           'cohere-ai',
           'Meta-ExternalAgent',
           'Amazonbot',
+          'Bytespider',
+          'CCBot',
+          'Diffbot',
+          'FacebookBot',
+          'DuckAssistBot',
         ],
         allow: '/',
         disallow: ['/api/'],

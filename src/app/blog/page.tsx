@@ -7,7 +7,7 @@ import { ArrowRight, Sparkles, BookOpen } from 'lucide-react';
 import { COMPANY_INFO } from '@/data/siteData';
 
 export const metadata: Metadata = {
-  title: 'Blog & Engineering Insights | Motive Technologies',
+  title: 'Engineering Insights & Technical Journal',
   description:
     'Authoritative guides, cost breakdowns, and technical blueprints on Enterprise AI development, Next.js engineering, DevOps, and MVP architecture by Motive Technologies.',
   alternates: {
@@ -25,8 +25,53 @@ export default function BlogIndexPage() {
   const heroSidebarPosts = BLOG_POSTS.filter((p) => p.isHeroSidebar);
   const featuredGridPosts = BLOG_POSTS.filter((p) => p.isFeaturedGrid);
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${COMPANY_INFO.url}/blog#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: COMPANY_INFO.url,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog & Engineering Insights',
+            item: `${COMPANY_INFO.url}/blog`,
+          },
+        ],
+      },
+      {
+        '@type': 'CollectionPage',
+        '@id': `${COMPANY_INFO.url}/blog#collection`,
+        name: 'Motive Technologies Engineering Insights & Technical Journal',
+        url: `${COMPANY_INFO.url}/blog`,
+        description: 'Practical guides and architectural roadmaps for building scalable AI software and high-performance digital platforms.',
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: BLOG_POSTS.map((post, idx) => ({
+            '@type': 'ListItem',
+            position: idx + 1,
+            name: post.title,
+            description: post.excerpt,
+            url: `${COMPANY_INFO.url}/blog/${post.slug}`,
+          })),
+        },
+      },
+    ],
+  };
+
   return (
     <div className="bg-white min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+      />
       
       {/* Top Header Breadcrumb & Heading */}
       <section className="pt-10 pb-6 border-b border-motive-border">

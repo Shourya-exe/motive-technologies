@@ -52,7 +52,7 @@ export const ContactForm: React.FC = () => {
       } else if (serviceParam.includes('web')) {
         setForm(prev => ({ ...prev, serviceRequired: 'Website Development' }));
       } else if (serviceParam.includes('seo')) {
-        setForm(prev => ({ ...prev, serviceRequired: 'SEO & Digital Growth' }));
+        setForm(prev => ({ ...prev, serviceRequired: 'SEO, AEO & GEO' }));
       }
     }
   }, [serviceParam]);
@@ -347,7 +347,7 @@ export const ContactForm: React.FC = () => {
             <option value="AI Automation & AI Agents">AI Automation &amp; AI Agents</option>
             <option value="Website Development">Website Development</option>
             <option value="Mobile App Development">Mobile App Development</option>
-            <option value="SEO & Digital Growth">SEO &amp; Digital Growth</option>
+            <option value="SEO, AEO & GEO">SEO, AEO &amp; GEO (Search &amp; AI Visibility)</option>
             <option value="Multiple Services">Multiple Integrated Services</option>
             <option value="Other">Other Custom Technical Scope</option>
           </select>

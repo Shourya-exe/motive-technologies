@@ -5,17 +5,71 @@ import { ArrowRight, ShieldCheck, Target, Eye, Lightbulb, Compass, Code, Termina
 import { COMPANY_INFO, WHY_MOTIVE_PRINCIPLES } from '@/data/siteData';
 
 export const metadata: Metadata = {
-  title: 'About Us | Motive Technologies',
+  title: 'About Us — Engineering & Philosophy',
   description:
-    'Driven by Innovation. Designed for Progress. Discover Motive Technologies—our mission, engineering philosophy, and commitment to building intelligent digital solutions.',
+    'Driven by Innovation. Designed for Progress. Discover Motive Technologies—our mission, engineering philosophy, founding principles, and leadership in autonomous AI systems and digital engineering.',
+  keywords: [
+    'about motive technologies',
+    'ai engineering company kolkata',
+    'best ai agent developers india',
+    'autonomous systems agency',
+    'motive technologies founders',
+    'software engineering philosophy',
+  ],
   alternates: {
     canonical: `${COMPANY_INFO.url}/about`,
+  },
+  openGraph: {
+    title: 'About Us — Motive Technologies',
+    description: 'Driven by Innovation. Designed for Progress. Discover our mission, engineering philosophy, and values.',
+    url: `${COMPANY_INFO.url}/about`,
+    type: 'website',
   },
 };
 
 export default function AboutPage() {
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${COMPANY_INFO.url}/about#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: COMPANY_INFO.url,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'About Us',
+            item: `${COMPANY_INFO.url}/about`,
+          },
+        ],
+      },
+      {
+        '@type': 'AboutPage',
+        '@id': `${COMPANY_INFO.url}/about#webpage`,
+        url: `${COMPANY_INFO.url}/about`,
+        name: 'About Motive Technologies',
+        description: 'Motive Technologies is an enterprise technology consultancy engineering autonomous AI agents, web/mobile systems, and organic search growth.',
+        mainEntity: {
+          '@id': `${COMPANY_INFO.url}/#organization`,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="bg-white">
+      {/* Schema.org Graph */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+      />
+
       {/* Hero Header */}
       <section className="pt-16 pb-20 bg-motive-offwhite/50 border-b border-motive-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,149 +102,146 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-motive-black leading-snug">
               &ldquo;We believe the future belongs to businesses that use technology intelligently.&rdquo;
             </h2>
-            <p className="text-xs font-mono uppercase text-motive-grey tracking-wider">
-              {COMPANY_INFO.tagline}
-            </p>
-          </div>
-
-          <div className="lg:col-span-7 bg-motive-offwhite p-8 lg:p-10 rounded-xl border border-motive-border space-y-6">
-            <p className="text-base sm:text-lg text-motive-black font-medium leading-relaxed">
-              &ldquo;{COMPANY_INFO.statement}&rdquo; Our purpose is to make that future more accessible through thoughtful engineering, intelligent automation and digital innovation.
-            </p>
             <p className="text-sm text-motive-grey leading-relaxed">
-              Modern enterprises do not need more disconnected tools, fragile scripts, or superficial website templates. They need dependable, unified digital systems that quietly solve difficult operational bottlenecks, improve responsiveness, and compound commercial value over years of operation.
+              Technology should not create complexity; it should dissolve it. We engineer systems that work silently in the background, handling repetitive tasks with precision so human teams can focus on strategic judgment, creativity, and relationship-building.
             </p>
-            <div className="pt-2 flex items-center gap-4 text-xs font-mono text-zinc-500">
-              <span className="flex items-center gap-1.5 text-motive-black font-bold">
-                <ShieldCheck className="w-4 h-4 text-motive-red" />
-                <span>Zero Compromise on Code Quality</span>
+          </div>
+
+          <div className="lg:col-span-7 bg-motive-offwhite border border-motive-border rounded-xl p-8 lg:p-10 space-y-6">
+            <div className="flex items-center justify-between pb-4 border-b border-motive-border">
+              <span className="text-xs font-mono uppercase tracking-widest text-motive-black font-bold">
+                Operating Formula
               </span>
-              <span>&bull;</span>
-              <span>Business Outcome Driven</span>
+              <span className="text-xs font-mono text-motive-red font-semibold">
+                EST. {COMPANY_INFO.foundedYear}
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <span className="font-mono text-xs font-bold text-motive-red block">01 / DISCIPLINE</span>
+                <p className="text-xs text-motive-grey leading-relaxed">
+                  Clean, production-tested architectures built on deterministic logic, type-safety, and verifiable benchmarks.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <span className="font-mono text-xs font-bold text-motive-red block">02 / VELOCITY</span>
+                <p className="text-xs text-motive-grey leading-relaxed">
+                  Rapid engineering sprints that turn specifications into fully functioning software in weeks, not quarters.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <span className="font-mono text-xs font-bold text-motive-red block">03 / OWNERSHIP</span>
+                <p className="text-xs text-motive-grey leading-relaxed">
+                  100% intellectual property transfer to our clients upon deployment. Zero proprietary handcuffs.
+                </p>
+              </div>
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* Vision & Mission Grid */}
-      <section className="py-20 bg-motive-offwhite/40 border-b border-motive-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            {/* Vision */}
-            <div className="bg-white border border-motive-border rounded-xl p-8 lg:p-10 shadow-subtle flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded bg-motive-offwhite flex items-center justify-center text-motive-red">
-                  <Eye className="w-6 h-6" />
-                </div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-motive-grey block">
-                  STRATEGIC HORIZON
-                </span>
-                <h3 className="text-2xl font-bold text-motive-black">
-                  Our Vision
-                </h3>
-                <p className="text-sm text-motive-grey leading-relaxed">
-                  To be recognized as a premier international technology and digital transformation partner that empowers businesses to transition effortlessly into an automated, AI-augmented operational reality.
-                </p>
-              </div>
-
-              <div className="mt-8 pt-4 border-t border-motive-border flex items-center justify-between text-xs font-mono text-zinc-400">
-                <span>LONG-TERM DIRECTION</span>
-                <span className="text-motive-black font-semibold">AMBITIOUS</span>
-              </div>
+      {/* Mission & Vision Split Cards */}
+      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-motive-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          {/* Mission Card */}
+          <div className="bg-white border border-motive-border rounded-xl p-8 lg:p-10 shadow-subtle space-y-4">
+            <div className="w-10 h-10 rounded bg-motive-offwhite flex items-center justify-center text-motive-red border border-motive-border">
+              <Target className="w-5 h-5" />
             </div>
-
-            {/* Mission */}
-            <div className="bg-white border border-motive-border rounded-xl p-8 lg:p-10 shadow-subtle flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded bg-motive-offwhite flex items-center justify-center text-motive-red">
-                  <Target className="w-6 h-6" />
-                </div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-motive-grey block">
-                  OPERATIONAL MANDATE
-                </span>
-                <h3 className="text-2xl font-bold text-motive-black">
-                  Our Mission
-                </h3>
-                <p className="text-sm text-motive-grey leading-relaxed">
-                  To architect, build, and support high-caliber digital experiences, custom automation systems, and organic search engines that directly resolve operational bottlenecks, empower human teams, and generate measurable commercial progress.
-                </p>
-              </div>
-
-              <div className="mt-8 pt-4 border-t border-motive-border flex items-center justify-between text-xs font-mono text-zinc-400">
-                <span>EXECUTION DISCIPLINE</span>
-                <span className="text-motive-black font-semibold">PURPOSEFUL</span>
-              </div>
-            </div>
-
+            <span className="text-xs font-mono uppercase tracking-widest text-motive-grey block font-bold">
+              OUR MISSION
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold text-motive-black">
+              Democratizing enterprise-grade intelligence.
+            </h3>
+            <p className="text-sm text-motive-grey leading-relaxed">
+              To engineer and deliver accessible, robust, and mathematically sound AI systems and web applications that enable modern enterprises to automate manual operations, serve customers with sub-second responsiveness, and build enduring competitive advantages.
+            </p>
           </div>
+
+          {/* Vision Card */}
+          <div className="bg-white border border-motive-border rounded-xl p-8 lg:p-10 shadow-subtle space-y-4">
+            <div className="w-10 h-10 rounded bg-motive-offwhite flex items-center justify-center text-motive-red border border-motive-border">
+              <Eye className="w-5 h-5" />
+            </div>
+            <span className="text-xs font-mono uppercase tracking-widest text-motive-grey block font-bold">
+              OUR VISION
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold text-motive-black">
+              Smarter automation for a brighter tomorrow.
+            </h3>
+            <p className="text-sm text-motive-grey leading-relaxed">
+              We envision a business world where friction-laden administrative tasks are handled autonomously by verifiable AI pipelines, allowing organizations of every size to achieve unprecedented agility, operational resilience, and sustained human flourishing.
+            </p>
+          </div>
+
         </div>
       </section>
 
-      {/* What We Believe / Architectural Commitments */}
+      {/* Engineering Principles (Indexed from Why Motive) */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-motive-border">
         <div className="max-w-3xl mb-16 space-y-3">
           <span className="font-mono text-xs uppercase tracking-widest text-motive-grey">
-            OUR BELIEFS &amp; STANDARDS
+            FOUNDATIONAL COMMITMENTS
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-motive-black">
-            The Principles That Govern Our Craft
+            The Principles That Govern Our Code
           </h2>
           <p className="text-motive-grey text-base">
-            Every technical decision, pull request, and client conversation is evaluated against these non-negotiable benchmarks.
+            We hold ourselves to rigorous engineering standards on every engagement, whether a 2-week workflow deployment or a complex multi-tenant application.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 bg-white border border-motive-border rounded-lg shadow-subtle space-y-3">
-            <span className="font-mono text-xs text-motive-red font-bold">01 // CLARITY OVER COMPLEXITY</span>
-            <h4 className="text-base font-bold text-motive-black">Simplicity Is The Ultimate Sophistication</h4>
-            <p className="text-xs text-motive-grey leading-relaxed">
-              We write clean, readable code and design intuitive layouts. We never introduce unnecessary complexity to appear sophisticated.
-            </p>
-          </div>
-
-          <div className="p-6 bg-white border border-motive-border rounded-lg shadow-subtle space-y-3">
-            <span className="font-mono text-xs text-motive-red font-bold">02 // DETERMINISM &amp; VERIFICATION</span>
-            <h4 className="text-base font-bold text-motive-black">Safe AI with Guardrails</h4>
-            <p className="text-xs text-motive-grey leading-relaxed">
-              AI models are powerful but must be strictly bounded. We enforce deterministic business rules, data verification, and human oversight.
-            </p>
-          </div>
-
-          <div className="p-6 bg-white border border-motive-border rounded-lg shadow-subtle space-y-3">
-            <span className="font-mono text-xs text-motive-red font-bold">03 // TRANSPARENCY &amp; ETHICS</span>
-            <h4 className="text-base font-bold text-motive-black">Honest Engineering Partnerships</h4>
-            <p className="text-xs text-motive-grey leading-relaxed">
-              We communicate constraints directly, establish realistic milestones, and maintain complete transparency regarding technical scope and deliverables.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {WHY_MOTIVE_PRINCIPLES.map((principle, idx) => (
+            <div
+              key={idx}
+              className="bg-white border border-motive-border rounded-lg p-6 shadow-subtle hover:border-zinc-400 transition-colors space-y-3"
+            >
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs font-bold text-motive-red">
+                  {principle.number} // COMMITMENT
+                </span>
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+              </div>
+              <h3 className="text-base font-bold text-motive-black">
+                {principle.title}
+              </h3>
+              <p className="text-xs text-motive-grey leading-relaxed">
+                {principle.description}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-motive-dark text-white py-20 border-t border-motive-darkborder">
+      <section className="bg-motive-black text-white py-20 border-t border-motive-darkborder">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
-            JOIN US ON THE JOURNEY
+            COLLABORATION
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Work with a partner that values your business outcomes.
+            Partner with engineering specialists who care about outcomes.
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            Let us explore how Motive Technologies can engineer the digital and automated systems your company needs to compete and grow.
+            Reach out to our leadership team to discuss your operational challenges and explore how we can engineer a tailored technological solution.
           </p>
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
               className="px-8 py-4 bg-motive-red text-white text-xs font-bold uppercase tracking-wider rounded hover:bg-motive-red-hover transition-colors"
             >
-              Start A Conversation
+              Schedule an Introduction
             </Link>
             <Link
               href="/work"
-              className="px-6 py-4 bg-zinc-900 border border-zinc-700 text-white text-xs font-mono rounded hover:bg-zinc-800 transition-colors"
+              className="px-8 py-4 bg-zinc-900 border border-zinc-800 text-white text-xs font-mono rounded hover:bg-zinc-800 transition-colors"
             >
               Explore Our Work
             </Link>
