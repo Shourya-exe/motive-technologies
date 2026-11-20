@@ -85,7 +85,7 @@ export default function AboutPage() {
               <span className="text-motive-red">Designed for Progress.</span>
             </h1>
             <p className="text-base sm:text-lg text-motive-grey leading-relaxed">
-              Motive Technologies exists to eliminate friction and empower forward-looking businesses with intelligent automation, robust software engineering, and enduring digital visibility.
+              Motive Technologies helps forward-thinking businesses work smarter. We build easy-to-use AI automation, fast modern websites, and search strategies that help you get noticed and grow.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
               &ldquo;We believe the future belongs to businesses that use technology intelligently.&rdquo;
             </h2>
             <p className="text-sm text-motive-grey leading-relaxed">
-              Technology should not create complexity; it should dissolve it. We engineer systems that work silently in the background, handling repetitive tasks with precision so human teams can focus on strategic judgment, creativity, and relationship-building.
+              Technology shouldn&apos;t make things complicated—it should make things easier. We build smart tools that quietly handle daily repetitive work so you and your team can focus on what matters most: serving customers and growing your business.
             </p>
           </div>
 
@@ -121,21 +121,21 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <span className="font-mono text-xs font-bold text-motive-red block">01 / DISCIPLINE</span>
                 <p className="text-xs text-motive-grey leading-relaxed">
-                  Clean, production-tested architectures built on deterministic logic, type-safety, and verifiable benchmarks.
+                  Carefully crafted, thoroughly tested software built to work reliably from day one.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <span className="font-mono text-xs font-bold text-motive-red block">02 / VELOCITY</span>
                 <p className="text-xs text-motive-grey leading-relaxed">
-                  Rapid engineering sprints that turn specifications into fully functioning software in weeks, not quarters.
+                  Fast delivery sprints that take your ideas and turn them into working software in weeks, not months.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <span className="font-mono text-xs font-bold text-motive-red block">03 / OWNERSHIP</span>
                 <p className="text-xs text-motive-grey leading-relaxed">
-                  100% intellectual property transfer to our clients upon deployment. Zero proprietary handcuffs.
+                  You own 100% of your code, designs, and data. No ongoing lock-ins, ever.
                 </p>
               </div>
             </div>
@@ -157,10 +157,10 @@ export default function AboutPage() {
               OUR MISSION
             </span>
             <h3 className="text-xl sm:text-2xl font-bold text-motive-black">
-              Democratizing enterprise-grade intelligence.
+              Practical technology for ambitious businesses.
             </h3>
             <p className="text-sm text-motive-grey leading-relaxed">
-              To engineer and deliver accessible, robust, and mathematically sound AI systems and web applications that enable modern enterprises to automate manual operations, serve customers with sub-second responsiveness, and build enduring competitive advantages.
+              To design and deliver practical, high-performing AI tools and modern websites that help businesses eliminate busywork, reply to customers instantly, and grow with confidence.
             </p>
           </div>
 
@@ -176,7 +176,7 @@ export default function AboutPage() {
               Smarter automation for a brighter tomorrow.
             </h3>
             <p className="text-sm text-motive-grey leading-relaxed">
-              We envision a business world where friction-laden administrative tasks are handled autonomously by verifiable AI pipelines, allowing organizations of every size to achieve unprecedented agility, operational resilience, and sustained human flourishing.
+              We envision a future where repetitive tasks are handled automatically by dependable AI, giving business owners more freedom, fewer headaches, and more time to focus on their real passion.
             </p>
           </div>
 
@@ -193,7 +193,7 @@ export default function AboutPage() {
             The Principles That Govern Our Code
           </h2>
           <p className="text-motive-grey text-base">
-            We hold ourselves to rigorous engineering standards on every engagement, whether a 2-week workflow deployment or a complex multi-tenant application.
+            We hold ourselves to high quality standards on every single project, from a quick WhatsApp automation setup to a complete business web platform.
           </p>
         </div>
 

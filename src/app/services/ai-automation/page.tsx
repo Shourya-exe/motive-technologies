@@ -59,19 +59,19 @@ export default function AIAutomationPage() {
   const challenges = [
     {
       problem: 'Manual Repetitive Data Entry',
-      solution: 'Autonomous data ingestion agents parse PDFs, emails, and invoices straight into operational ERPs and CRMs.',
+      solution: 'Smart AI assistants automatically read PDFs, emails, and invoices and copy the data directly into your software without mistakes.',
     },
     {
-      problem: 'Lagging Customer Triage (Hours to Days)',
-      solution: '24/7 WhatsApp & conversational AI agents that qualify, answer documentation questions, and schedule consultations in seconds.',
+      problem: 'Slow Replies to New Leads (Hours to Days)',
+      solution: '24/7 WhatsApp AI agents reply in seconds, answer customer questions, qualify buyers, and book meetings on your calendar.',
     },
     {
-      problem: 'Disjointed SaaS Silos',
-      solution: 'Custom bi-directional webhook pipelines ensuring accounting, inventory, and sales updates propagate in real time.',
+      problem: 'Disconnected Business Tools',
+      solution: 'Automatic connections that keep your spreadsheets, CRM, accounting, and sales software continuously updated in real time.',
     },
     {
-      problem: 'Hallucination & Compliance Risks',
-      solution: 'Strict enterprise guardrails, RAG validation against internal source documents, and human-in-the-loop escalation paths.',
+      problem: 'Risk of AI Making Mistakes',
+      solution: 'We train AI strictly on your actual company documents and pricing guidelines, with instant alerts sent to your team for tricky cases.',
     },
   ];
 
@@ -282,12 +282,12 @@ export default function AIAutomationPage() {
         <div className="mt-16">
           <DirectAnswerBlock
             question="Why choose Motive Technologies for the best AI agents development?"
-            directAnswer="Motive Technologies provides the best AI agents development and enterprise autonomous workflows. We engineer deterministic, hallucination-resistant multi-agent architectures, official Meta WhatsApp Cloud API integrations, and vector semantic search (pgvector RAG). Our AI agents execute multi-step tool calls, synchronize CRM state, and resolve complex inquiries in seconds with 100% precision."
+            directAnswer="Motive Technologies develops smart, dependable AI agents and automation systems that do real work for your business. We connect official WhatsApp Cloud API, customer databases, and business software so your AI can answer customer inquiries instantly, qualify leads, schedule meetings, and update your records without mistakes or hallucinations."
             keyTakeaways={[
-              'Saves 20–40 hours per week per employee with zero manual overhead',
-              'Sub-second WhatsApp and conversational response times 24/7',
-              'Strict enterprise guardrails with zero data hallucination',
-              '100% intellectual property ownership and custom code transfer',
+              'Saves 20–40 hours per week by taking over repetitive manual admin',
+              'Instant replies to WhatsApp and web inquiries 24 hours a day',
+              'Safe and accurate responses grounded in your actual business data',
+              '100% intellectual property ownership—you own all code and setups',
             ]}
             ctaUrl="/contact"
             ctaText="Schedule AI Automation Consultation"
@@ -307,7 +307,7 @@ export default function AIAutomationPage() {
               Before vs. After Automation Architecture
             </h2>
             <p className="text-motive-grey text-base">
-              Witness the concrete operational contrast between fragile manual handling and deterministic, AI-orchestrated pipelines.
+              See the difference between doing everything by hand and letting smart AI automation do the heavy lifting.
             </p>
           </div>
 
@@ -319,34 +319,34 @@ export default function AIAutomationPage() {
                 <div className="flex items-center gap-2">
                   <XCircle className="w-5 h-5 text-red-500" />
                   <span className="font-mono text-xs uppercase font-bold text-red-700 tracking-wider">
-                    Legacy Operational Pattern (Before)
+                    Manual Process (Before)
                   </span>
                 </div>
-                <span className="text-xs font-mono text-red-600 font-semibold">Fragile</span>
+                <span className="text-xs font-mono text-red-600 font-semibold">Slow</span>
               </div>
 
               <div className="space-y-4 font-mono text-xs">
                 <div className="p-3 bg-red-50/50 rounded border border-red-100 flex items-start gap-3">
                   <Clock className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-zinc-800">4 to 12 Hour Response Latency:</span>
-                    <p className="text-zinc-600 mt-0.5">Leads sit in mailboxes or personal WhatsApp numbers during off-hours, leading to high drop-off.</p>
+                    <span className="font-bold text-zinc-800">Hours-Long Delays to Customer Inquiries:</span>
+                    <p className="text-zinc-600 mt-0.5">Leads sit in mailboxes or personal WhatsApp chats overnight, leading to lost sales.</p>
                   </div>
                 </div>
 
                 <div className="p-3 bg-red-50/50 rounded border border-red-100 flex items-start gap-3">
                   <Database className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-zinc-800">Manual Data Copy-Pasting:</span>
-                    <p className="text-zinc-600 mt-0.5">Team members manually transcribe spreadsheet rows into invoicing software and CRM pipelines, causing human errors.</p>
+                    <span className="font-bold text-zinc-800">Endless Copy-Pasting Between Apps:</span>
+                    <p className="text-zinc-600 mt-0.5">Team members manually re-type information from emails and forms into spreadsheets and CRMs, causing costly errors.</p>
                   </div>
                 </div>
 
                 <div className="p-3 bg-red-50/50 rounded border border-red-100 flex items-start gap-3">
                   <RefreshCw className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-zinc-800">Repetitive FAQ Answering:</span>
-                    <p className="text-zinc-600 mt-0.5">High-cost senior staff repeatedly answering the same 20 technical and pricing queries all day.</p>
+                    <span className="font-bold text-zinc-800">Repeating the Same Answers All Day:</span>
+                    <p className="text-zinc-600 mt-0.5">Valuable staff spend hours answering basic pricing, timing, and availability questions instead of closing deals.</p>
                   </div>
                 </div>
               </div>
@@ -358,34 +358,34 @@ export default function AIAutomationPage() {
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-emerald-600" />
                   <span className="font-mono text-xs uppercase font-bold text-emerald-800 tracking-wider">
-                    Motive Autonomous Pipeline (After)
+                    With Motive AI Automation (After)
                   </span>
                 </div>
-                <span className="text-xs font-mono text-emerald-700 font-semibold">Sub-15s Latency</span>
+                <span className="text-xs font-mono text-emerald-700 font-semibold">Instant (&lt; 15s)</span>
               </div>
 
               <div className="space-y-4 font-mono text-xs">
                 <div className="p-3 bg-emerald-50/50 rounded border border-emerald-100 flex items-start gap-3">
                   <Zap className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-zinc-900">Instant Intelligent Triage (&lt; 15s):</span>
-                    <p className="text-zinc-700 mt-0.5">Incoming requests on WhatsApp or Web are verified, categorized, and answered with strict document citations 24/7/365.</p>
+                    <span className="font-bold text-zinc-900">Instant Answers to Every Inquiry (&lt; 15s):</span>
+                    <p className="text-zinc-700 mt-0.5">Customer questions on WhatsApp or your website are answered accurately 24/7 using your approved business information.</p>
                   </div>
                 </div>
 
                 <div className="p-3 bg-emerald-50/50 rounded border border-emerald-100 flex items-start gap-3">
                   <GitFork className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-zinc-900">Automated Multi-System Sync:</span>
-                    <p className="text-zinc-700 mt-0.5">Bi-directional webhooks automatically provision customer records, trigger contract drafts, and sync accounting pipelines.</p>
+                    <span className="font-bold text-zinc-900">Automatic Sync Across All Your Tools:</span>
+                    <p className="text-zinc-700 mt-0.5">New leads, customer details, and invoice records update automatically across all your tools without lifting a finger.</p>
                   </div>
                 </div>
 
                 <div className="p-3 bg-emerald-50/50 rounded border border-emerald-100 flex items-start gap-3">
                   <Bot className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-zinc-900">Human-In-The-Loop Escalation:</span>
-                    <p className="text-zinc-700 mt-0.5">Complex custom negotiations or edge cases are neatly packaged and routed to human directors with instant summaries.</p>
+                    <span className="font-bold text-zinc-900">Instant Alerts for Complex Requests:</span>
+                    <p className="text-zinc-700 mt-0.5">Whenever an inquiry needs special attention, the AI summarizes the conversation and sends it directly to your team to step in.</p>
                   </div>
                 </div>
               </div>

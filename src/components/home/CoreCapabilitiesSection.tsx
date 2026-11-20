@@ -44,17 +44,17 @@ export const CoreCapabilitiesSection: React.FC = () => {
       icon: Bot,
       imageSrc: '/images/ai-agents-automation.jpg',
       imageAlt: 'Motive AI Agents and Autonomous Workflow Automation System',
-      statusBadge: 'AUTONOMOUS AGENT RUNTIME',
+      statusBadge: 'AI & WORKFLOW AUTOMATION',
       statusColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-950/40',
       metricBadge: '< 12s Response',
-      metricDetail: '24/7 Autonomous Lead Capture',
-      techTags: ['Multi-Agent Architecture', 'WhatsApp Cloud API', 'Zero-Error CRM Sync', 'Event Bus'],
-      clientOutcome: 'Save 20–40 hours per week by replacing manual repetitive admin with autonomous AI agents and instant WhatsApp lead qualification.',
+      metricDetail: '24/7 Instant Lead Replies',
+      techTags: ['Smart AI Helpers', 'WhatsApp Automation', 'Automatic CRM Sync', 'Zero Data Loss'],
+      clientOutcome: 'Save 20 to 40 hours every week by letting smart AI handle your repetitive tasks and respond to customer WhatsApp messages instantly.',
       keyCapabilities: [
-        'Best AI Agents Development & Multi-Agent Reasoning',
-        '24/7 WhatsApp Lead Qualification & Booking',
-        'Autonomous Workflow Sync (CRM, Invoicing, Forms)',
-        'Zero-Error Data Transfer Across Enterprise Tools',
+        'Smart AI Agents that think and solve customer questions',
+        '24/7 WhatsApp automatic replies and appointment booking',
+        'Automatic data sync between your forms, CRM, and billing',
+        'Zero manual data entry mistakes across your tools',
       ],
       ctaText: 'Explore AI Agents & Automation',
       interactiveLabel: 'Live Chat Flow',
@@ -66,17 +66,17 @@ export const CoreCapabilitiesSection: React.FC = () => {
       icon: Code2,
       imageSrc: '/images/web-engineering-platform.jpg',
       imageAlt: 'Motive High-Performance Web Engineering and Enterprise Platform Architecture',
-      statusBadge: 'ENTERPRISE EDGE RUNTIME',
+      statusBadge: 'FAST WEB & MOBILE PLATFORMS',
       statusColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-950/40',
-      metricBadge: '98/100 Lighthouse',
-      metricDetail: 'Sub-Second Page Loads',
-      techTags: ['Next.js App Router', 'TypeScript & Tailwind', 'Enterprise Portals', 'Cross-Platform Mobile'],
-      clientOutcome: 'Sub-second page loads, institutional brand credibility, and frictionless user journeys that maximize client conversion rates.',
+      metricBadge: '98/100 Speed Score',
+      metricDetail: 'Loads in Under 1 Second',
+      techTags: ['Fast Next.js Websites', 'Clean & Modern Design', 'Secure Client Portals', 'Mobile Friendly'],
+      clientOutcome: 'A clean, lightning-fast website that builds instant trust and makes it effortless for visitors to become paying customers.',
       keyCapabilities: [
-        'Bespoke Corporate Websites Built with Next.js',
-        'Custom Web Applications & Secure Client Portals',
-        'Cross-Platform Android & Mobile App Development',
-        'WCAG Accessible, High-Converting Swiss UI Design',
+        'Custom, lightning-fast business websites built with Next.js',
+        'Simple and secure client portals and web apps',
+        'Easy-to-use mobile apps for Android and iOS',
+        'Clean, accessible design that turns visitors into leads',
       ],
       ctaText: 'Explore Web & Mobile Engineering',
       interactiveLabel: 'Performance Audit',
@@ -88,17 +88,17 @@ export const CoreCapabilitiesSection: React.FC = () => {
       icon: TrendingUp,
       imageSrc: '/images/seo-aeo-growth.jpg',
       imageAlt: 'Motive Technical SEO and AEO Search Engine Growth System',
-      statusBadge: 'SEMANTIC KNOWLEDGE GRAPH',
+      statusBadge: 'SEARCH & AI DISCOVERY',
       statusColor: 'text-red-400 border-red-500/30 bg-red-950/40',
-      metricBadge: '+142% Organic Lift',
-      metricDetail: 'Zero Monthly Ad Dependency',
-      techTags: ['Technical SEO Audits', 'AEO / GEO Engine', 'Schema.org JSON-LD', 'Core Web Vitals'],
-      clientOutcome: 'Dominate Google search results for commercial high-intent terms and get cited by modern AI Answer Engines (Perplexity, ChatGPT).',
+      metricBadge: '+142% Organic Traffic',
+      metricDetail: 'Rank High Without Paying for Ads',
+      techTags: ['Top Google Rankings', 'ChatGPT & Perplexity Answers', 'Clear Search Structure', 'Fast Page Speeds'],
+      clientOutcome: 'Show up at the top when people search on Google or ask questions on ChatGPT and Perplexity, without paying for expensive ads.',
       keyCapabilities: [
-        'Full Technical SEO & Core Web Vitals Audits',
-        'AEO & GEO Optimization for Perplexity & ChatGPT',
-        'High-Intent Keyword & Semantic Entity Strategy',
-        'Structured Schema Markup & Crawl Optimization',
+        'Complete website checkup to fix speed and ranking issues',
+        'Get recommended by AI engines like ChatGPT and Perplexity',
+        'Target the exact search words your best customers use',
+        'Clear search code so Google easily understands your business',
       ],
       ctaText: 'Explore SEO, AEO & Growth',
       interactiveLabel: 'AI Citation & SERP',
@@ -130,7 +130,7 @@ export const CoreCapabilitiesSection: React.FC = () => {
             <div className="inline-flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-motive-red" />
               <span className="font-mono text-xs font-bold uppercase tracking-widest text-motive-grey">
-                WHAT WE BUILD // THREE INTERCONNECTED CAPABILITIES
+                WHAT WE BUILD // THREE CORE SERVICES
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tighter text-motive-black leading-[1.05]">
@@ -141,7 +141,7 @@ export const CoreCapabilitiesSection: React.FC = () => {
 
           <div className="lg:col-span-4 lg:pl-6">
             <p className="text-sm sm:text-base text-motive-grey leading-relaxed">
-              We engineer intelligent automation, modern web platforms, and organic visibility as a coordinated technological backbone designed to compound your revenue.
+              We build smart AI tools, fast modern websites, and strong search rankings that work together to help your business grow and earn more.
             </p>
           </div>
         </div>

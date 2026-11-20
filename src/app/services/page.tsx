@@ -97,7 +97,7 @@ export default function ServicesPage() {
               <span className="text-motive-red">One technology partner.</span>
             </h1>
             <p className="text-base sm:text-lg text-motive-grey leading-relaxed">
-              We do not treat automation, web engineering, and search as isolated projects. We build them as a unified operational engine that eliminates friction, attracts high-value demand, and scales predictably.
+              We don&apos;t treat AI automation, web development, and search rankings as separate things. We connect them together into a complete system that saves your team time, brings in new customers, and helps your business grow smoothly.
             </p>
           </div>
         </div>

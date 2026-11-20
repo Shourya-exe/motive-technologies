@@ -25,7 +25,7 @@ export const TechEcosystemSection: React.FC = () => {
 
           <div className="lg:col-span-4 lg:pl-6">
             <p className="text-sm sm:text-base text-motive-grey leading-relaxed">
-              We curate battle-tested frameworks, typed architectures, and modern cloud primitives. We select runtimes based on latency, operational reliability, and long-term maintainability.
+              We choose reliable, modern tools known for speed, rock-solid security, and effortless maintenance. We only use technology that makes your business faster and easier to run.
             </p>
           </div>
         </div>

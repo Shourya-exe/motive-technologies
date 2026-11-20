@@ -25,22 +25,22 @@ export const BrandIntroSection: React.FC = () => {
 
           <div className="lg:col-span-7 lg:pl-8 space-y-5">
             <p className="text-lg sm:text-xl text-motive-black font-medium leading-relaxed">
-              At Motive Technologies, we engineer intelligent automation, bespoke web architecture, and organic search visibility to eliminate administrative bottlenecks, close deals faster, and scale predictably.
+              At Motive Technologies, we build smart automations, fast modern websites, and search engine visibility so your team spends less time on repetitive busywork, answers customers faster, and wins more business.
             </p>
             
             {/* Quick Metrics Bar replacing text wall */}
             <div className="grid grid-cols-3 gap-3 pt-2">
               <div className="p-3 bg-white rounded-lg border border-motive-border text-center">
                 <span className="block font-mono text-base sm:text-lg font-bold text-motive-red">&lt; 12s</span>
-                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">AI Response Time</span>
+                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Customer Reply Time</span>
               </div>
               <div className="p-3 bg-white rounded-lg border border-motive-border text-center">
                 <span className="block font-mono text-base sm:text-lg font-bold text-motive-black">20–40h</span>
-                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Saved / Week</span>
+                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Saved Each Week</span>
               </div>
               <div className="p-3 bg-white rounded-lg border border-motive-border text-center">
                 <span className="block font-mono text-base sm:text-lg font-bold text-motive-black">98/100</span>
-                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Lighthouse Speed</span>
+                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Website Speed Score</span>
               </div>
             </div>
 
@@ -49,7 +49,7 @@ export const BrandIntroSection: React.FC = () => {
                 href="/about"
                 className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-motive-black hover:text-motive-red transition-colors group"
               >
-                <span>Learn More About Our Philosophy</span>
+                <span>Learn More About How We Work</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-motive-red" />
               </Link>
             </div>
@@ -63,26 +63,26 @@ export const BrandIntroSection: React.FC = () => {
           <div className="bg-white p-7 rounded-2xl border border-motive-border shadow-sm hover:shadow-md transition-all space-y-4 group">
             <div className="flex items-center justify-between">
               <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
-                01 // AI AUTOMATION
+                01 // AI &amp; AUTOMATION
               </span>
               <div className="w-9 h-9 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-motive-red group-hover:scale-105 transition-transform">
                 <Cpu className="w-4 h-4" />
               </div>
             </div>
             <h3 className="text-xl font-bold text-motive-black">
-              Best AI Agents &amp; Everyday Automation
+              Smart AI Assistants &amp; Automation
             </h3>
             <p className="text-sm text-zinc-600 leading-relaxed font-normal">
-              Eliminate tedious spreadsheets, manual email follow-ups, and copy-pasting. Autonomous AI agents connect your tools, WhatsApp, and CRM to operate smoothly 24/7.
+              Say goodbye to messy spreadsheets, manual follow-ups, and copy-pasting. Custom AI assistants connect your tools, WhatsApp, and CRM to handle routine tasks smoothly 24/7.
             </p>
             <ul className="space-y-2 pt-2 text-xs text-zinc-700 font-medium">
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
-                <span>Instant 24/7 WhatsApp lead qualification</span>
+                <span>Instant 24/7 WhatsApp customer replies</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
-                <span>Automated invoicing, leads &amp; CRM sync</span>
+                <span>Automatic billing, lead capture &amp; CRM updates</span>
               </li>
             </ul>
           </div>
@@ -91,26 +91,26 @@ export const BrandIntroSection: React.FC = () => {
           <div className="bg-white p-7 rounded-2xl border border-motive-border shadow-sm hover:shadow-md transition-all space-y-4 group">
             <div className="flex items-center justify-between">
               <span className="font-mono text-xs text-motive-red font-bold uppercase tracking-widest">
-                02 // WEB PLATFORMS
+                02 // WEB &amp; APPS
               </span>
               <div className="w-9 h-9 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center text-cyan-600 group-hover:scale-105 transition-transform">
                 <Layout className="w-4 h-4" />
               </div>
             </div>
             <h3 className="text-xl font-bold text-motive-black">
-              High-Converting Web &amp; Mobile
+              Fast, Modern Websites &amp; Mobile Apps
             </h3>
             <p className="text-sm text-zinc-600 leading-relaxed font-normal">
-              Elevate your business with custom Next.js corporate platforms, client portals, and mobile apps that establish immediate institutional trust and accelerate conversions.
+              Give your business a clean, professional website, customer portal, or mobile app that loads in under a second and makes a great impression on potential clients.
             </p>
             <ul className="space-y-2 pt-2 text-xs text-zinc-700 font-medium">
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
-                <span>Sub-second page loads with modern Next.js</span>
+                <span>Loads in less than a second on any phone</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
-                <span>Bespoke client portals &amp; mobile apps</span>
+                <span>Custom customer portals &amp; mobile apps</span>
               </li>
             </ul>
           </div>
@@ -126,19 +126,19 @@ export const BrandIntroSection: React.FC = () => {
               </div>
             </div>
             <h3 className="text-xl font-bold text-motive-black">
-              Predictable Inbound Growth
+              Get Found on Google &amp; AI Search
             </h3>
             <p className="text-sm text-zinc-600 leading-relaxed font-normal">
-              Stop relying solely on expensive paid ads. Technical SEO and AEO architectures place your brand at the top of Google and AI answer engines for high-intent searchers.
+              Stop burning your budget on expensive paid ads. We optimize your website so buyers find you directly on Google search and AI tools like ChatGPT and Perplexity.
             </p>
             <ul className="space-y-2 pt-2 text-xs text-zinc-700 font-medium">
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
-                <span>Top Google rankings for buying-intent keywords</span>
+                <span>Rank high for keywords buyers actually search for</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-motive-red shrink-0" />
-                <span>Compounding inbound traffic without monthly ad spend</span>
+                <span>Steady stream of inbound inquiries without ad spend</span>
               </li>
             </ul>
           </div>

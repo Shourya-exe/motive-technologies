@@ -255,6 +255,7 @@ export const Navbar: React.FC = () => {
           <div className="space-y-1">
             <Link
               href="/"
+              onClick={() => setMobileMenuOpen(false)}
               className={`block px-3 py-2 text-sm font-medium rounded ${
                 pathname === '/' ? 'bg-motive-offwhite text-motive-black font-bold' : 'text-motive-grey hover:text-motive-black'
               }`}
@@ -290,6 +291,7 @@ export const Navbar: React.FC = () => {
                       <Link
                         key={service.id}
                         href={`/services/${service.slug}`}
+                        onClick={() => setMobileMenuOpen(false)}
                         className={`block py-2 px-3 text-xs rounded transition-colors ${
                           isActive
                             ? 'text-motive-red font-semibold bg-motive-offwhite'
@@ -302,6 +304,7 @@ export const Navbar: React.FC = () => {
                   })}
                   <Link
                     href="/services"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="block py-2 px-3 text-xs font-semibold text-motive-red hover:underline"
                   >
                     All Capabilities &rarr;
@@ -314,6 +317,7 @@ export const Navbar: React.FC = () => {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
                 className={`block px-3 py-2 text-sm font-medium rounded ${
                   pathname === link.href ? 'bg-motive-offwhite text-motive-black font-bold' : 'text-motive-grey'
                 }`}

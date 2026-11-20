@@ -25,7 +25,7 @@ export const WhyMotiveSection: React.FC = () => {
 
           <div className="lg:col-span-4 lg:pl-6">
             <p className="text-sm sm:text-base text-motive-grey leading-relaxed">
-              Our operating philosophy is grounded in architectural discipline, business clarity, and verifiable execution. We do not build technology for vanity—we build systems that perform.
+              We focus on real business results, clear communication, and dependable work. We don&apos;t build fancy tech just to look cool—we build solutions that actually save you time and help your business grow.
             </p>
           </div>
         </div>

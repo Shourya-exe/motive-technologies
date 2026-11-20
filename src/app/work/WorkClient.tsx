@@ -31,7 +31,7 @@ export function WorkClient() {
             <div className="inline-flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-motive-red" />
               <span className="font-mono text-xs font-bold uppercase tracking-widest text-motive-grey">
-                SELECTED PROJECTS &amp; CASE ARCHITECTURES
+                SELECTED WORK &amp; CASE STUDIES
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-motive-black leading-tight">
@@ -39,7 +39,7 @@ export function WorkClient() {
               <span className="text-motive-red">real solutions.</span>
             </h1>
             <p className="text-base sm:text-lg text-motive-grey leading-relaxed">
-              Explore our technical architectures, custom enterprise AI agents, automated operational pipelines, responsive web products, and organic search foundations. Built for measurable business impact.
+              Explore real projects we&apos;ve built: smart AI agents, custom websites, mobile apps, and search strategies designed to grow businesses and save hours of work.
             </p>
           </div>
         </div>

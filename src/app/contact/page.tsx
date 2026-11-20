@@ -118,7 +118,7 @@ export default function ContactPage() {
                 Reach Our Engineering Team Directly
               </h2>
               <p className="text-sm text-motive-grey leading-relaxed">
-                We believe in straightforward, transparent conversations without sales intermediaries or layered account representatives. You speak directly with our senior technology specialists.
+                We believe in honest, straightforward conversations with no pushy sales reps. You speak directly with the people who will actually design and build your project.
               </p>
             </div>
 

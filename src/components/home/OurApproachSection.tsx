@@ -28,7 +28,7 @@ export const OurApproachSection: React.FC = () => {
 
           <div className="lg:col-span-4 lg:pl-6">
             <p className="text-sm sm:text-base text-motive-grey leading-relaxed">
-              Our delivery methodology is disciplined, iterative, and transparent. Every phase builds upon verified requirements to eliminate guesswork and risk.
+              Our process is simple, honest, and organized. We listen to your goals first, plan clearly, and test thoroughly so there are no surprises or wasted money.
             </p>
           </div>
         </div>

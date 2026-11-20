@@ -34,7 +34,7 @@ export const HeroSection: React.FC = () => {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-50 border border-zinc-200 text-xs font-mono font-medium text-zinc-800 shadow-subtle">
               <span className="w-2 h-2 rounded-full bg-motive-red" />
               <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-900">
-                Enterprise AI Agents &amp; Autonomous Systems
+                Smart AI Assistants &amp; Modern Software
               </span>
             </div>
 
@@ -49,26 +49,26 @@ export const HeroSection: React.FC = () => {
 
             {/* Supporting Paragraph - Clear, Client-Focused */}
             <p className="text-base sm:text-lg text-motive-grey max-w-2xl leading-relaxed font-normal">
-              We combine the <strong className="font-semibold text-motive-black">best AI agents development</strong>, autonomous business workflow automation, high-performance web engineering, and strategic SEO/AEO/GEO to help ambitious companies eliminate operational bottlenecks, attract qualified clients, and scale with confidence.
+              We build custom AI assistants, automate everyday repetitive tasks, create fast modern websites, and help you get found on Google and AI search engines—so your business can run smoother, save time, and win more clients.
             </p>
 
             {/* Architectural Highlights / Tangible Conversion Checkpoints */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs font-mono text-zinc-800">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-motive-red flex-shrink-0" />
-                <span>&lt; 10s Lead Response &amp; Calendar Booking</span>
+                <span>&lt; 10s WhatsApp &amp; Website Replies</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-motive-red flex-shrink-0" />
-                <span>Custom CRM, WhatsApp &amp; ERP Sync</span>
+                <span>Syncs WhatsApp, CRM &amp; Billing Apps</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-motive-red flex-shrink-0" />
-                <span>Zero Bottlenecks &amp; 0% Drop Rate</span>
+                <span>Saves 20–40 Hours of Busywork Weekly</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-motive-red flex-shrink-0" />
-                <span>100% Code &amp; IP Ownership Under NDA</span>
+                <span>You Own 100% of All Code &amp; Designs</span>
               </div>
             </div>
 

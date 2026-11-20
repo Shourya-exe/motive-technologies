@@ -54,24 +54,24 @@ export default function WebAppDevelopmentPage() {
 
   const technicalCapabilities = [
     {
-      category: 'Frontend Architecture',
-      items: ['Next.js 15 (App Router)', 'React 19 Server Components', 'TypeScript 5.x', 'Tailwind CSS', 'Framer Motion'],
-      desc: 'Blazing-fast, accessible web frontends optimized for sub-second Core Web Vitals and zero cumulative layout shifts.',
+      category: 'Fast Modern Websites',
+      items: ['Next.js 15', 'React Server Components', 'TypeScript', 'Tailwind CSS', 'Smooth Animations'],
+      desc: 'Lightning-fast, beautiful web pages that load in under 1 second and look flawless on desktop, tablet, and mobile.',
     },
     {
-      category: 'Backend & APIs',
-      items: ['Node.js & Express', 'Python / FastAPI & Django', 'PostgreSQL / Prisma', 'Redis Queues', 'REST & GraphQL'],
-      desc: 'Robust, type-safe API layers built with horizontal scalability, token security, and comprehensive automated testing.',
+      category: 'Secure Backends & Databases',
+      items: ['Node.js & Express', 'Python & FastAPI', 'PostgreSQL Databases', 'Fast Data Caching', 'Secure APIs'],
+      desc: 'Dependable, high-security server systems built to handle millions of requests without slowdowns or crashes.',
     },
     {
-      category: 'Mobile Application Engineering',
-      items: ['Flutter & Dart SDK', 'Native Android Architecture', 'Offline SQLite Sync', 'FCM Push Messaging', 'Responsive PWA'],
-      desc: 'Fluid 60fps mobile interfaces with offline-first data persistence and seamless background sync.',
+      category: 'Mobile Applications',
+      items: ['Flutter & Dart SDK', 'Native Android', 'Offline Mode Support', 'Push Notifications', 'Fast Responsive Web Apps'],
+      desc: 'Smooth, responsive mobile apps that work even when offline and keep your users engaged with instant notifications.',
     },
     {
-      category: 'Cloud & DevOps Infrastructure',
-      items: ['Docker Containerization', 'AWS & Vercel Edge Hosting', 'CI/CD Automated Deployments', 'SSL/TLS & DDOS Mitigation'],
-      desc: 'Resilient cloud infrastructure with automated zero-downtime deployment pipelines and strict access control.',
+      category: 'Cloud Hosting & Security',
+      items: ['Cloud Containers', 'AWS & Vercel Hosting', 'Automatic Backups', 'Bank-Grade SSL Security', 'DDoS Protection'],
+      desc: 'Rock-solid hosting infrastructure that keeps your site 100% online, secure from hackers, and automatically backed up.',
     },
   ];
 
@@ -249,7 +249,7 @@ export default function WebAppDevelopmentPage() {
             Web &amp; Mobile Development Services
           </h2>
           <p className="text-motive-grey text-base">
-            From high-conversion institutional portals to multi-tenant web platforms and native Android mobile apps, our engineering practices follow strict Swiss typographic discipline and modular code architecture.
+            From modern company websites to secure client portals and mobile apps, we design clean, intuitive platforms that make your business look world-class.
           </p>
         </div>
 
@@ -282,12 +282,12 @@ export default function WebAppDevelopmentPage() {
         <div className="mt-16">
           <DirectAnswerBlock
             question="Why build custom web and mobile applications with Motive Technologies?"
-            directAnswer="Motive Technologies designs and engineers high-speed Next.js 15 web applications and Flutter cross-platform mobile apps that achieve perfect 100/100 Google Lighthouse scores. We write clean, type-safe codebases without bloated generic templates or third-party page builders, delivering sub-second loading speeds, military-grade security, and 100% intellectual property transfer to your organization."
+            directAnswer="Motive Technologies builds fast, modern websites and mobile apps using Next.js and Flutter. We never use clunky website builders or slow pre-made templates. Instead, we build custom, lightweight sites that load in under 1 second, look professional on every screen, and turn more visitors into paying customers. Best of all, you own 100% of your code."
             keyTakeaways={[
-              'Sub-second first contentful paint (FCP) and optimal Core Web Vitals',
-              'Next.js 15 App Router with streaming server-side rendering (SSR)',
-              'Cross-platform Flutter mobile apps with offline-first synchronization',
-              'Strict enterprise-grade NDAs with zero proprietary vendor lock-in',
+              'Loads in under 1 second so visitors never leave out of frustration',
+              'Built with modern Next.js for top Google search speed',
+              'Works smoothly on all phones, tablets, and computers',
+              'You own 100% of the code and design with no ongoing platform lock-in',
             ]}
             ctaUrl="/contact"
             ctaText="Schedule Digital Engineering Consultation"
@@ -307,7 +307,7 @@ export default function WebAppDevelopmentPage() {
               Responsive Architectural UI Engineering
             </h2>
             <p className="text-motive-grey text-base">
-              Every digital interface we engineer balances cognitive ease, typographic harmony, and sub-second interaction feedback across desktop, tablet, and mobile devices.
+              Every website and app we build is clean, easy to navigate, and works smoothly on every screen size.
             </p>
           </div>
 

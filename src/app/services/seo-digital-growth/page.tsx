@@ -54,20 +54,20 @@ export default function SEODigitalGrowthPage() {
 
   const auditDeliverables = [
     {
-      title: 'Full Technical Diagnostic & Crawl Graph',
-      desc: 'Identification of 404 response loops, 301 redirect chains, duplicate canonicals, and crawl-budget drain factors.',
+      title: 'Full Website Health & Indexing Check',
+      desc: 'We find and fix broken links, slow redirects, duplicate pages, and anything stopping Google from indexing your site properly.',
     },
     {
-      title: 'Core Web Vitals & Interaction Audit',
-      desc: 'Profiling Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS) across mobile and desktop.',
+      title: 'Page Speed & User Experience Audit',
+      desc: 'We test your loading speed on mobile and computer to make sure your pages open instantly without shifting around.',
     },
     {
-      title: 'Semantic Schema & JSON-LD Entity Graph',
-      desc: 'Architecting deep structured data hierarchies (Organization, Article, FAQ, LocalBusiness) to secure rich snippet eligibility.',
+      title: 'AI & Search Engine Schema Code',
+      desc: 'We add clear structured code so Google, ChatGPT, and Perplexity understand exactly what your business sells and does.',
     },
     {
-      title: 'Commercial Intent & Keyword Hierarchy',
-      desc: 'Mapping search intent tiers (informational, navigational, commercial, transactional) into interconnected topical content clusters.',
+      title: 'High-Value Customer Keyword Plan',
+      desc: 'We pinpoint the exact words high-budget clients type when searching for your services and show you how to rank for them.',
     },
   ];
 
@@ -233,7 +233,7 @@ export default function SEODigitalGrowthPage() {
             Organic Search &amp; Growth Capabilities
           </h2>
           <p className="text-motive-grey text-base">
-            We approach search engine optimization through a rigorous technical, architectural, and semantic lens. No deceptive tricks, no black-hat shortcuts—only sustainable structural authority.
+            We help your business rank at the top of Google and AI tools honestly and sustainably. No spam, no risky tricks—just fast, clear websites that search engines love to recommend.
           </p>
         </div>
 
@@ -266,12 +266,12 @@ export default function SEODigitalGrowthPage() {
         <div className="mt-16">
           <DirectAnswerBlock
             question="What is Tri-Pillar Search: SEO, AEO, and GEO?"
-            directAnswer="Tri-Pillar Search is Motive Technologies' holistic discovery methodology. It optimizes your digital assets simultaneously for traditional search engines (Google SEO), AI answer engines (Perplexity, ChatGPT Search, Google AI Overviews for AEO), and generative foundational models (Gemini, Claude, Copilot for GEO). This ensures your brand is recommended whenever high-intent enterprise buyers ask questions in any search interface."
+            directAnswer="Tri-Pillar Search is our complete approach to search growth. We make sure your business is found everywhere modern customers look: on Google search (SEO), in AI question tools like ChatGPT and Perplexity (AEO), and across generative AI engines (GEO). This gives your brand maximum visibility and brings you high-intent, paying customers without paying for ads."
             keyTakeaways={[
-              '100% Schema.org semantic graphs for rich snippet eligibility',
-              'Direct Q&A entity optimization for featured Perplexity & ChatGPT citations',
-              'Sub-50ms INP and sub-1s LCP Core Web Vitals performance guarantee',
-              'Regional & global geo-targeting capturing commercial acquisition intent',
+              'Clear search code so Google displays your ratings, FAQs, and services',
+              'Optimized answers so ChatGPT and Perplexity cite and recommend your business',
+              'Fast loading speeds on all devices so visitors never bounce',
+              'Target the exact keywords your ideal customers search for',
             ]}
             ctaUrl="/contact"
             ctaText="Schedule SEO/AEO Strategy Consultation"
@@ -291,7 +291,7 @@ export default function SEODigitalGrowthPage() {
               Telemetry &amp; Crawl Health Architecture
             </h2>
             <p className="text-motive-grey text-base">
-              A transparent view into how modern search bots parse, index, and award topical authority to properly architected web properties.
+              A clear, simple look at how Google and AI search engines discover, read, and rank your website pages.
             </p>
           </div>
 
@@ -383,7 +383,7 @@ export default function SEODigitalGrowthPage() {
             What You Receive in a Motive SEO Engagement
           </h2>
           <p className="text-motive-grey text-base">
-            We provide actionable, engineer-ready documentation and code-level remediation plans—not generic automated PDFs.
+            We give you clear, easy-to-follow action steps and fix the technical issues for you—not just confusing, automated reports.
           </p>
         </div>
 

@@ -14,37 +14,37 @@ const FAQS: FAQItem[] = [
   {
     question: 'How does Motive Technologies work with new clients?',
     answer:
-      'We start with a focused 20–30 minute discovery consultation to understand your operational bottlenecks and growth objectives. Within 24–48 hours, we provide an architectural proposal with clear milestones, deliverables, and transparent pricing. Once aligned, we engineer your solution in rapid, transparent sprints with regular progress updates.',
+      'We start with a quick 20–30 minute chat to understand what slows your business down and what you want to achieve. Within 1–2 days, we send you a straightforward plan with clear milestones and transparent pricing. Once approved, we build your solution quickly, giving you regular updates every step of the way.',
   },
   {
     question: 'How fast can our project be delivered?',
     answer:
-      'Most custom corporate websites and core workflow automations are fully designed, tested, and launched in 2 to 4 weeks. For high-priority automations (such as WhatsApp lead assistants or CRM synchronization pipelines), we can often deploy initial functioning prototypes within 5 to 7 business days.',
+      'Most custom business websites and core workflow automations are completely built, tested, and live within 2 to 4 weeks. For urgent automations—like a WhatsApp lead assistant or automatic CRM sync—we can often have a working version running for you in just 5 to 7 days.',
   },
   {
-    question: 'Can you integrate with our existing software, CRM, and WhatsApp?',
+    question: 'Can you connect with our existing tools, CRM, and WhatsApp?',
     answer:
-      'Yes, seamless integration is our core strength. We connect your daily operations across the WhatsApp Cloud API, Google Workspace, HubSpot, Zoho, Salesforce, custom PostgreSQL/MySQL databases, payment gateways, and legacy internal software with zero downtime.',
+      'Yes! Connecting your daily tools is what we do best. We link your WhatsApp, Google Workspace, HubSpot, Zoho, Salesforce, billing systems, and spreadsheets so your information flows automatically without any manual copy-pasting.',
   },
   {
     question: 'Who owns the code and intellectual property after delivery?',
     answer:
-      'You do. You retain 100% intellectual property ownership of all custom codebases, designs, workflow diagrams, and database structures we engineer for your company. We enforce strict enterprise-grade NDAs and zero vendor lock-in.',
+      'You own everything 100%. All custom code, designs, and data belong entirely to your company. We sign strict non-disclosure agreements (NDAs) and never lock you into proprietary platforms or surprise fees.',
   },
   {
     question: 'What happens after the project launches? Do you provide support?',
     answer:
-      'Every project includes complete technical documentation, team training, and dedicated post-launch support. We also offer ongoing maintenance, security updates, and performance optimization retainers to ensure your systems continuously evolve with your business.',
+      'Yes, we stand behind our work. Every project includes clear guides, team walkthroughs, and hands-on launch support. We also provide ongoing monthly care and updates so your tech continues running smoothly as your business grows.',
   },
   {
     question: 'Why choose Motive Technologies for the best AI agents development?',
     answer:
-      'We engineer production-grade, zero-hallucination autonomous AI agent systems that solve real operational bottlenecks. Rather than brittle experimental demos, we deliver multi-agent architectures with deterministic tool-calling, semantic memory (pgvector), official WhatsApp Business Cloud API integrations, and bi-directional CRM synchronization. Our AI agents operate 24/7 with sub-second execution speed, saving businesses 20–40 hours per week with 100% precision.',
+      'We build dependable AI agents that actually do real work for your business without making mistakes. Instead of simple chatbot toys, our AI agents can answer customer inquiries on WhatsApp 24/7, qualify leads, book appointments, and update your CRM automatically. They work around the clock with lightning speed, saving your team 20 to 40 hours of manual repetitive work every week.',
   },
   {
     question: 'What is AEO and GEO, and why does Motive Technologies specialize in it?',
     answer:
-      'AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) ensure your business appears as the cited source when prospective buyers ask questions in AI search engines such as Perplexity, ChatGPT Search, and Google AI Overviews. Motive Technologies optimizes content schemas, entity relationships, and technical performance for both traditional Google SERPs and modern generative AI models.',
+      'People don’t just search on Google anymore—millions now ask questions directly to AI tools like ChatGPT, Perplexity, and Google AI Overviews. AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) make sure these AI engines mention and recommend your business by name when potential customers ask for recommendations in your industry.',
   },
 ];
 
