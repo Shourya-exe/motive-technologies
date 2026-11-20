@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BrandLogo } from './BrandLogo';
 import { ChevronDown, ArrowRight, Menu, X, Bot, Code2, TrendingUp, Sparkles, PhoneCall } from 'lucide-react';
-import { COMPANY_INFO, SERVICES } from '@/data/siteData';
+import { COMPANY_INFO, SERVICES, NAV_SERVICES_MENU } from '@/data/siteData';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -106,60 +106,80 @@ export const Navbar: React.FC = () => {
                 />
               </button>
 
-              {/* Sophisticated Dropdown Menu */}
+              {/* Sophisticated Multi-Column Dropdown Menu */}
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 w-80 pt-2 transition-all duration-200">
-                  <div className="bg-white border border-motive-border rounded-lg shadow-premium p-2 overflow-hidden">
-                    <div className="px-3 py-2 border-b border-motive-border mb-1">
-                      <p className="text-[10px] font-mono uppercase tracking-widest text-motive-grey">
-                        Core Capabilities
-                      </p>
+                <div className="absolute top-full -left-12 w-[540px] pt-2 transition-all duration-200 z-50">
+                  <div className="bg-white border border-motive-border rounded-xl shadow-premium p-6 overflow-hidden">
+                    
+                    {/* 2-Column Grid Matching Capabilities Spec */}
+                    <div className="grid grid-cols-2 gap-8">
+                      {/* Column 1: AI & AUTOMATION */}
+                      <div>
+                        <div className="pb-2 mb-3 border-b border-blue-100 flex items-center justify-between">
+                          <span className="font-mono text-xs font-bold tracking-wider text-blue-600 uppercase">
+                            AI &amp; AUTOMATION
+                          </span>
+                        </div>
+                        <ul className="space-y-1">
+                          {NAV_SERVICES_MENU[0].items.map((item) => (
+                            <li key={item.label}>
+                              <Link
+                                href={item.href}
+                                onClick={() => setServicesDropdownOpen(false)}
+                                className="group/item flex items-center justify-between py-1.5 px-2 rounded-md hover:bg-motive-offwhite text-xs font-medium text-zinc-800 hover:text-motive-red transition-colors"
+                              >
+                                <span>{item.label}</span>
+                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-motive-red" />
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Column 2: ENGINEERING */}
+                      <div>
+                        <div className="pb-2 mb-3 border-b border-blue-100 flex items-center justify-between">
+                          <span className="font-mono text-xs font-bold tracking-wider text-blue-600 uppercase">
+                            ENGINEERING
+                          </span>
+                        </div>
+                        <ul className="space-y-1">
+                          {NAV_SERVICES_MENU[1].items.map((item) => (
+                            <li key={item.label}>
+                              <Link
+                                href={item.href}
+                                onClick={() => setServicesDropdownOpen(false)}
+                                className="group/item flex items-center justify-between py-1.5 px-2 rounded-md hover:bg-motive-offwhite text-xs font-medium text-zinc-800 hover:text-motive-red transition-colors"
+                              >
+                                <span>{item.label}</span>
+                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-motive-red" />
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
 
-                    <div className="space-y-1">
-                      {SERVICES.map((service) => {
-                        const Icon = serviceIcons[service.id as keyof typeof serviceIcons] || Sparkles;
-                        const isActive = pathname === `/services/${service.slug}`;
-                        return (
-                          <Link
-                            key={service.id}
-                            href={`/services/${service.slug}`}
-                            className={`group flex items-start gap-3 p-2.5 rounded transition-colors ${
-                              isActive
-                                ? 'bg-motive-offwhite text-motive-black'
-                                : 'hover:bg-motive-offwhite text-motive-black'
-                            }`}
-                          >
-                            <div className="w-8 h-8 rounded bg-zinc-100 flex items-center justify-center text-zinc-700 group-hover:text-motive-red group-hover:bg-red-50 transition-colors shrink-0 mt-0.5">
-                              <Icon className="w-4 h-4" />
-                            </div>
-                            <div className="flex-1">
-                              <div className="text-xs font-semibold group-hover:text-motive-red transition-colors flex items-center justify-between">
-                                <span>{service.title}</span>
-                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-motive-red" />
-                              </div>
-                              <p className="text-[11px] text-motive-grey line-clamp-1 mt-0.5">
-                                {service.id === 'ai-automation'
-                                  ? 'AI agents, WhatsApp & workflow pipelines'
-                                  : service.id === 'web-app-development'
-                                  ? 'Custom websites, platforms & mobile apps'
-                                  : 'Technical SEO & top Google rankings'}
-                              </p>
-                            </div>
-                          </Link>
-                        );
-                      })}
-                    </div>
-
-                    <div className="mt-2 pt-2 border-t border-motive-border px-3 py-1.5 bg-motive-offwhite/50 rounded flex items-center justify-between">
+                    {/* Bottom Strip: SEO & All Capabilities */}
+                    <div className="mt-5 pt-3 border-t border-motive-border flex items-center justify-between px-3 py-2 bg-motive-offwhite/50 rounded-lg">
+                      <Link
+                        href="/services/seo-digital-growth"
+                        onClick={() => setServicesDropdownOpen(false)}
+                        className="text-xs font-medium text-zinc-700 hover:text-motive-red transition-colors inline-flex items-center gap-1.5"
+                      >
+                        <TrendingUp className="w-3.5 h-3.5 text-motive-red" />
+                        <span>SEO &amp; Digital Growth (AEO &amp; GEO)</span>
+                      </Link>
                       <Link
                         href="/services"
-                        className="text-[11px] font-semibold text-motive-black hover:text-motive-red transition-colors inline-flex items-center gap-1"
+                        onClick={() => setServicesDropdownOpen(false)}
+                        className="text-xs font-semibold text-motive-black hover:text-motive-red transition-colors inline-flex items-center gap-1"
                       >
-                        <span>View All Capabilities</span>
+                        <span>All Capabilities Overview</span>
                         <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
+
                   </div>
                 </div>
               )}
@@ -284,31 +304,66 @@ export const Navbar: React.FC = () => {
               </button>
 
               {mobileServicesOpen && (
-                <div className="pl-3 pr-2 py-1 space-y-0.5 animate-in slide-in-from-top-1 duration-150">
-                  {SERVICES.map((service) => {
-                    const isActive = pathname === `/services/${service.slug}`;
-                    return (
-                      <Link
-                        key={service.id}
-                        href={`/services/${service.slug}`}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className={`block py-2 px-3 text-xs rounded transition-colors ${
-                          isActive
-                            ? 'text-motive-red font-semibold bg-motive-offwhite'
-                            : 'text-zinc-700 hover:text-motive-black hover:bg-motive-offwhite/50'
-                        }`}
-                      >
-                        {service.title}
-                      </Link>
-                    );
-                  })}
-                  <Link
-                    href="/services"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2 px-3 text-xs font-semibold text-motive-red hover:underline"
-                  >
-                    All Capabilities &rarr;
-                  </Link>
+                <div className="pl-3 pr-2 py-2 space-y-4 animate-in slide-in-from-top-1 duration-150">
+                  {/* AI & Automation */}
+                  <div>
+                    <div className="pb-1 mb-1.5 border-b border-blue-100">
+                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-blue-600">
+                        AI &amp; AUTOMATION
+                      </span>
+                    </div>
+                    <div className="space-y-0.5">
+                      {NAV_SERVICES_MENU[0].items.map((item) => (
+                        <Link
+                          key={item.label}
+                          href={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-1.5 px-2 text-xs text-zinc-700 hover:text-motive-red hover:bg-motive-offwhite/50 rounded transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* ENGINEERING */}
+                  <div>
+                    <div className="pb-1 mb-1.5 border-b border-blue-100">
+                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-blue-600">
+                        ENGINEERING
+                      </span>
+                    </div>
+                    <div className="space-y-0.5">
+                      {NAV_SERVICES_MENU[1].items.map((item) => (
+                        <Link
+                          key={item.label}
+                          href={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-1.5 px-2 text-xs text-zinc-700 hover:text-motive-red hover:bg-motive-offwhite/50 rounded transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* SEO & All Capabilities */}
+                  <div className="pt-2 border-t border-motive-border/60 space-y-1">
+                    <Link
+                      href="/services/seo-digital-growth"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-1.5 px-2 text-xs font-medium text-zinc-700 hover:text-motive-red transition-colors"
+                    >
+                      SEO &amp; Digital Growth (AEO &amp; GEO)
+                    </Link>
+                    <Link
+                      href="/services"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-1.5 px-2 text-xs font-semibold text-motive-red hover:underline"
+                    >
+                      All Capabilities Overview &rarr;
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>

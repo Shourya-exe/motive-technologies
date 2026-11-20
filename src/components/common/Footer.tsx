@@ -101,36 +101,28 @@ export const Footer: React.FC = () => {
                 <li key={service.id}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="text-zinc-300 hover:text-white transition-colors inline-flex items-center gap-1 group"
+                    className="text-zinc-300 hover:text-white transition-colors inline-flex items-center gap-1 group font-medium"
                   >
                     <span>{service.title}</span>
                     <ArrowUpRight className="w-3 h-3 text-zinc-400 group-hover:text-motive-red transition-colors opacity-0 group-hover:opacity-100" />
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/services/ai-automation"
-                  className="text-xs text-zinc-400 hover:text-white transition-colors block pl-2 border-l border-zinc-800"
-                >
-                  &bull; AI Agent Development
-                </Link>
+              <li className="pt-2">
+                <span className="font-mono text-[10px] font-bold text-blue-400 uppercase tracking-wider block mb-1">
+                  AI &amp; AUTOMATION
+                </span>
+                <p className="text-xs text-zinc-400 leading-relaxed pl-2 border-l border-zinc-800">
+                  AI Agents &bull; AI Automation &bull; Data &amp; Analytics &bull; Data Science
+                </p>
               </li>
-              <li>
-                <Link
-                  href="/services/web-app-development"
-                  className="text-xs text-zinc-400 hover:text-white transition-colors block pl-2 border-l border-zinc-800"
-                >
-                  &bull; Web & Mobile Applications
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/seo-digital-growth"
-                  className="text-xs text-zinc-400 hover:text-white transition-colors block pl-2 border-l border-zinc-800"
-                >
-                  &bull; Technical SEO & Audits
-                </Link>
+              <li className="pt-1">
+                <span className="font-mono text-[10px] font-bold text-blue-400 uppercase tracking-wider block mb-1">
+                  ENGINEERING
+                </span>
+                <p className="text-xs text-zinc-400 leading-relaxed pl-2 border-l border-zinc-800">
+                  SaaS Products &bull; Custom Web Apps &bull; Mobile Apps &bull; CRM &bull; ERP &bull; Cloud &amp; DevOps
+                </p>
               </li>
             </ul>
           </div>

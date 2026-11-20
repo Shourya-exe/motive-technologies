@@ -35,39 +35,45 @@
 
 ## 2. In-Depth Service Capabilities
 
-### 2.1 Capability 01: Best AI Agents Development & Intelligent Automation
+### 2.1 Capability 01: AI & Automation
 - **Canonical URL**: https://www.motivetechnologies.in/services/ai-automation
 - **Primary Category**: AI & Automation
-- **Target Keywords**: best ai agents development, best ai agent development company, custom ai agent development services, autonomous ai agents development, enterprise ai agent systems, whatsapp business api automation.
+- **Target Keywords**: best ai agents development, ai agent development, ai automation, data analytics, data science, custom ai agent development services, autonomous ai agents development, enterprise ai agent systems, whatsapp business api automation.
 - **Detailed Architectural Offerings**:
-  1. **Goal-Driven Autonomous AI Agents**:
+  1. **AI Agent Development**:
      Multi-step deterministic reasoning loops capable of inspecting state, utilizing custom tools via function calling, and safely modifying external databases.
-  2. **Multi-Agent System Orchestration**:
-     Collaborative swarms of specialized worker agents (e.g., Triage Agent, Research Agent, Data Ingestion Agent, Human Escalation Manager) that autonomously resolve complex corporate workflows without human bottlenecks.
-  3. **Official WhatsApp Business Cloud API Automation**:
-     Sub-15 second response times, rich interactive button menus, real-time product catalogs, automated lead qualification, and instantaneous synchronization with enterprise CRMs (HubSpot, Zoho, Salesforce, custom PostgreSQL).
-  4. **Business Process Automation (BPA)**:
-     End-to-end automation of operational backbones: PDF data extraction, invoice reconciliation, automated customer onboarding, and spreadsheet-to-database synchronization.
-  5. **Enterprise RAG & pgvector Knowledge Retrieval**:
-     Deterministic internal knowledge assistants grounded strictly on company manuals, SOPs, and historical databases using PostgreSQL pgvector embeddings. Zero hallucination guarantee through strict runtime validation (Pydantic / Zod).
+  2. **AI Automation**:
+     End-to-end automation of operational backbones: WhatsApp lead qualification, automated scheduling, invoice parsing, and multi-system synchronization.
+  3. **Data & Analytics**:
+     Real-time telemetry pipelines, interactive business intelligence dashboards, automated reporting daemons, and executive metric tracking.
+  4. **Data Science**:
+     Predictive modeling, machine learning classification, time-series forecasting, and customer retention analysis.
+  5. **Official WhatsApp Business Cloud API Automation**:
+     Sub-15 second response times, rich interactive button menus, real-time product catalogs, automated lead qualification, and instantaneous synchronization with enterprise CRMs.
 - **Core ROI Metrics**:
   - Recovers 20 to 40 hours per week per employee.
   - Drops off-hours lead response latency from hours to under 15 seconds.
   - 100% precision with zero hallucination due to confidence-threshold human escalation.
 
-### 2.2 Capability 02: Custom Web & Mobile Application Development
+### 2.2 Capability 02: Engineering (Web, Mobile & Cloud Systems)
 - **Canonical URL**: https://www.motivetechnologies.in/services/web-app-development
-- **Primary Category**: Full-Stack Web & Mobile Engineering
-- **Target Keywords**: custom web application development, next.js 15 enterprise web agency, react 19 full-stack development, flutter mobile app developers, high performance web engineering 100 lighthouse.
+- **Primary Category**: Full-Stack Engineering & Cloud Architecture
+- **Target Keywords**: saas product development, custom software web apps, website development, mobile app development, crm development, erp development, cloud devops, next.js 15 enterprise web agency, flutter mobile app developers.
 - **Detailed Architectural Offerings**:
-  1. **Modern Enterprise Web Platforms**:
-     Engineered with Next.js 15 App Router, React 19 Server Components, TypeScript 5.x, and Tailwind CSS.
-  2. **Performance Standard**:
-     Strict 100/100 Google Lighthouse scores across Performance, Accessibility, Best Practices, and SEO. Interaction to Next Paint (INP) < 50ms, Largest Contentful Paint (LCP) < 1.0s, and 0 Cumulative Layout Shift (CLS).
-  3. **Cross-Platform Mobile Engineering (Flutter & Dart)**:
-     Native-performance iOS and Android applications with offline-first SQLite caching, background bi-directional synchronization, FCM push messaging, and biometric authentication.
-  4. **Enterprise Client Dashboards & Portals**:
-     Role-based access control (RBAC), multi-tenant isolation, real-time telemetry graphs, and type-safe REST/GraphQL APIs built on Node.js / FastAPI and PostgreSQL.
+  1. **SaaS Product Development**:
+     Full-lifecycle multi-tenant cloud platforms built with Next.js 15, Stripe billing, role-based security, and sub-second page loads.
+  2. **Custom Software & Web Apps**:
+     Tailored browser-based business applications and workflow management portals engineered with React 19, TypeScript, and FastAPI/Node.js.
+  3. **Website Development**:
+     Sub-second corporate websites with perfect 100/100 Google Lighthouse scores, Swiss design typography, and high-conversion architectures.
+  4. **Mobile App Development**:
+     High-performance cross-platform iOS and Android applications built with Flutter & Dart, featuring offline SQLite caching and push notifications.
+  5. **CRM Development**:
+     Custom customer relationship platforms with automated lead pipeline stages, WhatsApp integration, and two-way email tracking.
+  6. **ERP Development**:
+     Integrated business management software connecting procurement, inventory, invoicing, employee permissions, and accounting ledgers.
+  7. **Cloud & DevOps**:
+     Automated CI/CD deployment pipelines on AWS and Vercel with Docker containerization, edge CDN acceleration, and bank-grade SSL security.
 
 ### 2.3 Capability 03: Technical SEO, AEO & GEO Growth Engineering
 - **Canonical URL**: https://www.motivetechnologies.in/services/seo-digital-growth

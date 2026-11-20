@@ -1,3 +1,37 @@
+export interface NavServiceSubItem {
+  label: string;
+  href: string;
+}
+
+export interface NavServiceCategory {
+  category: string;
+  items: NavServiceSubItem[];
+}
+
+export const NAV_SERVICES_MENU: NavServiceCategory[] = [
+  {
+    category: 'AI & AUTOMATION',
+    items: [
+      { label: 'AI Agent Development', href: '/services/ai-automation' },
+      { label: 'AI Automation', href: '/services/ai-automation' },
+      { label: 'Data & Analytics', href: '/services/ai-automation' },
+      { label: 'Data Science', href: '/services/ai-automation' },
+    ],
+  },
+  {
+    category: 'ENGINEERING',
+    items: [
+      { label: 'SaaS Product Development', href: '/services/web-app-development' },
+      { label: 'Custom Software & Web Apps', href: '/services/web-app-development' },
+      { label: 'Website Development', href: '/services/web-app-development' },
+      { label: 'Mobile App Development', href: '/services/web-app-development' },
+      { label: 'CRM Development', href: '/services/web-app-development' },
+      { label: 'ERP Development', href: '/services/web-app-development' },
+      { label: 'Cloud & DevOps', href: '/services/web-app-development' },
+    ],
+  },
+];
+
 export interface ServiceItem {
   id: string;
   slug: string;
@@ -82,24 +116,24 @@ export const SERVICES: ServiceItem[] = [
     fullDescription: 'We build practical AI systems and automated workflows that handle customer messages, sort paperwork, connect your apps, and answer inquiries without human delays.',
     capabilities: [
       {
-        title: 'Best AI Agents Development',
-        description: 'Smart AI assistants that read documents, think through tasks step-by-step, and update your apps automatically with high precision.',
+        title: 'AI Agent Development',
+        description: 'Goal-driven autonomous AI agents that analyze documents, reason through multi-step tasks, and execute actions across your business software automatically.',
       },
       {
-        title: 'Business Process Automation',
-        description: 'Automating routine daily tasks—from welcoming new clients and sorting paperwork to sending bills and matching payments.',
+        title: 'AI Automation',
+        description: 'End-to-end automation of daily business operations—from instant WhatsApp lead replies and scheduling to invoice parsing and CRM synchronization.',
       },
       {
-        title: 'Custom Workflow Automation',
-        description: 'Connecting all your software—CRMs, spreadsheets, databases, and chat tools—so data flows everywhere automatically without copy-pasting.',
+        title: 'Data & Analytics',
+        description: 'Live business intelligence dashboards, automated reporting pipelines, and real-time operational telemetry that turn raw numbers into clear growth decisions.',
+      },
+      {
+        title: 'Data Science',
+        description: 'Custom machine learning models, statistical pattern recognition, and predictive forecasting to help your business anticipate demand and optimize revenue.',
       },
       {
         title: 'WhatsApp Automation',
         description: 'Official WhatsApp chatbots that reply to customers in seconds, share product catalogs, book appointments, and update your CRM 24/7.',
-      },
-      {
-        title: 'AI-Powered Business Solutions',
-        description: 'Practical AI built into your daily operations—helping you review agreements faster, route customer tickets, and make better decisions.',
       },
       {
         title: 'App & Third-Party Integrations',
@@ -110,7 +144,7 @@ export const SERVICES: ServiceItem[] = [
         description: '24/7 customer service assistants trained on your real company guides that answer common questions accurately at any hour.',
       },
       {
-        title: 'Custom AI Integrations',
+        title: 'Custom AI & Private Model Hosting',
         description: 'Secure, private AI setups tailored specifically to your company rules, keeping your sensitive business data completely confidential.',
       },
     ],
@@ -149,36 +183,36 @@ export const SERVICES: ServiceItem[] = [
     fullDescription: 'Our team builds modern, easy-to-use websites and applications that load fast on any phone or computer, stay secure, and give your brand immediate credibility.',
     capabilities: [
       {
-        title: 'Custom Website Development',
-        description: 'Beautiful, custom-designed websites tailored to your brand with clean typography, smooth animations, and sub-second load times.',
+        title: 'SaaS Product Development',
+        description: 'Complete multi-tenant cloud software platforms engineered with Next.js, role-based access, stripe subscription billing, and sub-second load times.',
       },
       {
-        title: 'Corporate & Business Websites',
-        description: 'Professional websites built to explain your offerings clearly, build trust with prospective clients, and capture qualified inquiries.',
+        title: 'Custom Software & Web Apps',
+        description: 'Bespoke web applications, workflow consoles, and operational platforms designed to solve unique business challenges without third-party limits.',
       },
       {
-        title: 'Web Application Development',
-        description: 'Custom web software, customer dashboards, and internal business tools that help your team work faster from any browser.',
+        title: 'Website Development',
+        description: 'Clean, high-performance corporate websites built with Next.js and Tailwind CSS that load in under 1 second and convert visitors into paying clients.',
       },
       {
-        title: 'Android & Mobile App Development',
-        description: 'Smooth, user-friendly mobile apps for Android and iOS that work smoothly even when internet connectivity is spotty.',
+        title: 'Mobile App Development',
+        description: 'Fluid, cross-platform mobile apps for Android and iOS using Flutter and Dart with offline synchronization and instant push notifications.',
       },
       {
-        title: 'UI/UX Design & User Experiences',
-        description: 'Clean, modern screen designs that are intuitive for your customers to navigate and simple for your team to manage.',
+        title: 'CRM Development',
+        description: 'Custom customer relationship management platforms tailored to your sales pipeline with automated lead tracking, email/WhatsApp sync, and deal metrics.',
       },
       {
-        title: 'Backend & Cloud Systems',
-        description: 'Fast, secure server systems that handle high traffic smoothly and protect customer data with bank-grade encryption.',
+        title: 'ERP Development',
+        description: 'Integrated enterprise resource planning systems connecting inventory, purchasing, staff schedules, accounting, and order fulfillment in one place.',
       },
       {
-        title: 'Database Architecture',
-        description: 'Organized and secure database storage that ensures your company information is always backed up and quick to retrieve.',
+        title: 'Cloud & DevOps',
+        description: 'Rock-solid AWS and Vercel cloud setups with automated CI/CD deployment pipelines, containerization (Docker), automated backups, and 99.99% uptime.',
       },
       {
-        title: 'Custom Client Portals',
-        description: 'Private portals where your clients can log in, view their project progress, download invoices, and manage their accounts.',
+        title: 'Custom Client Portals & Dashboards',
+        description: 'Secure client-facing portals where customers can log in, track project milestones, access files, and review statements independently.',
       },
     ],
     workflows: [
