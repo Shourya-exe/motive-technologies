@@ -115,8 +115,8 @@ export const Navbar: React.FC = () => {
                     <div className="grid grid-cols-2 gap-8">
                       {/* Column 1: AI & AUTOMATION */}
                       <div>
-                        <div className="pb-2 mb-3 border-b border-blue-100 flex items-center justify-between">
-                          <span className="font-mono text-xs font-bold tracking-wider text-blue-600 uppercase">
+                        <div className="pb-2 mb-3 border-b border-red-100 flex items-center justify-between">
+                          <span className="font-mono text-xs font-bold tracking-wider text-motive-red uppercase">
                             AI &amp; AUTOMATION
                           </span>
                         </div>
@@ -138,8 +138,8 @@ export const Navbar: React.FC = () => {
 
                       {/* Column 2: ENGINEERING */}
                       <div>
-                        <div className="pb-2 mb-3 border-b border-blue-100 flex items-center justify-between">
-                          <span className="font-mono text-xs font-bold tracking-wider text-blue-600 uppercase">
+                        <div className="pb-2 mb-3 border-b border-red-100 flex items-center justify-between">
+                          <span className="font-mono text-xs font-bold tracking-wider text-motive-red uppercase">
                             ENGINEERING
                           </span>
                         </div>
@@ -307,8 +307,8 @@ export const Navbar: React.FC = () => {
                 <div className="pl-3 pr-2 py-2 space-y-4 animate-in slide-in-from-top-1 duration-150">
                   {/* AI & Automation */}
                   <div>
-                    <div className="pb-1 mb-1.5 border-b border-blue-100">
-                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-blue-600">
+                    <div className="pb-1 mb-1.5 border-b border-red-100">
+                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-motive-red">
                         AI &amp; AUTOMATION
                       </span>
                     </div>
@@ -328,8 +328,8 @@ export const Navbar: React.FC = () => {
 
                   {/* ENGINEERING */}
                   <div>
-                    <div className="pb-1 mb-1.5 border-b border-blue-100">
-                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-blue-600">
+                    <div className="pb-1 mb-1.5 border-b border-red-100">
+                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-motive-red">
                         ENGINEERING
                       </span>
                     </div>

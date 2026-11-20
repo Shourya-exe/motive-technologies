@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
+import { FloatingChatButton } from '@/components/common/FloatingChatButton';
 import { COMPANY_INFO, SERVICES } from '@/data/siteData';
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -327,6 +328,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <FloatingChatButton />
       </body>
     </html>
   );

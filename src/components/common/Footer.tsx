@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
               <li className="pt-2">
-                <span className="font-mono text-[10px] font-bold text-blue-400 uppercase tracking-wider block mb-1">
+                <span className="font-mono text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">
                   AI &amp; AUTOMATION
                 </span>
                 <p className="text-xs text-zinc-400 leading-relaxed pl-2 border-l border-zinc-800">
@@ -117,7 +117,7 @@ export const Footer: React.FC = () => {
                 </p>
               </li>
               <li className="pt-1">
-                <span className="font-mono text-[10px] font-bold text-blue-400 uppercase tracking-wider block mb-1">
+                <span className="font-mono text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">
                   ENGINEERING
                 </span>
                 <p className="text-xs text-zinc-400 leading-relaxed pl-2 border-l border-zinc-800">
@@ -219,37 +219,50 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Legal & Architecture Strip */}
-      <div className="border-t border-motive-darkborder bg-black/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-motive-red" />
-            <p className="font-mono">
-              Copyright &copy; 2026 Motive Technologies. All Rights Reserved.
-            </p>
-          </div>
-
-          <div className="flex items-center space-x-6">
+      {/* Bottom Utility Strip (Privacy | Terms | Cookies | Security | Accessibility | Sitemap) */}
+      <div className="bg-black text-white border-t border-zinc-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-2 text-zinc-400">
             <Link
-              href="/privacy-policy"
-              className="hover:text-white transition-colors flex items-center gap-1"
+              href="/privacy"
+              className="hover:text-white transition-colors"
             >
-              <Shield className="w-3 h-3 text-zinc-400" />
-              <span>Privacy Policy</span>
+              Privacy
             </Link>
             <Link
               href="/terms"
-              className="hover:text-white transition-colors flex items-center gap-1"
-            >
-              <Terminal className="w-3 h-3 text-zinc-400" />
-              <span>Terms & Conditions</span>
-            </Link>
-            <a
-              href={`https://${COMPANY_INFO.domain}`}
               className="hover:text-white transition-colors"
             >
-              {COMPANY_INFO.domain}
-            </a>
+              Terms
+            </Link>
+            <Link
+              href="/cookies"
+              className="hover:text-white transition-colors"
+            >
+              Cookies
+            </Link>
+            <Link
+              href="/security"
+              className="hover:text-white transition-colors"
+            >
+              Security
+            </Link>
+            <Link
+              href="/accessibility"
+              className="hover:text-white transition-colors"
+            >
+              Accessibility
+            </Link>
+            <Link
+              href="/sitemap"
+              className="hover:text-white transition-colors"
+            >
+              Sitemap
+            </Link>
+          </div>
+
+          <div className="flex items-center gap-2 text-zinc-500 font-mono text-[11px]">
+            <span>&copy; 2026 Motive Technologies. All rights reserved.</span>
           </div>
         </div>
       </div>
