@@ -11,6 +11,7 @@ export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -36,6 +37,7 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
+    setMobileServicesOpen(false);
   }, [pathname]);
 
   const navLinks = [
@@ -254,33 +256,58 @@ export const Navbar: React.FC = () => {
             <Link
               href="/"
               className={`block px-3 py-2 text-sm font-medium rounded ${
-                pathname === '/' ? 'bg-motive-offwhite text-motive-black font-bold' : 'text-motive-grey'
+                pathname === '/' ? 'bg-motive-offwhite text-motive-black font-bold' : 'text-motive-grey hover:text-motive-black'
               }`}
             >
               Home
             </Link>
 
-            <div className="px-3 py-2">
-              <p className="text-[10px] font-mono uppercase tracking-widest text-motive-grey mb-2">
-                Services
-              </p>
-              <div className="space-y-2 pl-2 border-l border-motive-border">
-                {SERVICES.map((service) => (
+            {/* Mobile Services Accordion */}
+            <div>
+              <button
+                type="button"
+                onClick={() => setMobileServicesOpen((prev) => !prev)}
+                className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded transition-colors ${
+                  pathname.startsWith('/services')
+                    ? 'bg-motive-offwhite text-motive-black font-bold'
+                    : 'text-motive-grey hover:text-motive-black'
+                }`}
+                aria-expanded={mobileServicesOpen}
+              >
+                <span>Services</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    mobileServicesOpen ? 'rotate-180 text-motive-red' : 'text-motive-grey'
+                  }`}
+                />
+              </button>
+
+              {mobileServicesOpen && (
+                <div className="pl-3 pr-2 py-1 space-y-0.5 animate-in slide-in-from-top-1 duration-150">
+                  {SERVICES.map((service) => {
+                    const isActive = pathname === `/services/${service.slug}`;
+                    return (
+                      <Link
+                        key={service.id}
+                        href={`/services/${service.slug}`}
+                        className={`block py-2 px-3 text-xs rounded transition-colors ${
+                          isActive
+                            ? 'text-motive-red font-semibold bg-motive-offwhite'
+                            : 'text-zinc-700 hover:text-motive-black hover:bg-motive-offwhite/50'
+                        }`}
+                      >
+                        {service.title}
+                      </Link>
+                    );
+                  })}
                   <Link
-                    key={service.id}
-                    href={`/services/${service.slug}`}
-                    className="block text-xs font-medium text-motive-black hover:text-motive-red"
+                    href="/services"
+                    className="block py-2 px-3 text-xs font-semibold text-motive-red hover:underline"
                   >
-                    {service.title}
+                    All Capabilities &rarr;
                   </Link>
-                ))}
-                <Link
-                  href="/services"
-                  className="block text-xs font-semibold text-motive-red pt-1"
-                >
-                  All Capabilities &rarr;
-                </Link>
-              </div>
+                </div>
+              )}
             </div>
 
             {navLinks.slice(1).map((link) => (
