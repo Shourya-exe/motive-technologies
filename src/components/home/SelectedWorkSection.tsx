@@ -7,6 +7,36 @@ import { ArrowRight, CheckCircle2, ExternalLink, Zap } from 'lucide-react';
 import { PROJECTS } from '@/data/siteData';
 
 const PROJECT_GRAPHICS: Record<string, { imageSrc: string; badge: string; metric: string; metricLabel: string }> = {
+  'careerguide-india': {
+    imageSrc: '/images/careerguide-india.jpg',
+    badge: 'INTERACTIVE STREAM DISCOVERY',
+    metric: '98%',
+    metricLabel: 'Stream Match Accuracy',
+  },
+  'neurointent-bci-system': {
+    imageSrc: '/images/project-neurointent.jpg',
+    badge: 'BRAIN-COMPUTER INTERFACE',
+    metric: '< 500ms',
+    metricLabel: 'Thought Command Latency',
+  },
+  'aira-ai-attendance': {
+    imageSrc: '/images/project-aira.jpg',
+    badge: 'COMPUTER VISION AI',
+    metric: '99.4%',
+    metricLabel: 'Face Match Accuracy',
+  },
+  'neuromind-ai-assistant': {
+    imageSrc: '/images/project-neuromind.jpg',
+    badge: 'MEMORY-INSPIRED AI',
+    metric: '100%',
+    metricLabel: 'Context Retention',
+  },
+  'ai-court-legal-reasoning': {
+    imageSrc: '/images/project-aicourt.jpg',
+    badge: 'MULTI-AGENT REASONING',
+    metric: '3 Agents',
+    metricLabel: 'Prosecution, Defense & Judge',
+  },
   'enterprise-whatsapp-crm-automation': {
     imageSrc: '/images/case-whatsapp-ai-crm.jpg',
     badge: 'AUTONOMOUS CONVERSATIONAL AGENT',
@@ -39,7 +69,7 @@ export const SelectedWorkSection: React.FC = () => {
   const categories = ['All', 'AI & Automation', 'Web Applications', 'Digital Platforms', 'SEO & Growth'];
 
   const filteredProjects = selectedFilter === 'All'
-    ? PROJECTS.slice(0, 4)
+    ? PROJECTS.filter(p => p.featured).slice(0, 6)
     : PROJECTS.filter(p => p.category === selectedFilter);
 
   return (

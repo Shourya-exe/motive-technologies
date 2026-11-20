@@ -106,6 +106,26 @@
   - *Challenge*: Delivery drivers frequently lost connectivity in remote industrial zones, causing lost pickup timestamps and route misdirection.
   - *Solution*: Engineered a cross-platform Flutter application with local SQLite caching, queued background delta sync, and native GPS breadcrumbs.
   - *Outcome*: Zero data loss across 350+ fleet vehicles; 18% reduction in daily route turnaround time.
+- **Case 04: CareerGuide India – Interactive Stream Discovery Platform**:
+  - *Challenge*: Overwhelming Class 10 stream confusion and lack of practical Indian entrance exam roadmaps for students.
+  - *Solution*: Developed a gamified 3-minute quest web app with preference cards, offline PWA support, and tailored exam pathways.
+  - *Outcome*: 98% recommendation match; zero load friction; complete JEE, NEET, CLAT & CA Foundation exam guides.
+- **Case 05: NeuroIntent – Deep Learning Brain-Computer Interface (BCI)**:
+  - *Challenge*: Extreme signal noise and classification latency in raw EEG brainwave acquisition.
+  - *Solution*: Built a real-time deep learning pipeline with BrainFlow, MNE artifact filtering, and PyTorch motor imagery recognition.
+  - *Outcome*: Sub-second thought-to-command execution; live PyQt confidence feedback HUD; hardware simulation mode.
+- **Case 06: AIRA – AI Face Recognition Attendance System**:
+  - *Challenge*: Long morning queues and attendance fraud from physical biometric fingerprint scanners.
+  - *Solution*: Engineered a high-speed computer vision attendance platform with OpenCV, Next.js, and FastAPI in Docker.
+  - *Outcome*: Sub-500ms contactless face verification; 99.4% matching accuracy; automated real-time shift analytics.
+- **Case 07: AI Court – Multi-Agent Legal Reasoning Platform**:
+  - *Challenge*: Complex legal disputes requiring independent evaluation of conflicting evidence and statutes.
+  - *Solution*: Orchestrated multi-agent architecture with specialized Prosecution, Defense, and Judicial reasoning agents.
+  - *Outcome*: Balanced adversary deliberation; statutory cross-referencing; transparent, reasoned written judgments.
+- **Case 08: NeuroMind AI – Long-Term Memory Cognitive Assistant**:
+  - *Challenge*: LLM statelessness and context amnesia between conversation sessions.
+  - *Solution*: Designed persistent episodic and semantic vector memory architecture that continuously learns user preferences.
+  - *Outcome*: Multi-session context retention; zero memory loss across working sessions; continuous personalization.
 
 ---
 

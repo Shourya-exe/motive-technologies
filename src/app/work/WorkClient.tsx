@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Cpu, Globe, Smartphone, Code, CheckCircle2 } from 'lucide-react';
 import { PROJECTS, ProjectItem } from '@/data/siteData';
 
@@ -111,13 +112,39 @@ export function WorkClient() {
                 </div>
 
                 <div className="relative z-10 pt-3 mt-4 border-t border-zinc-900 flex items-center justify-between text-[10px] font-mono text-zinc-500">
-                  <span className="text-emerald-400 font-semibold flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    STATUS: DEPLOYED
+                  <span className={`${
+                    project.status === 'In development'
+                      ? 'text-amber-400'
+                      : project.status === 'Prototype'
+                      ? 'text-cyan-400'
+                      : 'text-emerald-400'
+                  } font-semibold flex items-center gap-1.5`}>
+                    <span className={`w-1.5 h-1.5 rounded-full ${
+                      project.status === 'In development'
+                        ? 'bg-amber-400'
+                        : project.status === 'Prototype'
+                        ? 'bg-cyan-400'
+                        : 'bg-emerald-400'
+                    } animate-pulse`} />
+                    STATUS: {project.status ? project.status.toUpperCase() : 'DEPLOYED'}
                   </span>
                   <span>VERIFIED ARCHITECTURE</span>
                 </div>
               </div>
+
+              {/* Optional Project Screenshot / Mockup Preview */}
+              {project.imageSrc && (
+                <div className="relative w-full aspect-[16/9] overflow-hidden bg-zinc-950 border-b border-motive-border group">
+                  <Image
+                    src={project.imageSrc}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+                </div>
+              )}
 
               {/* Card Body Details */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6 bg-white">
